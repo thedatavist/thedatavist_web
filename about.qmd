@@ -1,0 +1,7 @@
+---
+title: "About"
+---
+
+thedatavist is a blog about the data profession written by Darragh Murray, a data analytics and insights professional based in Brisbane, Australia.
+
+This site is built in Quarto, powered by GitHub and published via Netlify.

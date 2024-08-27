@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "thedatavist is a blog about the data profession written by Darragh Murray, a data analytics and insights professional based in Brisbane, Australia.\nThis site is built in Quarto, powered by GitHub and published via Netlify."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "thedatavist",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "posts/posts.html",
+    "href": "posts/posts.html",
+    "title": "Datavist Blog",
+    "section": "",
+    "text": "No matching items"
+  },
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "Datavist Blog",
+    "section": "",
+    "text": "No matching items"
+  },
+  {
+    "objectID": "posts/2024-08-27-first-post/index.html",
+    "href": "posts/2024-08-27-first-post/index.html",
+    "title": "thedatavist",
+    "section": "",
+    "text": "Why hello there!"
+  }
+]
