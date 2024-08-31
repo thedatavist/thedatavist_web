@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Datavist Blog – thedatavist</title>
+<title>index – thedatavist</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,77 +66,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">thedatavist</span>
     </a>
   </div>
@@ -149,15 +89,15 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./posts.html" aria-current="page"> 
+    <a class="nav-link" href="../../posts.html"> 
 <span class="menu-text">Datavist Blog</span></a>
   </li>  
 </ul>
@@ -172,78 +112,133 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#approach" id="toc-approach" class="nav-link active" data-scroll-target="#approach">Approach</a></li>
+  <li><a href="#intercepts" id="toc-intercepts" class="nav-link" data-scroll-target="#intercepts">Intercepts</a></li>
+  <li><a href="#contested-marks" id="toc-contested-marks" class="nav-link" data-scroll-target="#contested-marks">Contested Marks</a></li>
+  <li><a href="#spoils" id="toc-spoils" class="nav-link" data-scroll-target="#spoils">Spoils</a></li>
+  <li><a href="#rebound-50s" id="toc-rebound-50s" class="nav-link" data-scroll-target="#rebound-50s">Rebound 50s</a></li>
+  <li><a href="#one-percenters" id="toc-one-percenters" class="nav-link" data-scroll-target="#one-percenters">One Percenters</a></li>
+  <li><a href="#overall-rank" id="toc-overall-rank" class="nav-link" data-scroll-target="#overall-rank">Overall Rank</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Datavist Blog</h1>
-</div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
+<p>As a die-hard Brisbane Lions supporter and an extreme data enthusiast, I understand that ingrained bias can distort perspectives, but data often provides comfort and clarity.</p>
+<p>However, anyone who watched the Brisbane Lions’ 2024 matches could not ignore that the team’s performance would have been far worse without the heroics of key defender and co-captain <strong>Harris Andrews</strong>.</p>
+<p>Therefore, it was shocking when the AFL left him out of the All-Australian team announced on August 29. Many considered him an absolute lock for the team.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="afl_all_australian_2024.png" class="img-fluid figure-img"></p>
+<figcaption>2024 All Australian Team | Credit: AFL Photos</figcaption>
+</figure>
+</div>
+<p>Instead, the key defensive positions went to <strong>Jeremy McGovern</strong> from the West Coast Eagles, <strong>Jacob Weitering</strong> from the Carlton Blues, and <strong>Luke Ryan</strong> from the Fremantle Dockers.</p>
+<p>All great players, no doubt, but were they better than Harris Andrews this year?</p>
+<p>Driven by frustration, I turned to uncovering the cold, hard facts, determined to prove that the selectors made a huge mistake by excluding the Lions’ defensive talisman from the team for the second consecutive year.</p>
+<p>I sought to understand whether Harris Andrews was truly robbed of an All-Australian jersey, as many, especially Lions fans, claimed. After analysing the key statistical categories for a key defender, I am confident that Harris was indeed unfairly overlooked.</p>
+<p>But let’s see how Andrews’ season compares to his defensive peers by the numbers.</p>
+<section id="approach" class="level2">
+<h2 class="anchored" data-anchor-id="approach">Approach</h2>
+<p>To understand, I went straight to the 2024 season data and pulled key metrics that underpin the role of a key defender in Australian Rules Football.</p>
+<p>These metrics include:</p>
+<ul>
+<li>Intercepts</li>
+<li>Contested Marks</li>
+<li>Spoils</li>
+<li>Rebound 50s</li>
+<li>One percenters</li>
+</ul>
+<p>These data were pulled via the fitzRoy API, which taps into a wide range of AFL data sources including Footywire.</p>
+<p><em>But why these categories?</em></p>
+<p>Primarily because many sites that track player characteristics (for example, Stats Insiders) use similar categories to define a key defender. There might be some debate about whether these are the right ones, but I’ve settled on these for the time being.</p>
+<p>Since many AFL players occasionally take on defensive roles (e.g., Nick Daicos playing off half-back early in 2024), I filtered the data to include only those who played defensive positions for at least <strong>80% of the season</strong>.</p>
+<p>In most cases, I highlighted the main players in this analysis: Andrews, McGovern, Weitering, and Ryan.</p>
+</section>
+<section id="intercepts" class="level2">
+<h2 class="anchored" data-anchor-id="intercepts">Intercepts</h2>
+<p>Intercepts involve gaining possession of the ball by cutting off an opposition pass, kick, or handball during play. The chart below ranks all relevant AFL players by their average intercepts per game throughout the season (minimum 18 games as a defender).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="intercepts.png" class="img-fluid figure-img"></p>
+<figcaption>Intercepts | Credit: TheDatavist</figcaption>
+</figure>
+</div>
+<p>It’s clear that McGovern leads this group with nearly 8 intercepts per game, ranking 4th in the AFL. Andrews follows closely, averaging just over 7.5 per game and ranking 8th. Neither Weitering nor Ryan made the top ten, with Ryan ranking 27th with 5.83 intercepts per game. For reference, <strong>Sam Collins</strong> holds the top spot, averaging 8 intercepts per game.</p>
+</section>
+<section id="contested-marks" class="level2">
+<h2 class="anchored" data-anchor-id="contested-marks">Contested Marks</h2>
+<p>Contested marks, or marking the ball in a contested situation, is another crucial attribute of top key defenders. As shown in the chart below, Harris Andrews clearly led the league in this skill in 2024.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="contested_marks.png" class="img-fluid figure-img"></p>
+<figcaption>Contested Marks | Credit: TheDatavist</figcaption>
+</figure>
+</div>
+<p>Andrews averaged over 2 contested marks per game, making him the top defender in the AFL for this statistic, with a 0.5 mark per game lead over second place, Tom Barrass. Both McGovern and Weitering also performed well, ranking 4th and 5th, respectively. However, Ryan lagged behind, averaging only 0.4 contested marks per game, ranking 36th.</p>
+</section>
+<section id="spoils" class="level2">
+<h2 class="anchored" data-anchor-id="spoils">Spoils</h2>
+<p>Preventing the opposition from marking the ball, typically through punching or knocking it away, known as spoiling, is a crucial skill for top AFL teams, often executed by key defenders. Harris Andrews excelled in this area during the 2024 season.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="spoils.png" class="img-fluid figure-img"></p>
+<figcaption>Spoils | Credit: TheDatavist</figcaption>
+</figure>
+</div>
+<p>Andrews ranked 2nd behind Darcy Moore, averaging an impressive 7.4 spoils per match. In this category, the group is more spread out, with Weitering ranking in the top 10, while McGovern and Ryan performed comparatively worse.</p>
+</section>
+<section id="rebound-50s" class="level2">
+<h2 class="anchored" data-anchor-id="rebound-50s">Rebound 50s</h2>
+<p>Rebound 50s involves moving the ball from the defensive 50 zone into the midfield and beyond, and this is one area where Harris Andrews falls short compared to his All-Australian peers.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="rebound_50s.png" class="img-fluid figure-img"></p>
+<figcaption>Rebound 50s | Credit: TheDatavist</figcaption>
+</figure>
+</div>
+<p>Conversely, Luke Ryan excels in this category, leading the group with nearly 7.4 rebound 50s per game. McGovern closely follows with 7.32 per game. Andrews, and to a lesser extent Weitering, perform poorly in this area, with Andrews averaging just under 3 per game, ranking 44th.</p>
+</section>
+<section id="one-percenters" class="level2">
+<h2 class="anchored" data-anchor-id="one-percenters">One Percenters</h2>
+<p>One percenters capture all other defensive actions in an AFL match that are challenging to track individually, such as shepherds, smothers, and blocks. These actions are crucial to key defending and are often used to gauge a defender’s performance.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="one_percenters.png" class="img-fluid figure-img"></p>
+<figcaption>One Percenters | Credit: TheDatavist</figcaption>
+</figure>
+</div>
+<p>In 2024, Andrews once again proved to be among the best, ranking 3rd overall with nearly 8.1 per game. Weitering also made the top 10 with 6.71 per game. McGovern and Ryan were more middle of the pack, ranking 20th and 31st, respectively.</p>
+</section>
+<section id="overall-rank" class="level2">
+<h2 class="anchored" data-anchor-id="overall-rank">Overall Rank</h2>
+<p>By now, you probably see where this analysis is heading.</p>
+<p>But for clarity’s sake, here’s a highlight table showing the rank positions of our chosen key defenders in the metrics that really matter for their role.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="overall.png" class="img-fluid figure-img"></p>
+<figcaption>Overall Rankings | Credit: TheDatavist</figcaption>
+</figure>
+</div>
+<p>As you can see, Jeremy McGovern and Harris Andrews average out at 2nd and 3rd, respectively. Interestingly, McGovern’s teammate Tom Barrass takes the top spot! Barrass fans might argue he’s been hard done by as well (congrats to the Hawks on what looks like a stellar signing on paper).</p>
+<p>There’s probably a whole other blog needed to explain why two Eagles players rank 1st and 2nd in key defender stats despite their team’s overall defensive struggles—but we’ll save that for another day.</p>
+<p>Anyway, while the evidence shows that Weitering probably earned his blazer, ranking 5th overall in these metrics, the data suggests that Luke Ryan is statistically a much weaker player in the key defender role. He might count himself incredibly lucky to have snagged that All-Australian spot, especially with Andrews outperforming him in most key metrics.</p>
+<p>Sorry, Freo fans—nothing personal against Luke Ryan, but the stats (mostly) don’t lie.</p>
+<p>If you made it this far, thanks for reading. You’re welcome to send me your thoughts if you wish (hopefully not abuse!).</p>
+<p>And if you have any angles you’d think worthwhile exploring on this data, suggest it, and I’ll see if I can dig into it, if time permits.</p>
 
 
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1724752806253" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
-<a href="./posts/2024-08-27-first-post/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<div class="card-text listing-description">
-Why hello there!
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
+</section>
 
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1725107166872" data-listing-reading-time-sort="6" data-listing-word-count-sort="1040">
-<a href="./posts/2024-08-31-harris-andrews/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="posts/2024-08-31-harris-andrews/afl_all_australian_2024.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Approach
-</h5>
-<div class="card-text listing-description">
-As a die-hard Brisbane Lions supporter and an extreme data enthusiast, I understand that ingrained bias can distort perspectives, but data often provides comfort and clarity.
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
