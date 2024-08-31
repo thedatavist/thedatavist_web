@@ -1,6 +1,6 @@
 ---
 title: "Was Harris Andrews Robbed?"
-description: "Post description"
+description: "Did AFL Key Defender Harris Andrews unfairly miss out on an All Australian jacket in 2024?"
 author: "Darragh Murray"
 date: "31/08/2024"
 categories:

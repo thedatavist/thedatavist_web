@@ -78,9 +78,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -173,7 +173,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="AFL">AFL <span class="quarto-category-count">(1)</span></div><div class="category" data-category="analysis">analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="data visualisation">data visualisation <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -219,20 +219,34 @@ Why hello there!
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1725107166872" data-listing-reading-time-sort="6" data-listing-word-count-sort="1040">
+<div class="g-col-1" data-index="1" data-categories="AFL,analysis,data visualisation" data-listing-date-sort="1783432800000" data-listing-file-modified-sort="1725107523710" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1040">
 <a href="./posts/2024-08-31-harris-andrews/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="posts/2024-08-31-harris-andrews/afl_all_australian_2024.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-Approach
+Was Harris Andrews Robbed?
 </h5>
-<div class="card-text listing-description">
-As a die-hard Brisbane Lions supporter and an extreme data enthusiast, I understand that ingrained bias can distort perspectives, but data often provides comfort and clarity.
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('AFL'); return false;">
+AFL
 </div>
-<div class="card-attribution card-text-small start">
+<div class="listing-category" onclick="window.quartoListingCategory('analysis'); return false;">
+analysis
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('data visualisation'); return false;">
+data visualisation
+</div>
+</div>
+<div class="card-text listing-description">
+Did AFL Key Defender Harris Andrews unfairly miss out on an All Australian jacket in 2024?
+</div>
+<div class="card-attribution card-text-small justify">
 <div class="listing-author">
-
+Darragh Murray
+</div>
+<div class="listing-date">
+Jul 8, 2026
 </div>
 </div>
 </div>

@@ -2,6 +2,4 @@
 title: "thedatavist"
 ---
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+I understand, there isn't much here. I only committed to my website repo in late August 2024, but more will come soon, I promise!
