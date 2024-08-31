@@ -1,3 +1,14 @@
+---
+title: "Was Harris Andrews Robbed?"
+description: "Post description"
+author: "Darragh Murray"
+date: "31/08/2024"
+categories:
+  - AFL
+  - analysis
+  - data visualisation
+---
+
 As a die-hard Brisbane Lions supporter and an extreme data enthusiast, I understand that ingrained bias can distort perspectives, but data often provides comfort and clarity.
 
 However, anyone who watched the Brisbane Lions' 2024 matches could not ignore that the team's performance would have been far worse without the heroics of key defender and co-captain **Harris Andrews**.
