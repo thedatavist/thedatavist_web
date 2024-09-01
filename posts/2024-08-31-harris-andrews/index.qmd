@@ -1,8 +1,8 @@
 ---
 title: "Was Harris Andrews Robbed?"
-description: "Did AFL Key Defender Harris Andrews unfairly miss out on an All Australian jacket in 2024?"
+description: "Did AFL Key Defender Harris Andrews unfairly miss out on an All Australian blazer in 2024?"
 author: "Darragh Murray"
-date: "31/08/2024"
+date: "2024-08-31"
 categories:
   - AFL
   - analysis
