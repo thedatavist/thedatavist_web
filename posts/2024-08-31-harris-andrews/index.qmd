@@ -13,7 +13,7 @@ As a die-hard Brisbane Lions supporter and an extreme data enthusiast, I underst
 
 However, anyone who watched the Brisbane Lions' 2024 matches could not ignore that the team's performance would have been far worse without the heroics of key defender and co-captain **Harris Andrews**.
 
-Therefore, it was shocking when the AFL left him out of the All-Australian team announced on August 29. Many considered him an absolute lock for the team.
+Therefore, it was somewhat shocking when the selectors left him out of the All-Australian team announced on August 29. Many considered him an absolute lock for the team.
 
 ![2024 All Australian Team | Credit: AFL Photos](afl_all_australian_2024.png)
 
@@ -23,7 +23,7 @@ All great players, no doubt, but were they better than Harris Andrews this year?
 
 Driven by frustration, I turned to uncovering the cold, hard facts, determined to prove that the selectors made a huge mistake by excluding the Lions' defensive talisman from the team for the second consecutive year.
 
-I sought to understand whether Harris Andrews was truly robbed of an All-Australian jersey, as many, especially Lions fans, claimed. After analysing the key statistical categories for a key defender, I am confident that Harris was indeed unfairly overlooked.
+I sought to understand whether Harris Andrews was truly robbed of an All-Australian jersey, as many, especially Lions fans, claimed. After analysing the key statistical categories for a key defender, I am convinced that Andrews was very unfortunate to miss out.
 
 But let’s see how Andrews’ season compares to his defensive peers by the numbers.
 
@@ -89,7 +89,7 @@ One percenters capture all other defensive actions in an AFL match that are chal
 
 In 2024, Andrews once again proved to be among the best, ranking 3rd overall with nearly 8.1 per game. Weitering also made the top 10 with 6.71 per game. McGovern and Ryan were more middle of the pack, ranking 20th and 31st, respectively.
 
-## Overall Rank
+## Overall Rankings
 
 By now, you probably see where this analysis is heading.
 
@@ -97,14 +97,29 @@ But for clarity's sake, here’s a highlight table showing the rank positions of
 
 ![Overall Rankings | Credit: TheDatavist](overall.png)
 
-
 As you can see, Jeremy McGovern and Harris Andrews average out at 2nd and 3rd, respectively. Interestingly, McGovern’s teammate Tom Barrass takes the top spot! Barrass fans might argue he’s been hard done by as well (if the Hawks can nab him, he's looking like a HUGE signing).
 
-There’s probably a whole other blog needed to explain why two Eagles players rank 1st and 2nd in key defender stats despite their team’s overall defensive struggles—but we’ll save that for another day.
+There’s probably a whole other blog needed to explain why two Eagles players rank 1st and 2nd in key defender stats despite their team’s overall defensive struggles — my gut feel on this is that they simply have far more opportunity to intercept and spoil - but we’ll save that for another day.
 
-Anyway, while the evidence shows that Weitering probably earned his blazer, ranking 5th overall in these metrics, the data suggests that Luke Ryan is statistically a much weaker player in the key defender role. He might count himself incredibly lucky to have snagged that All-Australian spot, especially with Andrews outperforming him in most key metrics.
+## Further Analysis
 
-Sorry, Freo fans—nothing personal against Luke Ryan, but the stats (mostly) don’t lie.
+So we can probably safefly say that Andrews was at least as good, possibly better, than many of those key defenders selected in the All-Australian during 2024. But if you were convinced enough to slot him in, who would miss out?
+
+Lets first consider **Weitering**. Everyone knows he's an absolute defensive gun, but he in the metrics we're tracking above, he's relatively weaker than both McGovern and Andrews. But, as we know, Weitering's strength is one on one contests - which according to Wheelo, Weitering leads the league at an only **11%** loss rate.
+
+![One-on-One Contest Loss Percentage | Credit: TheDatavist](one_on_one_percent_loss.png)
+
+But Andrews is no slouch in this department either, with a marginally worse loss rate of **14%**. Coupled with the upside of being relatively better in in other key defensive statistics, I'd probably be personally taking Andrews over Weitering - but its a close call.
+
+But what about **Luke Ryan**? While arguably Ryan is not a key defender at all (rather, he's a medium defender playing tall), it's *probably* unfair to compare him to the likes of McGovern, Weitering and Andrews. 
+
+That's why he's so much poorer in this select batch of statistics compared to the others. He is, however, significantly ahead of Andrews in terms of Rebound 50s - but McGovern is pretty close. 
+
+Without turning this post into a thesis length exploration of these statistics, I'd put forward that the AA team should have included Weitering, McGovern and **Andrews**. The selectors probably should have considered dropping Ryan for McGovern or swapping Weitering for Andrews - or even considered swapping Ryan in for **Blakey**.
+
+This is why I think [ESPN's 'All Australian' team](https://www.espn.com.au/afl/story/_/id/40911714/afl-espn-2024-all-australian-team-including-surprises-bolters-snubs) is a much stronger defensive unit compared to the one that was actually selected. 
+
+I remain convinced that *Harris Andrews was very hard done by at the selector's panel*, and that the panel did him a disservice for not selecting him in spite of an outstanding year. While I didn't delve into the numbers for them, Sam Collins and Barrass also have a case for not being selected, as those guys also had incredible years from a statistical point of view. 
 
 If you made it this far, thanks for reading. You're welcome to send me your thoughts if you wish (hopefully not abuse!). 
 
