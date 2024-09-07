@@ -16,7 +16,9 @@ The results threw up some interesting results – showing that typically more th
 
 This probably shouldn’t be a surprise given that the Lions have lost more finals than won during this recent stretch and typically we’ve finished high on the ladder during the regular season. 
 
-Still, let’s quickly look at some of the ratings to see who we should keep an eye on during the 2024 finals season (assuming Lions manage to play a few games). 
+## Brisbane Lions
+
+Let’s quickly look at some of the ratings to see who we should keep an eye on during the 2024 finals season (assuming Lions manage to play a few games). 
 
 ![Who lifts for the Lions?](lions.png)
 
@@ -36,7 +38,7 @@ One quirk of the data seems to be Conor McKenna, who generally performs quite we
 
 With the game tonight being huge for the Lions, lets hope a few of our high impact players buck their finals trends and perform well to get the team over the line. I'm looking directly at you Cam Rayner.
 
-## Blues
+## Carlton Blues
 
 Given that I've looked at one side of the dime for this match, I thought it might be interesting to look at how our opposition has typically performed in finals recently. 
 
