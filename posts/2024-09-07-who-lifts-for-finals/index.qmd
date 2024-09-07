@@ -1,0 +1,61 @@
+---
+title: Who lifts for footy finals?
+description: Ahead of the elimination final between the Brisbane Lions and Carlton Blues, I examine which players lift (or drop) in finals games. 
+author: Darragh Murray
+date: 2024-09-07
+categories:
+  - AFL
+  - analysis
+  - data visualisation
+---
+The Brisbane Lions have played quite a few finals over the last few years, and many of the players who played at the start of our recent finals run back in 2019 are still around today. 
+
+I thought it would be interesting to examine average player ratings in regular seasons versus the average player rating throughout finals. 
+
+The results threw up some interesting results – showing that typically more than half of the players in the Lions squad for the game against the Blues,  who have played finals before, typically *underperform* relative to their regular season ratings.
+
+This probably shouldn’t be a surprise given that the Lions have lost more finals than won during this recent stretch and typically we’ve finished high on the ladder during the regular season. 
+
+Still, let’s quickly look at some of the ratings to see who we should keep an eye on during the 2024 finals season (assuming Lions manage to play a few games). 
+
+![Who lifts for the Lions?](lions.png)
+
+Let’s start with perhaps the most interesting player in the data I’ve pulled, Jaspa Fletcher. 
+
+While Fletcher has only played a handful of finals, those he has played have seen him typically far outperform his regular season effort, with a team high positive differential of +4.3 points. 
+
+On the flip side, Dayne Zorko has the biggest **negative** differential, with his finals games typically rated around -3.4 points lower than his regular season games. It will be interesting to see how he performs this finals season given his new role in which he has excelled off half back.
+
+Lachie Neale is not only our best player in terms of ratings points, but he is also clearly our best finals player, upping his already high standard by +0.6 points.
+
+Other key players in the team that tend to perform well in finals includes McCluggage and Joe Daniher.
+
+Data indicates that Hipwood is typically our biggest underperformer in finals, having the worst rating out of the players likely to feature against Carlton this coming Saturday 7 September. His performances in finals have tended to be -2 rating points lower than regular season. 
+
+One quirk of the data seems to be Conor McKenna, who generally performs quite well in finals historically, lifting +0.1 points on average. McKenna has performed relatively poorly this season, much to the frustration of Lions fans (in fact his season player rating is a miserable 4.2 average in 2024).
+
+With the game tonight being huge for the Lions, lets hope a few of our high impact players buck their finals trends and perform well to get the team over the line. I'm looking directly at you Cam Rayner.
+
+## Blues
+
+Given that I've looked at one side of the dime for this match, I thought it might be interesting to look at how our opposition has typically performed in finals recently. 
+
+The Carlton Blues have much less finals experience than the Brisbane Lions, with most players only having played in last years finals run for the baggers. Still, they had a stellar run last year, taking quite a few scalps before eventually falling short against the very team they play tonight.
+
+So it's not suprising to see that they have more players who 'lift' for finals than Brisbane, given the data is skewed by such a small sample of games. So keep that sample size at the forefront of your mind when you're reading into these charts.
+
+![Who lifts for the Blues?](blues.png)
+
+I'm not suprised that last years 'player of the finals' Sam Walsh is the number one player in finals for Carlton. He was outstanding during the series last year, performing on average **5 rating points higher** than his season player ratings aveage. I'm hoping that Fagan has some kind of plan for limiting his influence in the game later this evening. Walsh is also the highest rated finals player amongst both teams on the field tonight.
+
+You might expect Patrick Cripps to be next, but that actually isn't the case for the Blues, with the likes of Zac Williams, Tom De Koning and Adam Saad having better finals ratings compared to the Blues captain. Actually Crippa has typically underperformed (-1.6 differential) compared to his season ratings on average. 
+
+One thing that might bring some comfort is that Blues tall forward stocks in finals have not usually faired well, with Harry McKay typically dropping around -1.5 points on average compared to his season statistics. 
+
+Charlie Curnow, who actually is not in the squad tonight, actually has the biggest differential out of both teams, usually performing  a whopping -6.6 points worse than his season player rating average.
+
+Anyway, I'd probably dive deeper into some of the 'why' behind this all, but with only a few hours until the bounce, I'm going to get myself and the family ready for a night in front of the television, cheering on our team. 
+
+Oh, and if you are wondering how player ratings work, (Emlyn Breese has provided a very readble explanation over on their blog)[https://credittodubois.com/blog/worked-example-of-player-ratings-fre-v-mel-r19-2024] that is well worth a skim through. 
+
+Thanks for reading and go Lions!
