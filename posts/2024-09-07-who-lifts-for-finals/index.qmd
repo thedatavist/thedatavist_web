@@ -1,8 +1,8 @@
 ---
-title: Who lifts for footy finals?
-description: Ahead of the elimination final between the Brisbane Lions and Carlton Blues, I examine which players lift (or drop) in finals games. 
-author: Darragh Murray
-date: 2024-09-07
+title: "Who lifts for footy finals?"
+description: "Ahead of the elimination final between the Brisbane Lions and Carlton Blues, I examine which players lift (or drop) in finals games." 
+author: "Darragh Murray"
+date: "2024-09-07"
 categories:
   - AFL
   - analysis
