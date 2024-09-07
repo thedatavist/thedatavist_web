@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Darragh Murray">
+<meta name="dcterms.date" content="2024-09-07">
+<meta name="description" content="Ahead of the elimination final between the Brisbane Lions and Carlton Blues, I examine which players lift (or drop) in finals games.">
 
-<title>Datavist Blog – thedatavist</title>
+<title>Who lifts for footy finals? – thedatavist</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +26,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,77 +69,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">thedatavist</span>
     </a>
   </div>
@@ -149,15 +92,15 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./posts.html" aria-current="page"> 
+    <a class="nav-link" href="../../posts.html"> 
 <span class="menu-text">Datavist Blog</span></a>
   </li>  
 </ul>
@@ -168,130 +111,105 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Who lifts for footy finals?</h1>
+                  <div>
+        <div class="description">
+          Ahead of the elimination final between the Brisbane Lions and Carlton Blues, I examine which players lift (or drop) in finals games.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">AFL</div>
+                <div class="quarto-category">analysis</div>
+                <div class="quarto-category">data visualisation</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Darragh Murray </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">September 7, 2024</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="AFL">AFL <span class="quarto-category-count">(2)</span></div><div class="category" data-category="analysis">analysis <span class="quarto-category-count">(2)</span></div><div class="category" data-category="data visualisation">data visualisation <span class="quarto-category-count">(2)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#blues" id="toc-blues" class="nav-link active" data-scroll-target="#blues">Blues</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Datavist Blog</h1>
-</div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<p>The Brisbane Lions have played quite a few finals over the last few years, and many of the players who played at the start of our recent finals run back in 2019 are still around today.</p>
+<p>I thought it would be interesting to examine average player ratings in regular seasons versus the average player rating throughout finals.</p>
+<p>The results threw up some interesting results – showing that typically more than half of the players in the Lions squad for the game against the Blues, who have played finals before, typically <em>underperform</em> relative to their regular season ratings.</p>
+<p>This probably shouldn’t be a surprise given that the Lions have lost more finals than won during this recent stretch and typically we’ve finished high on the ladder during the regular season.</p>
+<p>Still, let’s quickly look at some of the ratings to see who we should keep an eye on during the 2024 finals season (assuming Lions manage to play a few games).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="lions.png" class="img-fluid figure-img"></p>
+<figcaption>Who lifts for the Lions?</figcaption>
+</figure>
+</div>
+<p>Let’s start with perhaps the most interesting player in the data I’ve pulled, Jaspa Fletcher.</p>
+<p>While Fletcher has only played a handful of finals, those he has played have seen him typically far outperform his regular season effort, with a team high positive differential of +4.3 points.</p>
+<p>On the flip side, Dayne Zorko has the biggest <strong>negative</strong> differential, with his finals games typically rated around -3.4 points lower than his regular season games. It will be interesting to see how he performs this finals season given his new role in which he has excelled off half back.</p>
+<p>Lachie Neale is not only our best player in terms of ratings points, but he is also clearly our best finals player, upping his already high standard by +0.6 points.</p>
+<p>Other key players in the team that tend to perform well in finals includes McCluggage and Joe Daniher.</p>
+<p>Data indicates that Hipwood is typically our biggest underperformer in finals, having the worst rating out of the players likely to feature against Carlton this coming Saturday 7 September. His performances in finals have tended to be -2 rating points lower than regular season.</p>
+<p>One quirk of the data seems to be Conor McKenna, who generally performs quite well in finals historically, lifting +0.1 points on average. McKenna has performed relatively poorly this season, much to the frustration of Lions fans (in fact his season player rating is a miserable 4.2 average in 2024).</p>
+<p>With the game tonight being huge for the Lions, lets hope a few of our high impact players buck their finals trends and perform well to get the team over the line. I’m looking directly at you Cam Rayner.</p>
+<section id="blues" class="level2">
+<h2 class="anchored" data-anchor-id="blues">Blues</h2>
+<p>Given that I’ve looked at one side of the dime for this match, I thought it might be interesting to look at how our opposition has typically performed in finals recently.</p>
+<p>The Carlton Blues have much less finals experience than the Brisbane Lions, with most players only having played in last years finals run for the baggers. Still, they had a stellar run last year, taking quite a few scalps before eventually falling short against the very team they play tonight.</p>
+<p>So it’s not suprising to see that they have more players who ‘lift’ for finals than Brisbane, given the data is skewed by such a small sample of games. So keep that sample size at the forefront of your mind when you’re reading into these charts.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="blues.png" class="img-fluid figure-img"></p>
+<figcaption>Who lifts for the Blues?</figcaption>
+</figure>
+</div>
+<p>I’m not suprised that last years ‘player of the finals’ Sam Walsh is the number one player in finals for Carlton. He was outstanding during the series last year, performing on average <strong>5 rating points higher</strong> than his season player ratings aveage. I’m hoping that Fagan has some kind of plan for limiting his influence in the game later this evening. Walsh is also the highest rated finals player amongst both teams on the field tonight.</p>
+<p>You might expect Patrick Cripps to be next, but that actually isn’t the case for the Blues, with the likes of Zac Williams, Tom De Koning and Adam Saad having better finals ratings compared to the Blues captain. Actually Crippa has typically underperformed (-1.6 differential) compared to his season ratings on average.</p>
+<p>One thing that might bring some comfort is that Blues tall forward stocks in finals have not usually faired well, with Harry McKay typically dropping around -1.5 points on average compared to his season statistics.</p>
+<p>Charlie Curnow, who actually is not in the squad tonight, actually has the biggest differential out of both teams, usually performing a whopping -6.6 points worse than his season player rating average.</p>
+<p>Anyway, I’d probably dive deeper into some of the ‘why’ behind this all, but with only a few hours until the bounce, I’m going to get myself and the family ready for a night in front of the television, cheering on our team.</p>
+<p>Oh, and if you are wondering how player ratings work, (Emlyn Breese has provided a very readble explanation over on their blog)[https://credittodubois.com/blog/worked-example-of-player-ratings-fre-v-mel-r19-2024] that is well worth a skim through.</p>
+<p>Thanks for reading and go Lions!</p>
 
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1724752806253" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
-<a href="./posts/2024-08-27-first-post/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<div class="card-text listing-description">
-Why hello there!
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
 
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="AFL,analysis,data visualisation" data-listing-date-sort="1725631200000" data-listing-file-modified-sort="1725687773787" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="838">
-<a href="./posts/2024-09-07-who-lifts-for-finals/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="posts/2024-09-07-who-lifts-for-finals/lions.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Who lifts for footy finals?
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('AFL'); return false;">
-AFL
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('analysis'); return false;">
-analysis
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('data visualisation'); return false;">
-data visualisation
-</div>
-</div>
-<div class="card-text listing-description">
-Ahead of the elimination final between the Brisbane Lions and Carlton Blues, I examine which players lift (or drop) in finals games.
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Darragh Murray
-</div>
-<div class="listing-date">
-Sep 7, 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="AFL,analysis,data visualisation" data-listing-date-sort="1725026400000" data-listing-file-modified-sort="1725687790807" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1349">
-<a href="./posts/2024-08-31-harris-andrews/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="posts/2024-08-31-harris-andrews/afl_all_australian_2024.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Should Andrews have had a place in the All-Australian?
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('AFL'); return false;">
-AFL
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('analysis'); return false;">
-analysis
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('data visualisation'); return false;">
-data visualisation
-</div>
-</div>
-<div class="card-text listing-description">
-Did AFL Key Defender Harris Andrews unfairly miss out on an All Australian blazer in 2024?
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Darragh Murray
-</div>
-<div class="listing-date">
-Aug 31, 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

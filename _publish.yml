@@ -1,0 +1,4 @@
+- source: project
+  netlify:
+    - id: 26130858-9433-46b0-bacd-f82d6bd89204
+      url: 'https://sprightly-medovik-36ce52.netlify.app'

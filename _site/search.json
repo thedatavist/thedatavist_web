@@ -1,10 +1,10 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "Datavist Blog",
     "section": "",
-    "text": "Why, hello there!\nThe Datavist is a collection of ideas, thoughts and shared learnings about the data profession and related miscellanry written by Darragh Murray, a data analytics and insights professional based in Brisbane, Australia.\nI’ve been working in the data or data-adjacent field for over twenty years now, and I’d like to think I have some idea of what’s what, even if I consider myself a bit of a jack of all trades in the data profession.\nI also occsaionally publish data-driven analysis in areas where I’m particularly passionate - such as the study of history, international relations and AFL!\nThis site is built in Quarto, powered by GitHub and published via Netlify."
+    "text": "Who lifts for footy finals?\n\n\n\nAFL\n\n\nanalysis\n\n\ndata visualisation\n\n\n\nAhead of the elimination final between the Brisbane Lions and Carlton Blues, I examine which players lift (or drop) in finals games.\n\n\n\nDarragh Murray\n\n\nSep 7, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nShould Andrews have had a place in the All-Australian?\n\n\n\nAFL\n\n\nanalysis\n\n\ndata visualisation\n\n\n\nDid AFL Key Defender Harris Andrews unfairly miss out on an All Australian blazer in 2024?\n\n\n\nDarragh Murray\n\n\nAug 31, 2024\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -14,20 +14,6 @@
     "text": "I understand, there isn’t much here. I only committed to my website repo in late August 2024, but more will come soon, I promise!"
   },
   {
-    "objectID": "posts/posts.html",
-    "href": "posts/posts.html",
-    "title": "Datavist Blog",
-    "section": "",
-    "text": "No matching items"
-  },
-  {
-    "objectID": "posts.html",
-    "href": "posts.html",
-    "title": "Datavist Blog",
-    "section": "",
-    "text": "Was Harris Andrews Robbed?\n\n\n\nAFL\n\n\nanalysis\n\n\ndata visualisation\n\n\n\nDid AFL Key Defender Harris Andrews unfairly miss out on an All Australian jacket in 2024?\n\n\n\nDarragh Murray\n\n\nJul 8, 2026\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "posts/2024-08-27-first-post/index.html",
     "href": "posts/2024-08-27-first-post/index.html",
     "title": "thedatavist",
@@ -35,73 +21,87 @@
     "text": "Why hello there!"
   },
   {
+    "objectID": "posts/2024-09-07-who-lifts-for-finals/index.html",
+    "href": "posts/2024-09-07-who-lifts-for-finals/index.html",
+    "title": "Who lifts for footy finals?",
+    "section": "",
+    "text": "The Brisbane Lions have played quite a few finals over the last few years, and many of the players who played at the start of our recent finals run back in 2019 are still around today.\nI thought it would be interesting to examine average player ratings in regular seasons versus the average player rating throughout finals.\nThe results threw up some interesting results – showing that typically more than half of the players in the Lions squad for the game against the Blues, who have played finals before, typically underperform relative to their regular season ratings.\nThis probably shouldn’t be a surprise given that the Lions have lost more finals than won during this recent stretch and typically we’ve finished high on the ladder during the regular season.\nStill, let’s quickly look at some of the ratings to see who we should keep an eye on during the 2024 finals season (assuming Lions manage to play a few games).\nLet’s start with perhaps the most interesting player in the data I’ve pulled, Jaspa Fletcher.\nWhile Fletcher has only played a handful of finals, those he has played have seen him typically far outperform his regular season effort, with a team high positive differential of +4.3 points.\nOn the flip side, Dayne Zorko has the biggest negative differential, with his finals games typically rated around -3.4 points lower than his regular season games. It will be interesting to see how he performs this finals season given his new role in which he has excelled off half back.\nLachie Neale is not only our best player in terms of ratings points, but he is also clearly our best finals player, upping his already high standard by +0.6 points.\nOther key players in the team that tend to perform well in finals includes McCluggage and Joe Daniher.\nData indicates that Hipwood is typically our biggest underperformer in finals, having the worst rating out of the players likely to feature against Carlton this coming Saturday 7 September. His performances in finals have tended to be -2 rating points lower than regular season.\nOne quirk of the data seems to be Conor McKenna, who generally performs quite well in finals historically, lifting +0.1 points on average. McKenna has performed relatively poorly this season, much to the frustration of Lions fans (in fact his season player rating is a miserable 4.2 average in 2024).\nWith the game tonight being huge for the Lions, lets hope a few of our high impact players buck their finals trends and perform well to get the team over the line. I’m looking directly at you Cam Rayner."
+  },
+  {
+    "objectID": "posts/2024-09-07-who-lifts-for-finals/index.html#blues",
+    "href": "posts/2024-09-07-who-lifts-for-finals/index.html#blues",
+    "title": "Who lifts for footy finals?",
+    "section": "Blues",
+    "text": "Blues\nGiven that I’ve looked at one side of the dime for this match, I thought it might be interesting to look at how our opposition has typically performed in finals recently.\nThe Carlton Blues have much less finals experience than the Brisbane Lions, with most players only having played in last years finals run for the baggers. Still, they had a stellar run last year, taking quite a few scalps before eventually falling short against the very team they play tonight.\nSo it’s not suprising to see that they have more players who ‘lift’ for finals than Brisbane, given the data is skewed by such a small sample of games. So keep that sample size at the forefront of your mind when you’re reading into these charts.\n\n\n\nWho lifts for the Blues?\n\n\nI’m not suprised that last years ‘player of the finals’ Sam Walsh is the number one player in finals for Carlton. He was outstanding during the series last year, performing on average 5 rating points higher than his season player ratings aveage. I’m hoping that Fagan has some kind of plan for limiting his influence in the game later this evening. Walsh is also the highest rated finals player amongst both teams on the field tonight.\nYou might expect Patrick Cripps to be next, but that actually isn’t the case for the Blues, with the likes of Zac Williams, Tom De Koning and Adam Saad having better finals ratings compared to the Blues captain. Actually Crippa has typically underperformed (-1.6 differential) compared to his season ratings on average.\nOne thing that might bring some comfort is that Blues tall forward stocks in finals have not usually faired well, with Harry McKay typically dropping around -1.5 points on average compared to his season statistics.\nCharlie Curnow, who actually is not in the squad tonight, actually has the biggest differential out of both teams, usually performing a whopping -6.6 points worse than his season player rating average.\nAnyway, I’d probably dive deeper into some of the ‘why’ behind this all, but with only a few hours until the bounce, I’m going to get myself and the family ready for a night in front of the television, cheering on our team.\nOh, and if you are wondering how player ratings work, (Emlyn Breese has provided a very readble explanation over on their blog)[https://credittodubois.com/blog/worked-example-of-player-ratings-fre-v-mel-r19-2024] that is well worth a skim through.\nThanks for reading and go Lions!"
+  },
+  {
     "objectID": "posts/2024-08-31-harris-andrews/index.html",
     "href": "posts/2024-08-31-harris-andrews/index.html",
-    "title": "Was Harris Andrews Robbed?",
+    "title": "Should Andrews have had a place in the All-Australian?",
     "section": "",
     "text": "As a die-hard Brisbane Lions supporter and an extreme data enthusiast, I understand that ingrained bias can distort perspectives, but data often provides comfort and clarity.\nHowever, anyone who watched the Brisbane Lions’ 2024 matches could not ignore that the team’s performance would have been far worse without the heroics of key defender and co-captain Harris Andrews.\nTherefore, it was somewhat shocking when the selectors left him out of the All-Australian team announced on August 29. Many considered him an absolute lock for the team.\nInstead, the key defensive positions went to Jeremy McGovern from the West Coast Eagles, Jacob Weitering from the Carlton Blues, and Luke Ryan from the Fremantle Dockers.\nAll great players, no doubt, but were they better than Harris Andrews this year?\nDriven by frustration, I turned to uncovering the cold, hard facts, determined to prove that the selectors made a huge mistake by excluding the Lions’ defensive talisman from the team for the second consecutive year.\nI sought to understand whether Harris Andrews was truly robbed of an All-Australian jersey, as many, especially Lions fans, claimed. After analysing the key statistical categories for a key defender, I am convinced that Andrews was very unfortunate to miss out.\nBut let’s see how Andrews’ season compares to his defensive peers by the numbers."
   },
   {
     "objectID": "posts/2024-08-31-harris-andrews/index.html#approach",
     "href": "posts/2024-08-31-harris-andrews/index.html#approach",
-    "title": "Was Harris Andrews Robbed?",
+    "title": "Should Andrews have had a place in the All-Australian?",
     "section": "Approach",
     "text": "Approach\nTo understand, I went straight to the 2024 season data and pulled key metrics that underpin the role of a key defender in Australian Rules Football.\nThese metrics include:\n\nIntercepts\nContested Marks\nSpoils\nRebound 50s\nOne percenters\n\nThese data were pulled via the fitzRoy API, which taps into a wide range of AFL data sources including Footywire.\nBut why these categories?\nPrimarily because many sites that track player characteristics (for example, Stats Insiders) use similar categories to define a key defender. There might be some debate about whether these are the right ones, but I’ve settled on these for the time being.\nSince many AFL players occasionally take on defensive roles (e.g., Nick Daicos playing off half-back early in 2024), I filtered the data to include only those who played defensive positions for at least 80% of the season.\nIn most cases, I highlighted the main players in this analysis: Andrews, McGovern, Weitering, and Ryan."
   },
   {
     "objectID": "posts/2024-08-31-harris-andrews/index.html#intercepts",
     "href": "posts/2024-08-31-harris-andrews/index.html#intercepts",
-    "title": "Was Harris Andrews Robbed?",
+    "title": "Should Andrews have had a place in the All-Australian?",
     "section": "Intercepts",
     "text": "Intercepts\nIntercepts involve gaining possession of the ball by cutting off an opposition pass, kick, or handball during play. The chart below ranks all relevant AFL players by their average intercepts per game throughout the season (minimum 18 games as a defender).\n\n\n\nIntercepts | Credit: TheDatavist\n\n\nIt’s clear that McGovern leads this group with nearly 8 intercepts per game, ranking 4th in the AFL. Andrews follows closely, averaging just over 7.5 per game and ranking 8th. Neither Weitering nor Ryan made the top ten, with Ryan ranking 27th with 5.83 intercepts per game. For reference, Sam Collins holds the top spot, averaging 8 intercepts per game."
   },
   {
     "objectID": "posts/2024-08-31-harris-andrews/index.html#contested-marks",
     "href": "posts/2024-08-31-harris-andrews/index.html#contested-marks",
-    "title": "Was Harris Andrews Robbed?",
+    "title": "Should Andrews have had a place in the All-Australian?",
     "section": "Contested Marks",
     "text": "Contested Marks\nContested marks, or marking the ball in a contested situation, is another crucial attribute of top key defenders. As shown in the chart below, Harris Andrews clearly led the league in this skill in 2024.\n\n\n\nContested Marks | Credit: TheDatavist\n\n\nAndrews averaged over 2 contested marks per game, making him the top defender in the AFL for this statistic, with a 0.5 mark per game lead over second place, Tom Barrass. Both McGovern and Weitering also performed well, ranking 4th and 5th, respectively. However, Ryan lagged behind, averaging only 0.4 contested marks per game, ranking 36th."
   },
   {
     "objectID": "posts/2024-08-31-harris-andrews/index.html#spoils",
     "href": "posts/2024-08-31-harris-andrews/index.html#spoils",
-    "title": "Was Harris Andrews Robbed?",
+    "title": "Should Andrews have had a place in the All-Australian?",
     "section": "Spoils",
     "text": "Spoils\nPreventing the opposition from marking the ball, typically through punching or knocking it away, known as spoiling, is a crucial skill for top AFL teams, often executed by key defenders. Harris Andrews excelled in this area during the 2024 season.\n\n\n\nSpoils | Credit: TheDatavist\n\n\nAndrews ranked 2nd behind Darcy Moore, averaging an impressive 7.4 spoils per match. In this category, the group is more spread out, with Weitering ranking in the top 10, while McGovern and Ryan performed comparatively worse."
   },
   {
     "objectID": "posts/2024-08-31-harris-andrews/index.html#rebound-50s",
     "href": "posts/2024-08-31-harris-andrews/index.html#rebound-50s",
-    "title": "Was Harris Andrews Robbed?",
+    "title": "Should Andrews have had a place in the All-Australian?",
     "section": "Rebound 50s",
     "text": "Rebound 50s\nRebound 50s involves moving the ball from the defensive 50 zone into the midfield and beyond, and this is one area where Harris Andrews falls short compared to his All-Australian peers.\n\n\n\nRebound 50s | Credit: TheDatavist\n\n\nConversely, Luke Ryan excels in this category, leading the group with nearly 7.4 rebound 50s per game. McGovern closely follows with 7.32 per game. Andrews, and to a lesser extent Weitering, perform poorly in this area, with Andrews averaging just under 3 per game, ranking 44th."
   },
   {
     "objectID": "posts/2024-08-31-harris-andrews/index.html#one-percenters",
     "href": "posts/2024-08-31-harris-andrews/index.html#one-percenters",
-    "title": "Was Harris Andrews Robbed?",
+    "title": "Should Andrews have had a place in the All-Australian?",
     "section": "One Percenters",
     "text": "One Percenters\nOne percenters capture all other defensive actions in an AFL match that are challenging to track individually, such as shepherds, smothers, and blocks. These actions are crucial to key defending and are often used to gauge a defender’s performance.\n\n\n\nOne Percenters | Credit: TheDatavist\n\n\nIn 2024, Andrews once again proved to be among the best, ranking 3rd overall with nearly 8.1 per game. Weitering also made the top 10 with 6.71 per game. McGovern and Ryan were more middle of the pack, ranking 20th and 31st, respectively."
   },
   {
-    "objectID": "posts/2024-08-31-harris-andrews/index.html#overall-rank",
-    "href": "posts/2024-08-31-harris-andrews/index.html#overall-rank",
-    "title": "Was Harris Andrews Robbed?",
-    "section": "Overall Rank",
-    "text": "Overall Rank\nBy now, you probably see where this analysis is heading.\nBut for clarity’s sake, here’s a highlight table showing the rank positions of our chosen key defenders in the metrics that really matter for their role.\n\n\n\nOverall Rankings | Credit: TheDatavist\n\n\nAs you can see, Jeremy McGovern and Harris Andrews average out at 2nd and 3rd, respectively. Interestingly, McGovern’s teammate Tom Barrass takes the top spot! Barrass fans might argue he’s been hard done by as well (congrats to the Hawks on what looks like a stellar signing on paper).\nThere’s probably a whole other blog needed to explain why two Eagles players rank 1st and 2nd in key defender stats despite their team’s overall defensive struggles—but we’ll save that for another day.\nAnyway, while the evidence shows that Weitering probably earned his blazer, ranking 5th overall in these metrics, the data suggests that Luke Ryan is statistically a much weaker player in the key defender role. He might count himself incredibly lucky to have snagged that All-Australian spot, especially with Andrews outperforming him in most key metrics.\nSorry, Freo fans—nothing personal against Luke Ryan, but the stats (mostly) don’t lie.\nIf you made it this far, thanks for reading. You’re welcome to send me your thoughts if you wish (hopefully not abuse!).\nAnd if you have any angles you’d think worthwhile exploring on this data, suggest it, and I’ll see if I can dig into it, if time permits."
-  },
-  {
     "objectID": "posts/2024-08-31-harris-andrews/index.html#overall-rankings",
     "href": "posts/2024-08-31-harris-andrews/index.html#overall-rankings",
-    "title": "Was Harris Andrews Robbed?",
+    "title": "Should Andrews have had a place in the All-Australian?",
     "section": "Overall Rankings",
     "text": "Overall Rankings\nBy now, you probably see where this analysis is heading.\nBut for clarity’s sake, here’s a highlight table showing the rank positions of our chosen key defenders in the metrics that really matter for their role.\n\n\n\nOverall Rankings | Credit: TheDatavist\n\n\nAs you can see, Jeremy McGovern and Harris Andrews average out at 2nd and 3rd, respectively. Interestingly, McGovern’s teammate Tom Barrass takes the top spot! Barrass fans might argue he’s been hard done by as well (if the Hawks can nab him, he’s looking like a HUGE signing).\nThere’s probably a whole other blog needed to explain why two Eagles players rank 1st and 2nd in key defender stats despite their team’s overall defensive struggles — my gut feel on this is that they simply have far more opportunity to intercept and spoil - but we’ll save that for another day."
   },
   {
     "objectID": "posts/2024-08-31-harris-andrews/index.html#further-analysis",
     "href": "posts/2024-08-31-harris-andrews/index.html#further-analysis",
-    "title": "Was Harris Andrews Robbed?",
+    "title": "Should Andrews have had a place in the All-Australian?",
     "section": "Further Analysis",
     "text": "Further Analysis\nSo we can probably safefly say that Andrews was at least as good, possibly better, than many of those key defenders selected in the All-Australian during 2024. But if you were convinced enough to slot him in, who would miss out?\nLets first consider Weitering. Everyone knows he’s an absolute defensive gun, but he in the metrics we’re tracking above, he’s relatively weaker than both McGovern and Andrews. But, as we know, Weitering’s strength is one on one contests - which according to Wheelo, Weitering leads the league at an only 11% loss rate.\n\n\n\nOne-on-One Contest Loss Percentage | Credit: TheDatavist\n\n\nBut Andrews is no slouch in this department either, with a marginally worse loss rate of 14%. Coupled with the upside of being relatively better in in other key defensive statistics, I’d probably be personally taking Andrews over Weitering - but its a close call.\nBut what about Luke Ryan? While arguably Ryan is not a key defender at all (rather, he’s a medium defender playing tall), it’s probably unfair to compare him to the likes of McGovern, Weitering and Andrews.\nThat’s why he’s so much poorer in this select batch of statistics compared to the others. He is, however, significantly ahead of Andrews in terms of Rebound 50s - but McGovern is pretty close.\nWithout turning this post into a thesis length exploration of these statistics, I’d put forward that the AA team should have included Weitering, McGovern and Andrews. The selectors probably should have considered dropping Ryan for McGovern or swapping Weitering for Andrews - or even considered swapping Ryan in for Blakey.\nThis is why I think ESPN’s ‘All Australian’ team is a much stronger defensive unit compared to the one that was actually selected.\nI remain convinced that Harris Andrews was very hard done by at the selector’s panel, and that the panel did him a disservice for not selecting him in spite of an outstanding year. While I didn’t delve into the numbers for them, Sam Collins and Barrass also have a case for not being selected, as those guys also had incredible years from a statistical point of view.\nIf you made it this far, thanks for reading. You’re welcome to send me your thoughts if you wish (hopefully not abuse!).\nAnd if you have any angles you’d think worthwhile exploring on this data, suggest it, and I’ll see if I can dig into it, if time permits."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Why, hello there!\nThe Datavist is a collection of ideas, thoughts and shared learnings about the data profession and related miscellanry written by Darragh Murray, a data analytics and insights professional based in Brisbane, Australia.\nI’ve been working in the data or data-adjacent field for over twenty years now, and I’d like to think I have some idea of what’s what, even if I consider myself a bit of a jack of all trades in the data profession.\nI also occsaionally publish data-driven analysis in areas where I’m particularly passionate - such as the study of history, international relations and AFL!\nThis site is built in Quarto, powered by GitHub and published via Netlify."
   }
 ]
