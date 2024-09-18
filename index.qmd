@@ -1,5 +1,22 @@
 ---
 title: "thedatavist"
+
+subtitle: "
+Data Visualisation / Insights / Footy
+"
+format:
+  lumo-html: 
+    logo: "logo.png"                             # Optional. Path to a logo displayed above the title
+    github-repo: "https://github.com/thedatavist/thedatavist_web"        # Optional. Adds a github corner at the top right
+    primary-color: "black"
+    self-contained: true
+    is-particlejs-enabled: true                  # Optional: display interactive particles in the document header
+author: Darragh Murray
+date: last-modified
+
+
 ---
 
 I understand, there isn't much here. I only committed to my website repo in late August 2024, but more will come soon, I promise!
+
+Currently testing out Yan Holtz's 'Lumo' Quarto theme!
