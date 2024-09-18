@@ -157,7 +157,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#blues" id="toc-blues" class="nav-link active" data-scroll-target="#blues">Blues</a></li>
+  <li><a href="#brisbane-lions" id="toc-brisbane-lions" class="nav-link active" data-scroll-target="#brisbane-lions">Brisbane Lions</a></li>
+  <li><a href="#carlton-blues" id="toc-carlton-blues" class="nav-link" data-scroll-target="#carlton-blues">Carlton Blues</a></li>
   </ul>
 </nav>
     </div>
@@ -172,7 +173,9 @@ ul.task-list li input[type="checkbox"] {
 <p>I thought it would be interesting to examine average player ratings in regular seasons versus the average player rating throughout finals.</p>
 <p>The results threw up some interesting results – showing that typically more than half of the players in the Lions squad for the game against the Blues, who have played finals before, typically <em>underperform</em> relative to their regular season ratings.</p>
 <p>This probably shouldn’t be a surprise given that the Lions have lost more finals than won during this recent stretch and typically we’ve finished high on the ladder during the regular season.</p>
-<p>Still, let’s quickly look at some of the ratings to see who we should keep an eye on during the 2024 finals season (assuming Lions manage to play a few games).</p>
+<section id="brisbane-lions" class="level2">
+<h2 class="anchored" data-anchor-id="brisbane-lions">Brisbane Lions</h2>
+<p>Let’s quickly look at some of the ratings to see who we should keep an eye on during the 2024 finals season (assuming Lions manage to play a few games).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="lions.png" class="img-fluid figure-img"></p>
@@ -187,8 +190,9 @@ ul.task-list li input[type="checkbox"] {
 <p>Data indicates that Hipwood is typically our biggest underperformer in finals, having the worst rating out of the players likely to feature against Carlton this coming Saturday 7 September. His performances in finals have tended to be -2 rating points lower than regular season.</p>
 <p>One quirk of the data seems to be Conor McKenna, who generally performs quite well in finals historically, lifting +0.1 points on average. McKenna has performed relatively poorly this season, much to the frustration of Lions fans (in fact his season player rating is a miserable 4.2 average in 2024).</p>
 <p>With the game tonight being huge for the Lions, lets hope a few of our high impact players buck their finals trends and perform well to get the team over the line. I’m looking directly at you Cam Rayner.</p>
-<section id="blues" class="level2">
-<h2 class="anchored" data-anchor-id="blues">Blues</h2>
+</section>
+<section id="carlton-blues" class="level2">
+<h2 class="anchored" data-anchor-id="carlton-blues">Carlton Blues</h2>
 <p>Given that I’ve looked at one side of the dime for this match, I thought it might be interesting to look at how our opposition has typically performed in finals recently.</p>
 <p>The Carlton Blues have much less finals experience than the Brisbane Lions, with most players only having played in last years finals run for the baggers. Still, they had a stellar run last year, taking quite a few scalps before eventually falling short against the very team they play tonight.</p>
 <p>So it’s not suprising to see that they have more players who ‘lift’ for finals than Brisbane, given the data is skewed by such a small sample of games. So keep that sample size at the forefront of your mind when you’re reading into these charts.</p>
@@ -302,7 +306,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/sprightly-medovik-36ce52\.netlify\.app");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
