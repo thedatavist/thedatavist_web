@@ -1,9 +1,8 @@
 ---
 title: "thedatavist"
 
-subtitle: "
-Data Visualisation / Insights / Footy
-"
+subtitle: "Data Visualisation / Insights / Footy"
+
 format:
   lumo-html: 
     logo: "logo.png"                             # Optional. Path to a logo displayed above the title
