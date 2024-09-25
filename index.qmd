@@ -17,5 +17,3 @@ date: last-modified
 ---
 
 I understand, there isn't much here. I only committed to my website repo in late August 2024, but more will come soon, I promise!
-
-Currently testing out Yan Holtz's 'Lumo' Quarto theme!
