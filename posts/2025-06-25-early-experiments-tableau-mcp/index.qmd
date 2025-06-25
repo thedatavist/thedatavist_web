@@ -139,4 +139,4 @@ Tableau itself may pivot its development strategy from adding Desktop features t
 
 It's a curious and exciting time to work in data—even with tools like Tableau. I'll continue experimenting with Tableau's MCP service to explore further possibilities.
 
-Thanks for reading!
+Thanks for reading! If you're interested in my other writing and work, you can [check out my substack](https://thedatavist.substack.com) which is more focused on issues in the data profession, or [get in touch / connect via LinkedIn](https://www.linkedin.com/in/darraghmurray/). 
