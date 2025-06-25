@@ -1,7 +1,7 @@
 ---
 title: "thedatavist"
 
-subtitle: "Data Visualisation / Insights / Footy"
+subtitle: "Analytics & Data Engineering / Data Visusalisation & BI / Data Profession"
 
 format:
   lumo-html: 
@@ -16,4 +16,4 @@ date: last-modified
 
 ---
 
-I understand, there isn't much here. I only committed to my website repo in late August 2024, but more will come soon, I promise!
+Why hello there! Welcome to my new corner of the web. Not much here, but it is coming! In the meantime, I do recommend checking out the [blog section](https://thedatavist.netlify.app/posts)!

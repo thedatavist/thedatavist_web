@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.56">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Darragh Murray">
+<meta name="dcterms.date" content="2025-06-25">
+<meta name="description" content="A hands-on walkthrough of setting up and experimenting with Tableau’s new Model Context Protocol (MCP) server to enable natural language data querying through Claude AI.">
+
+<title>Early Experiments in Tableau’s New MCP Service: Connecting AI to Business Intelligence Platforms – thedatavist</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">thedatavist</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../posts.html"> 
+<span class="menu-text">Datavist Blog</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Early Experiments in Tableau’s New MCP Service: Connecting AI to Business Intelligence Platforms</h1>
+                  <div>
+        <div class="description">
+          A hands-on walkthrough of setting up and experimenting with Tableau’s new Model Context Protocol (MCP) server to enable natural language data querying through Claude AI.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">AI</div>
+                <div class="quarto-category">MCP</div>
+                <div class="quarto-category">Tableau</div>
+                <div class="quarto-category">business intelligence</div>
+                <div class="quarto-category">data visualisation</div>
+                <div class="quarto-category">data profession</div>
+                <div class="quarto-category">Claude</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Darragh Murray </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">June 25, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-is-model-context-protocol" id="toc-what-is-model-context-protocol" class="nav-link active" data-scroll-target="#what-is-model-context-protocol">What is Model Context Protocol?</a></li>
+  <li><a href="#leveraging-tableaus-mcp-server" id="toc-leveraging-tableaus-mcp-server" class="nav-link" data-scroll-target="#leveraging-tableaus-mcp-server">Leveraging Tableau’s MCP Server</a></li>
+  <li><a href="#setting-up-tableau-cloud" id="toc-setting-up-tableau-cloud" class="nav-link" data-scroll-target="#setting-up-tableau-cloud">Setting Up Tableau Cloud</a></li>
+  <li><a href="#configuring-claude" id="toc-configuring-claude" class="nav-link" data-scroll-target="#configuring-claude">Configuring Claude</a></li>
+  <li><a href="#experimenting-with-the-server" id="toc-experimenting-with-the-server" class="nav-link" data-scroll-target="#experimenting-with-the-server">Experimenting with the Server</a></li>
+  <li><a href="#building-visualisations" id="toc-building-visualisations" class="nav-link" data-scroll-target="#building-visualisations">Building Visualisations</a></li>
+  <li><a href="#quick-reflections" id="toc-quick-reflections" class="nav-link" data-scroll-target="#quick-reflections">Quick Reflections</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<p><a href="https://thedatavist.substack.com/p/mcp-and-the-reshaping-of-data-visualisation?r=8vq88">I’ve previously written about the emergence of <strong>Model Context Protocol</strong> (MCP)</a>, arguing for its potential game changing influence on the future practice of data visualisation and business intelligence.</p>
+<p>So, I guess I wasn’t suprised when leading visual analytics tool <a href="https://github.com/tableau/tableau-mcp">Tableau released their first MCP server</a> earlier this week, providing data professionals like myself <em>“a suite of tools that make it easier for developers to build and configure AI applications that integrate with Tableau Cloud and Server.”</em></p>
+<p>Given my experience with Tableau and newfound interest in MCP, I was keen to give this service a go. And I’m pleased to report early success.</p>
+<p>I’m writing this article in a bit of a rush, covering the process I used to get it running in Anthropics’s Claude Desktop and my initial experiments using the AI application to query data stored on Tableau Cloud. I’m keen to get it out in the world and see what others think - so apologies in advance for any errors (spelling, grammatical or otherwise), it’s highly likely I’ll revise this post in the future.</p>
+<section id="what-is-model-context-protocol" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-model-context-protocol">What is Model Context Protocol?</h2>
+<p>I covered this in my <a href="https://thedatavist.substack.com/p/mcp-and-the-reshaping-of-data-visualisation?r=8vq88">original Substack post</a>, but to paraphrase: MCP is an open standard that simplifies how AI systems connect to external tools, apps, and data.</p>
+<p>Instead of needing custom connectors for every service, MCP acts as a universal layer—one protocol that can pull from anything, whether it’s a CSV, database, or business intelligence tool like Tableau.</p>
+<p>Think of it as a plug-and-play system for giving AI the context it needs to provide more relevant answers.</p>
+</section>
+<section id="leveraging-tableaus-mcp-server" class="level2">
+<h2 class="anchored" data-anchor-id="leveraging-tableaus-mcp-server">Leveraging Tableau’s MCP Server</h2>
+<p>Tableau’s plugin offers a clean, open way for AI tools like Claude to query Tableau dashboards and data using natural language—no complex API calls or coding required.</p>
+<p><a href="https://github.com/tableau/tableau-mcp">Their MCP github repo</a> provides excellent instructions and outlines key implemented features.</p>
+<p>Currently, their toolset offers several data access tools for Tableau Server or Cloud instances:</p>
+<ul>
+<li><strong>list-datasources</strong>: Retrieves a list of published data sources from a specified Tableau site (via REST API)</li>
+<li><strong>list-fields</strong>: Fetches field metadata (name, description) for the specified datasource (Metadata API)</li>
+<li><strong>query-datasources</strong>: Run a Tableau VizQL query (VDS API)</li>
+<li><strong>read-metadata</strong>: Requests metadata for the specified data source (VDS API)</li>
+</ul>
+<p>Yes, only four functions currently, but its pretty early days - and you can still do some interesting things with them. These functions are read-only, allowing you to retrieve data and metadata from Tableau servers, though they’re limited to Tableau Published Data Sources.</p>
+<p>I got started by cloning the Tableau repo into Visual Studio Code, installing Node.js using <code>npm install</code>, then building the plugin with <code>npm run build</code>. The <a href="https://github.com/tableau/tableau-mcp">repo documentation</a> provides clear instructions.</p>
+</section>
+<section id="setting-up-tableau-cloud" class="level2">
+<h2 class="anchored" data-anchor-id="setting-up-tableau-cloud">Setting Up Tableau Cloud</h2>
+<p>Before configuring the MCP server within Claude, I needed to set up authentication and upload a dataset.</p>
+<p>Authentication was straightforward via personal access token (PAT). I configured this in my user settings and noted the PAT token for later use in Claude’s developer settings.</p>
+<p>I sourced a FIFA 2021 complete player dataset from Kaggle for testing (though FIFA 2021 feels quite dated now!). I packaged this as a Tableau Published Data Source on Tableau Cloud, ready for Claude to query via the MCP server.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="1-tableau-published-datasource.png" class="img-fluid figure-img"></p>
+<figcaption>Tableau Published Datasource</figcaption>
+</figure>
+</div>
+</section>
+<section id="configuring-claude" class="level2">
+<h2 class="anchored" data-anchor-id="configuring-claude">Configuring Claude</h2>
+<p>This proved very straightforward—finding the required file directories on my computer took longer than the actual configuration.</p>
+<p>In Claude’s menu settings under Developer, you can edit the configuration file (mine was called <code>claude_desktop_config.json</code>). The required JSON block configures the local MCP server, specifying which script to run, environment variables, and server details. You essentially need your Tableau server location and PAT token for authentication.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2-json-configuration.png" class="img-fluid figure-img"></p>
+<figcaption>JSON configuration</figcaption>
+</figure>
+</div>
+<p>Save the configuration file and restart Claude. If successful, Claude loads without issue and flags ‘tableau’ as running in developer settings.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="3-mcp-running.png" class="img-fluid figure-img"></p>
+<figcaption>MCP running</figcaption>
+</figure>
+</div>
+<p>Furthermore, if the MCP server is running, you’ll see it in the <em>search and tools</em> menu within the main Claude interface.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="12-tools.png" class="img-fluid figure-img"></p>
+<figcaption>MCP tools</figcaption>
+</figure>
+</div>
+<p>Claude will also give you the option to turn on and off certain tools within the server itself</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="11-see-mcp.png" class="img-fluid figure-img"></p>
+<figcaption>MCP options</figcaption>
+</figure>
+</div>
+</section>
+<section id="experimenting-with-the-server" class="level2">
+<h2 class="anchored" data-anchor-id="experimenting-with-the-server">Experimenting with the Server</h2>
+<p>Time for the fun stuff! I created a new chat and began testing.</p>
+<p>First, I asked Claude to list all available data sources. Claude used <code>list-datasources</code> and returned 84 data sources. When I asked Claude to check for my FIFA 2021 datasource, it confirmed its presence.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="4-list-datasources.png" class="img-fluid figure-img"></p>
+<figcaption>List datasources</figcaption>
+</figure>
+</div>
+<p>For more complex queries, I asked Claude to list columns in the FIFA 2021 dataset. It initially tried <code>list-fields</code> but failed, then smartly switched to <code>read-metadata</code>, uncovering nine columns and providing details about datatypes and categories.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="5-list-columns.png" class="img-fluid figure-img"></p>
+<figcaption>List columns</figcaption>
+</figure>
+</div>
+<p>Getting analytical, I asked for the ten highest-rated players. Claude used <code>query-datasource</code> and quickly identified Lionel Messi and Cristiano Ronaldo at the top. When I asked about the fastest players, Claude correctly reported it couldn’t find a relevant variable in the dataset.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="6-high-rating-players.png" class="img-fluid figure-img"></p>
+<figcaption>High rating players</figcaption>
+</figure>
+</div>
+<p>To note, Claude will ask you for permission when it tries to use an external integration, such as what you can see in the figure below.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="10-ask-permission.png" class="img-fluid figure-img"></p>
+<figcaption>Asking permission to run integration</figcaption>
+</figure>
+</div>
+<p>I also tested the server, by asking it questions it couldn’t answer using the datasource I was connected to, such as ‘who are the fastest players’. Claude used <code>list-fields</code>, and quickly concluded that it could not answer this question using the current context.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="6-high-rating-players.png" class="img-fluid figure-img"></p>
+<figcaption>Fastest players</figcaption>
+</figure>
+</div>
+</section>
+<section id="building-visualisations" class="level2">
+<h2 class="anchored" data-anchor-id="building-visualisations">Building Visualisations</h2>
+<p>I wanted to test some other capabilities, particularly whether I could use this Tableau Cloud data to build basic charts within Claude itself.</p>
+<p>Unfortunately, due to the read-only functions available within the Tableau MCP implementation, I couldn’t build charts within Tableau Cloud directly. However, I could leverage Claude’s own ability to use tools like JavaScript and HTML to do some basic charting within the Claude application itself.</p>
+<p>I first asked Claude to identify which countries had the most players in the top 100 rated players within the FIFA 2021 game. Claude used <code>query-datasource</code> and identified eight countries as ‘top tier’, with Spain having 13 players rated in the top 100.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="8-top-100.png" class="img-fluid figure-img"></p>
+<figcaption>Top players</figcaption>
+</figure>
+</div>
+<p>Great! I then asked Claude to chart this data. After a few stumbles with my prompting and some pointers from me on visual aesthetics, Claude retrieved the necessary data from Tableau via <code>query-datasource</code>, then generated an accurate—if unspectacular—column chart within Claude itself.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="9-column-chart.png" class="img-fluid figure-img"></p>
+<figcaption>Column chart showing countries with most top-100 FIFA players</figcaption>
+</figure>
+</div>
+<p>I decided to take it one step further, asking Claude to use Tableau data to build an entire dashboard. I prompted Claude with the following:</p>
+<blockquote class="blockquote">
+<p>“Can you create for me a dashboard showing the FIFA 2021 profile of Arsenal football club. Create four key KPIs across the top, and then two charts underneath, providing insight on where Arsenal is strong and weak versus other teams in the English Premier League within the FIFA 2021 game”</p>
+</blockquote>
+<p>Claude again used <code>query-datasource</code> and responded with a slightly awful looking but functional dashboard! The output was a HTML file that used javascript to build the visuals.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="13-full-dashboard.png" class="img-fluid figure-img"></p>
+<figcaption>Arsenal FIFA 2021 dashboard</figcaption>
+</figure>
+</div>
+<p>But I was still quite impressed at how quickly it was able to build this using a resource I’d created that sat on a Tableau Cloud server.</p>
+<p>And that’s where I called my experiment to an end.</p>
+</section>
+<section id="quick-reflections" class="level2">
+<h2 class="anchored" data-anchor-id="quick-reflections">Quick Reflections</h2>
+<p>I’ve always been pragmatic about AI capabilities, preferring to observe their evolution. However, after exploring MCP and understanding its opportunities, I’ve become genuinely curious about its impact on analytics engineering, business intelligence, and data visualisation.</p>
+<p>Even in early days, Tableau’s MCP implementation provides interesting food for thought. The ease of querying Tableau Cloud data using natural language suggests the days of learning specific charting techniques in such tools might be numbered.</p>
+<p>A year ago, I’d have dismissed such claims, but MCP’s ability to facilitate seamless communication between AI applications and platforms, whilst providing necessary context for data understanding and insight generation, signals that shifts in the data professional landscape might arrive sooner than expected.</p>
+<p>Tableau itself may pivot its development strategy from adding Desktop features to optimising its platform for AI applications to utilise its superior visual analysis capabilities.</p>
+<p>It’s a curious and exciting time to work in data—even with tools like Tableau. I’ll continue experimenting with Tableau’s MCP service to explore further possibilities.</p>
+<p>Thanks for reading!</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
