@@ -1,3 +1,0 @@
-[build]
-  command = "bash install-quarto.sh && quarto render"
-  publish = "_site"
