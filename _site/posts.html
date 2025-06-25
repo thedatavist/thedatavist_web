@@ -6,11 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Darragh Murray">
-<meta name="dcterms.date" content="2025-06-25">
-<meta name="description" content="A hands-on walkthrough of setting up and experimenting with Tableau’s new Model Context Protocol (MCP) server to enable natural language data querying through Claude AI.">
 
-<title>Early Experiments in Tableau’s New MCP Service: Connecting AI to Business Intelligence Platforms – thedatavist</title>
+<title>Datavist Blog – thedatavist</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -26,22 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,19 +68,77 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
 
-<link rel="stylesheet" href="../../styles.css">
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">thedatavist</span>
     </a>
   </div>
@@ -92,15 +149,15 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../posts.html"> 
+    <a class="nav-link active" href="./posts.html" aria-current="page"> 
 <span class="menu-text">Datavist Blog</span></a>
   </li>  
 </ul>
@@ -111,160 +168,159 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">Early Experiments in Tableau’s New MCP Service: Connecting AI to Business Intelligence Platforms</h1>
-                  <div>
-        <div class="description">
-          A hands-on walkthrough of setting up and experimenting with Tableau’s new Model Context Protocol (MCP) server to enable natural language data querying through Claude AI.
-        </div>
-      </div>
-                          <div class="quarto-categories">
-                <div class="quarto-category">AI</div>
-                <div class="quarto-category">MCP</div>
-                <div class="quarto-category">Tableau</div>
-                <div class="quarto-category">business intelligence</div>
-                <div class="quarto-category">data visualisation</div>
-                <div class="quarto-category">data profession</div>
-                <div class="quarto-category">Claude</div>
-              </div>
-                  </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Darragh Murray </p>
-            </div>
-    </div>
-      
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">June 25, 2025</p>
-      </div>
-    </div>
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#what-is-model-context-protocol" id="toc-what-is-model-context-protocol" class="nav-link active" data-scroll-target="#what-is-model-context-protocol">What is Model Context Protocol?</a></li>
-  <li><a href="#leveraging-tableaus-mcp-server" id="toc-leveraging-tableaus-mcp-server" class="nav-link" data-scroll-target="#leveraging-tableaus-mcp-server">Leveraging Tableau’s MCP Server</a></li>
-  <li><a href="#setting-up-tableau-cloud" id="toc-setting-up-tableau-cloud" class="nav-link" data-scroll-target="#setting-up-tableau-cloud">Setting Up Tableau Cloud</a></li>
-  <li><a href="#configuring-claude" id="toc-configuring-claude" class="nav-link" data-scroll-target="#configuring-claude">Configuring Claude</a></li>
-  <li><a href="#experimenting-with-the-server" id="toc-experimenting-with-the-server" class="nav-link" data-scroll-target="#experimenting-with-the-server">Experimenting with the Server</a></li>
-  <li><a href="#building-visualisations" id="toc-building-visualisations" class="nav-link" data-scroll-target="#building-visualisations">Building Visualisations</a></li>
-  <li><a href="#quick-reflections" id="toc-quick-reflections" class="nav-link" data-scroll-target="#quick-reflections">Quick Reflections</a></li>
-  </ul>
-</nav>
-    </div>
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="AFL">AFL <span class="quarto-category-count">(2)</span></div><div class="category" data-category="AI">AI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Claude">Claude <span class="quarto-category-count">(1)</span></div><div class="category" data-category="MCP">MCP <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Tableau">Tableau <span class="quarto-category-count">(1)</span></div><div class="category" data-category="analysis">analysis <span class="quarto-category-count">(2)</span></div><div class="category" data-category="business intelligence">business intelligence <span class="quarto-category-count">(1)</span></div><div class="category" data-category="data profession">data profession <span class="quarto-category-count">(1)</span></div><div class="category" data-category="data visualisation">data visualisation <span class="quarto-category-count">(3)</span></div></div></div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Datavist Blog</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
 
 
 
 
 
-<p><a href="https://thedatavist.substack.com/p/mcp-and-the-reshaping-of-data-visualisation?r=8vq88">I’ve previously written about the emergence of <strong>Model Context Protocol</strong> (MCP)</a>, arguing for its potential game changing influence on the future practice of data visualisation and business intelligence.</p>
-<p>So, I guess I wasn’t suprised when leading visual analytics tool <a href="https://github.com/tableau/tableau-mcp">Tableau released their first MCP server</a> earlier this week, providing data professionals like myself <em>“a suite of tools that make it easier for developers to build and configure AI applications that integrate with Tableau Cloud and Server.”</em></p>
-<p>Given my experience with Tableau and newfound interest in MCP, I was keen to give this service a go. And I’m pleased to report early success.</p>
-<p>I’m writing this article in a bit of a rush, covering the process I used to get it running in Anthropics’s Claude Desktop and my initial experiments using the AI application to query data stored on Tableau Cloud. I’m keen to get it out in the world and see what others think - so apologies in advance for any errors (spelling, grammatical or otherwise), it’s highly likely I’ll revise this post in the future.</p>
-<section id="what-is-model-context-protocol" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-model-context-protocol">What is Model Context Protocol?</h2>
-<p>I covered this in my <a href="https://thedatavist.substack.com/p/mcp-and-the-reshaping-of-data-visualisation?r=8vq88">original Substack post</a>, but to paraphrase: MCP is an open standard that simplifies how AI systems connect to external tools, apps, and data.</p>
-<p>Instead of needing custom connectors for every service, MCP acts as a universal layer—one protocol that can pull from anything, whether it’s a CSV, database, or business intelligence tool like Tableau.</p>
-<p>Think of it as a plug-and-play system for giving AI the context it needs to provide more relevant answers.</p>
-</section>
-<section id="leveraging-tableaus-mcp-server" class="level2">
-<h2 class="anchored" data-anchor-id="leveraging-tableaus-mcp-server">Leveraging Tableau’s MCP Server</h2>
-<p>Tableau’s plugin offers a clean, open way for AI tools like Claude to query Tableau dashboards and data using natural language—no complex API calls or coding required.</p>
-<p><a href="https://github.com/tableau/tableau-mcp">Their MCP github repo</a> provides excellent instructions and outlines key implemented features.</p>
-<p>Currently, their toolset offers several data access tools for Tableau Server or Cloud instances:</p>
-<ul>
-<li><strong>list-datasources</strong>: Retrieves a list of published data sources from a specified Tableau site (via REST API)</li>
-<li><strong>list-fields</strong>: Fetches field metadata (name, description) for the specified datasource (Metadata API)</li>
-<li><strong>query-datasources</strong>: Run a Tableau VizQL query (VDS API)</li>
-<li><strong>read-metadata</strong>: Requests metadata for the specified data source (VDS API)</li>
-</ul>
-<p>Yes, only four functions currently, but its pretty early days - and you can still do some interesting things with them. These functions are read-only, allowing you to retrieve data and metadata from Tableau servers, though they’re limited to Tableau Published Data Sources.</p>
-<p>I got started by cloning the Tableau repo into Visual Studio Code, installing Node.js using <code>npm install</code>, then building the plugin with <code>npm run build</code>. The <a href="https://github.com/tableau/tableau-mcp">repo documentation</a> provides clear instructions.</p>
-</section>
-<section id="setting-up-tableau-cloud" class="level2">
-<h2 class="anchored" data-anchor-id="setting-up-tableau-cloud">Setting Up Tableau Cloud</h2>
-<p>Before configuring the MCP server within Claude, I needed to set up authentication and upload a dataset.</p>
-<p>Authentication was straightforward via personal access token (PAT). I configured this in my user settings and noted the PAT token for later use in Claude’s developer settings.</p>
-<p>I sourced a FIFA 2021 complete player dataset from Kaggle for testing (though FIFA 2021 feels quite dated now!). I packaged this as a Tableau Published Data Source on Tableau Cloud, ready for Claude to query via the MCP server.</p>
-<p><img src="1-tableau-published-datasource.png" alt="Tableau Published Datasource" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px;"></p>
-</section>
-<section id="configuring-claude" class="level2">
-<h2 class="anchored" data-anchor-id="configuring-claude">Configuring Claude</h2>
-<p>This proved very straightforward—finding the required file directories on my computer took longer than the actual configuration.</p>
-<p>In Claude’s menu settings under Developer, you can edit the configuration file (mine was called <code>claude_desktop_config.json</code>). The required JSON block configures the local MCP server, specifying which script to run, environment variables, and server details. You essentially need your Tableau server location and PAT token for authentication.</p>
-<p><img src="2-json-configuration.png" alt="JSON configuration" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px;"></p>
-<p>Save the configuration file and restart Claude. If successful, Claude loads without issue and flags ‘tableau’ as running in developer settings.</p>
-<p><img src="3-mcp-running.png" alt="MCP running" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px;"></p>
-<p>Furthermore, if the MCP server is running, you’ll see it in the <em>search and tools</em> menu within the main Claude interface.</p>
-<p><img src="12-tools.png" alt="MCP tools" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px;"></p>
-<p>Claude will also give you the option to turn on and off certain tools within the server itself</p>
-<p><img src="11-see-mcp.png" alt="MCP options" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px;"></p>
-</section>
-<section id="experimenting-with-the-server" class="level2">
-<h2 class="anchored" data-anchor-id="experimenting-with-the-server">Experimenting with the Server</h2>
-<p>Time for the fun stuff! I created a new chat and began testing.</p>
-<p>First, I asked Claude to list all available data sources. Claude used <code>list-datasources</code> and returned 84 data sources. When I asked Claude to check for my FIFA 2021 datasource, it confirmed its presence.</p>
-<p><img src="4-list-datasources.png" alt="List datasources" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px;"></p>
-<p>For more complex queries, I asked Claude to list columns in the FIFA 2021 dataset. It initially tried <code>list-fields</code> but failed, then smartly switched to <code>read-metadata</code>, uncovering nine columns and providing details about datatypes and categories.</p>
-<p><img src="5-list-columns.png" alt="List columns" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px;"></p>
-<p>Getting analytical, I asked for the ten highest-rated players. Claude used <code>query-datasource</code> and quickly identified Lionel Messi and Cristiano Ronaldo at the top. When I asked about the fastest players, Claude correctly reported it couldn’t find a relevant variable in the dataset.</p>
-<p><img src="6-high-rating-players.png" alt="High rating players" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px;"></p>
-<p>To note, Claude will ask you for permission when it tries to use an external integration, such as what you can see in the figure below.</p>
-<p><img src="10-ask-permission.png" alt="Asking permission to run integration" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px;"></p>
-<p>I also tested the server, by asking it questions it couldn’t answer using the datasource I was connected to, such as ‘who are the fastest players’. Claude used <code>list-fields</code>, and quickly concluded that it could not answer this question using the current context.</p>
-<p><img src="6-high-rating-players.png" alt="Fastest players" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px;"></p>
-</section>
-<section id="building-visualisations" class="level2">
-<h2 class="anchored" data-anchor-id="building-visualisations">Building Visualisations</h2>
-<p>I wanted to test some other capabilities, particularly whether I could use this Tableau Cloud data to build basic charts within Claude itself.</p>
-<p>Unfortunately, due to the read-only functions available within the Tableau MCP implementation, I couldn’t build charts within Tableau Cloud directly. However, I could leverage Claude’s own ability to use tools like JavaScript and HTML to do some basic charting within the Claude application itself.</p>
-<p>I first asked Claude to identify which countries had the most players in the top 100 rated players within the FIFA 2021 game. Claude used <code>query-datasource</code> and identified eight countries as ‘top tier’, with Spain having 13 players rated in the top 100.</p>
-<p><img src="8-top-100.png" alt="Top players" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px;"></p>
-<p>Great! I then asked Claude to chart this data. After a few stumbles with my prompting and some pointers from me on visual aesthetics, Claude retrieved the necessary data from Tableau via <code>query-datasource</code>, then generated an accurate—if unspectacular—column chart within Claude itself.</p>
-<p><img src="9-column-chart.png" alt="Column chart showing countries with most top-100 FIFA players" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px;"></p>
-<p>I decided to take it one step further, asking Claude to use Tableau data to build an entire dashboard. I prompted Claude with the following:</p>
-<blockquote class="blockquote">
-<p>“Can you create for me a dashboard showing the FIFA 2021 profile of Arsenal football club. Create four key KPIs across the top, and then two charts underneath, providing insight on where Arsenal is strong and weak versus other teams in the English Premier League within the FIFA 2021 game”</p>
-</blockquote>
-<p>Claude again used <code>query-datasource</code> and responded with a slightly awful looking but functional dashboard! The output was a HTML file that used javascript to build the visuals.</p>
-<p><img src="13-full-dashboard.png" alt="Arsenal FIFA 2021 dashboard" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px;"></p>
-<p>But I was still quite impressed at how quickly it was able to build this using a resource I’d created that sat on a Tableau Cloud server.</p>
-<p>And that’s where I called my experiment to an end.</p>
-</section>
-<section id="quick-reflections" class="level2">
-<h2 class="anchored" data-anchor-id="quick-reflections">Quick Reflections</h2>
-<p>I’ve always been pragmatic about AI capabilities, preferring to observe their evolution. However, after exploring MCP and understanding its opportunities, I’ve become genuinely curious about its impact on analytics engineering, business intelligence, and data visualisation.</p>
-<p>Even in early days, Tableau’s MCP implementation provides interesting food for thought. The ease of querying Tableau Cloud data using natural language suggests the days of learning specific charting techniques in such tools might be numbered.</p>
-<p>A year ago, I’d have dismissed such claims, but MCP’s ability to facilitate seamless communication between AI applications and platforms, whilst providing necessary context for data understanding and insight generation, signals that shifts in the data professional landscape might arrive sooner than expected.</p>
-<p>Tableau itself may pivot its development strategy from adding Desktop features to optimising its platform for AI applications to utilise its superior visual analysis capabilities.</p>
-<p>It’s a curious and exciting time to work in data—even with tools like Tableau. I’ll continue experimenting with Tableau’s MCP service to explore further possibilities.</p>
-<p>Thanks for reading! If you’re interested in my other writing and work, you can <a href="https://thedatavist.substack.com">check out my substack</a> which is more focused on issues in the data profession, or <a href="https://www.linkedin.com/in/darraghmurray/">get in touch / connect via LinkedIn</a>.</p>
 
-
-</section>
-
-</main> <!-- /main -->
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="AI,MCP,Tableau,business intelligence,data visualisation,data profession,Claude" data-listing-date-sort="1750773600000" data-listing-file-modified-sort="1750858730081" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1458">
+<a href="./posts/2025-06-25-early-experiments-tableau-mcp/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts/2025-06-25-early-experiments-tableau-mcp/1-tableau-published-datasource.png" alt="Tableau Published Datasource" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Early Experiments in Tableau’s New MCP Service: Connecting AI to Business Intelligence Platforms
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('AI'); return false;">
+AI
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('MCP'); return false;">
+MCP
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Tableau'); return false;">
+Tableau
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('business intelligence'); return false;">
+business intelligence
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('data visualisation'); return false;">
+data visualisation
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('data profession'); return false;">
+data profession
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Claude'); return false;">
+Claude
+</div>
+</div>
+<div class="card-text listing-description">
+A hands-on walkthrough of setting up and experimenting with Tableau’s new Model Context Protocol (MCP) server to enable natural language data querying through Claude AI.
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Darragh Murray
+</div>
+<div class="listing-date">
+Jun 25, 2025
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="AFL,analysis,data visualisation" data-listing-date-sort="1725631200000" data-listing-file-modified-sort="1750854441679" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="839">
+<a href="./posts/2024-09-07-who-lifts-for-finals/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts/2024-09-07-who-lifts-for-finals/lions.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Who lifts for footy finals?
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('AFL'); return false;">
+AFL
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('analysis'); return false;">
+analysis
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('data visualisation'); return false;">
+data visualisation
+</div>
+</div>
+<div class="card-text listing-description">
+Ahead of the elimination final between the Brisbane Lions and Carlton Blues, I examine which players lift (or drop) in finals games.
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Darragh Murray
+</div>
+<div class="listing-date">
+Sep 7, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="AFL,analysis,data visualisation" data-listing-date-sort="1725026400000" data-listing-file-modified-sort="1750854441670" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1349">
+<a href="./posts/2024-08-31-harris-andrews/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts/2024-08-31-harris-andrews/afl_all_australian_2024.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Should Andrews have had a place in the All-Australian?
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('AFL'); return false;">
+AFL
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('analysis'); return false;">
+analysis
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('data visualisation'); return false;">
+data visualisation
+</div>
+</div>
+<div class="card-text listing-description">
+Did AFL Key Defender Harris Andrews unfairly miss out on an All Australian blazer in 2024?
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Darragh Murray
+</div>
+<div class="listing-date">
+Aug 31, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
