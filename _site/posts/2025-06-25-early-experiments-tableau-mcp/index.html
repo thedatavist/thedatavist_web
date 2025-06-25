@@ -207,48 +207,48 @@ ul.task-list li input[type="checkbox"] {
 <p>Before configuring the MCP server within Claude, I needed to set up authentication and upload a dataset.</p>
 <p>Authentication was straightforward via personal access token (PAT). I configured this in my user settings and noted the PAT token for later use in Claude’s developer settings.</p>
 <p>I sourced a FIFA 2021 complete player dataset from Kaggle for testing (though FIFA 2021 feels quite dated now!). I packaged this as a Tableau Published Data Source on Tableau Cloud, ready for Claude to query via the MCP server.</p>
-<p><img src="1-tableau-published-datasource.png" alt="Tableau Published Datasource" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px;"></p>
+<p><img src="1-tableau-published-datasource.png" alt="Tableau Published Datasource" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; display: block; margin: 25px auto;"></p>
 </section>
 <section id="configuring-claude" class="level2">
 <h2 class="anchored" data-anchor-id="configuring-claude">Configuring Claude</h2>
 <p>This proved very straightforward—finding the required file directories on my computer took longer than the actual configuration.</p>
 <p>In Claude’s menu settings under Developer, you can edit the configuration file (mine was called <code>claude_desktop_config.json</code>). The required JSON block configures the local MCP server, specifying which script to run, environment variables, and server details. You essentially need your Tableau server location and PAT token for authentication.</p>
-<p><img src="2-json-configuration.png" alt="JSON configuration" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px;"></p>
+<p><img src="2-json-configuration.png" alt="JSON configuration" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; display: block; margin: 25px auto;"></p>
 <p>Save the configuration file and restart Claude. If successful, Claude loads without issue and flags ‘tableau’ as running in developer settings.</p>
-<p><img src="3-mcp-running.png" alt="MCP running" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px;"></p>
+<p><img src="3-mcp-running.png" alt="MCP running" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; display: block; margin: 25px auto;"></p>
 <p>Furthermore, if the MCP server is running, you’ll see it in the <em>search and tools</em> menu within the main Claude interface.</p>
-<p><img src="12-tools.png" alt="MCP tools" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px;"></p>
+<p><img src="12-tools.png" alt="MCP tools" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; display: block; margin: 25px auto;"></p>
 <p>Claude will also give you the option to turn on and off certain tools within the server itself</p>
-<p><img src="11-see-mcp.png" alt="MCP options" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px;"></p>
+<p><img src="11-see-mcp.png" alt="MCP options" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; display: block; margin: 25px auto;"></p>
 </section>
 <section id="experimenting-with-the-server" class="level2">
 <h2 class="anchored" data-anchor-id="experimenting-with-the-server">Experimenting with the Server</h2>
 <p>Time for the fun stuff! I created a new chat and began testing.</p>
 <p>First, I asked Claude to list all available data sources. Claude used <code>list-datasources</code> and returned 84 data sources. When I asked Claude to check for my FIFA 2021 datasource, it confirmed its presence.</p>
-<p><img src="4-list-datasources.png" alt="List datasources" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px;"></p>
+<p><img src="4-list-datasources.png" alt="List datasources" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; display: block; margin: 25px auto;"></p>
 <p>For more complex queries, I asked Claude to list columns in the FIFA 2021 dataset. It initially tried <code>list-fields</code> but failed, then smartly switched to <code>read-metadata</code>, uncovering nine columns and providing details about datatypes and categories.</p>
-<p><img src="5-list-columns.png" alt="List columns" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px;"></p>
+<p><img src="5-list-columns.png" alt="List columns" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; display: block; margin: 25px auto;"></p>
 <p>Getting analytical, I asked for the ten highest-rated players. Claude used <code>query-datasource</code> and quickly identified Lionel Messi and Cristiano Ronaldo at the top. When I asked about the fastest players, Claude correctly reported it couldn’t find a relevant variable in the dataset.</p>
-<p><img src="6-high-rating-players.png" alt="High rating players" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px;"></p>
+<p><img src="6-high-rating-players.png" alt="High rating players" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; display: block; margin: 25px auto;"></p>
 <p>To note, Claude will ask you for permission when it tries to use an external integration, such as what you can see in the figure below.</p>
-<p><img src="10-ask-permission.png" alt="Asking permission to run integration" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px;"></p>
+<p><img src="10-ask-permission.png" alt="Asking permission to run integration" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; display: block; margin: 25px auto;"></p>
 <p>I also tested the server, by asking it questions it couldn’t answer using the datasource I was connected to, such as ‘who are the fastest players’. Claude used <code>list-fields</code>, and quickly concluded that it could not answer this question using the current context.</p>
-<p><img src="6-high-rating-players.png" alt="Fastest players" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px;"></p>
+<p><img src="6-high-rating-players.png" alt="Fastest players" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; display: block; margin: 25px auto;"></p>
 </section>
 <section id="building-visualisations" class="level2">
 <h2 class="anchored" data-anchor-id="building-visualisations">Building Visualisations</h2>
 <p>I wanted to test some other capabilities, particularly whether I could use this Tableau Cloud data to build basic charts within Claude itself.</p>
 <p>Unfortunately, due to the read-only functions available within the Tableau MCP implementation, I couldn’t build charts within Tableau Cloud directly. However, I could leverage Claude’s own ability to use tools like JavaScript and HTML to do some basic charting within the Claude application itself.</p>
 <p>I first asked Claude to identify which countries had the most players in the top 100 rated players within the FIFA 2021 game. Claude used <code>query-datasource</code> and identified eight countries as ‘top tier’, with Spain having 13 players rated in the top 100.</p>
-<p><img src="8-top-100.png" alt="Top players" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px;"></p>
+<p><img src="8-top-100.png" alt="Top players" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; display: block; margin: 25px auto;"></p>
 <p>Great! I then asked Claude to chart this data. After a few stumbles with my prompting and some pointers from me on visual aesthetics, Claude retrieved the necessary data from Tableau via <code>query-datasource</code>, then generated an accurate—if unspectacular—column chart within Claude itself.</p>
-<p><img src="9-column-chart.png" alt="Column chart showing countries with most top-100 FIFA players" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px;"></p>
+<p><img src="9-column-chart.png" alt="Column chart showing countries with most top-100 FIFA players" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; display: block; margin: 25px auto;"></p>
 <p>I decided to take it one step further, asking Claude to use Tableau data to build an entire dashboard. I prompted Claude with the following:</p>
 <blockquote class="blockquote">
 <p>“Can you create for me a dashboard showing the FIFA 2021 profile of Arsenal football club. Create four key KPIs across the top, and then two charts underneath, providing insight on where Arsenal is strong and weak versus other teams in the English Premier League within the FIFA 2021 game”</p>
 </blockquote>
 <p>Claude again used <code>query-datasource</code> and responded with a slightly awful looking but functional dashboard! The output was a HTML file that used javascript to build the visuals.</p>
-<p><img src="13-full-dashboard.png" alt="Arsenal FIFA 2021 dashboard" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px;"></p>
+<p><img src="13-full-dashboard.png" alt="Arsenal FIFA 2021 dashboard" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; display: block; margin: 25px auto;"></p>
 <p>But I was still quite impressed at how quickly it was able to build this using a resource I’d created that sat on a Tableau Cloud server.</p>
 <p>And that’s where I called my experiment to an end.</p>
 </section>
