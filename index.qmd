@@ -1,7 +1,7 @@
 ---
-title: "thedatavist"
+title: "datavist.ai"
 
-subtitle: "Analytics & Data Engineering / Data Visusalisation & BI / Data Profession"
+subtitle: "Analytics & Data Engineering / Artifical Intelligence / Data Visusalisation & BI / Data Profession"
 
 format:
   lumo-html: 
@@ -13,7 +13,7 @@ format:
 author: Darragh Murray
 date: last-modified
 ---
-Hi, I'm Darragh Murray  - a data professional with a pragmatic approach to business intelligence and analytics who runs **datavist.ai**. 
+Hi, I'm Darragh Murray  - a data professional with a pragmatic approach to artifical intellgience, data engineering, and analytics who runs **datavist.ai**. 
 
 I'm a three-time Tableau Ambassador, a Power BI wizard, an SQL maven, and an analytics engineering expert, who's learned that mastery beats brand loyalty every time. Here, I share insights on data visualization, BI tools, analytics & data engineering and the fundamentals that actually matter in turning data into decisions.
 
