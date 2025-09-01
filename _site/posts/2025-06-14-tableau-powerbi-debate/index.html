@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Darragh Murray">
+<meta name="dcterms.date" content="2025-06-14">
+<meta name="description" content="An argument for why data professionals should stop debating Tableau vs Power BI and focus on mastering whatever tool they have access to instead.">
 
-<title>Datavist Blog – thedatavist</title>
+<title>The Tableau vs Power BI debate is largely a waste of time – thedatavist</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +26,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,77 +69,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">thedatavist</span>
     </a>
   </div>
@@ -149,15 +92,15 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./posts.html" aria-current="page"> 
+    <a class="nav-link" href="../../posts.html"> 
 <span class="menu-text">Datavist Blog</span></a>
   </li>  
 </ul>
@@ -168,203 +111,147 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">The Tableau vs Power BI debate is largely a waste of time</h1>
+                  <div>
+        <div class="description">
+          An argument for why data professionals should stop debating Tableau vs Power BI and focus on mastering whatever tool they have access to instead.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Tableau</div>
+                <div class="quarto-category">Power BI</div>
+                <div class="quarto-category">business intelligence</div>
+                <div class="quarto-category">data visualisation</div>
+                <div class="quarto-category">data profession</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Darragh Murray </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">June 14, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="AFL">AFL <span class="quarto-category-count">(2)</span></div><div class="category" data-category="AI">AI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Claude">Claude <span class="quarto-category-count">(1)</span></div><div class="category" data-category="MCP">MCP <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Power BI">Power BI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Tableau">Tableau <span class="quarto-category-count">(2)</span></div><div class="category" data-category="analysis">analysis <span class="quarto-category-count">(2)</span></div><div class="category" data-category="business intelligence">business intelligence <span class="quarto-category-count">(2)</span></div><div class="category" data-category="data profession">data profession <span class="quarto-category-count">(2)</span></div><div class="category" data-category="data visualisation">data visualisation <span class="quarto-category-count">(4)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#why-i-dont-care-about-the-tableau-vs-power-bi-debate" id="toc-why-i-dont-care-about-the-tableau-vs-power-bi-debate" class="nav-link active" data-scroll-target="#why-i-dont-care-about-the-tableau-vs-power-bi-debate">Why I Don’t Care About the Tableau vs Power BI Debate</a></li>
+  <li><a href="#its-not-what-the-tool-can-do-for-you-its-what-you-can-do-with-the-tool" id="toc-its-not-what-the-tool-can-do-for-you-its-what-you-can-do-with-the-tool" class="nav-link" data-scroll-target="#its-not-what-the-tool-can-do-for-you-its-what-you-can-do-with-the-tool">It’s not what the tool can do for you, it’s what you can do with the tool</a></li>
+  <li><a href="#you-probably-dont-get-to-choose-anyway" id="toc-you-probably-dont-get-to-choose-anyway" class="nav-link" data-scroll-target="#you-probably-dont-get-to-choose-anyway">You probably don’t get to choose anyway</a></li>
+  <li><a href="#visual-analytics-isnt-about-tools-its-about-fundamentals" id="toc-visual-analytics-isnt-about-tools-its-about-fundamentals" class="nav-link" data-scroll-target="#visual-analytics-isnt-about-tools-its-about-fundamentals">Visual analytics isn’t about tools, it’s about fundamentals</a></li>
+  <li><a href="#less-brand-loyalty-more-analytical-maturity" id="toc-less-brand-loyalty-more-analytical-maturity" class="nav-link" data-scroll-target="#less-brand-loyalty-more-analytical-maturity">Less brand loyalty, more analytical maturity</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Datavist Blog</h1>
-</div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<section id="why-i-dont-care-about-the-tableau-vs-power-bi-debate" class="level2">
+<h2 class="anchored" data-anchor-id="why-i-dont-care-about-the-tableau-vs-power-bi-debate">Why I Don’t Care About the Tableau vs Power BI Debate</h2>
+<p>Nothing makes me groan more than data professionals asking whether I prefer Tableau or Power BI.</p>
+<p>The debate over which of these popular BI tools reigns supreme still rages in many corners of the business intelligence and data visualisation communities. A quick scroll through the relevant subreddits is all it takes to see how alive (and how pointless) these disputes remain. For two mature, widely used tools, the level of tribalism is oddly persistent.</p>
+<p>Recently, someone asked me this question out of the blue. My faced scrunched up like I was sucking on a lemon.</p>
+<figure style="display: block; margin: 25px auto; text-align: center;" class="figure">
+<img src="homer-lemon.jpg" alt="Homer eats a lemon" style="width: 50%; max-width: 600px; height: auto; border-radius: 8px;" class="figure-img">
+<figcaption style="font-style: italic; margin-top: 10px;">
+My face after someone asks me if I prefer Tableau over PowerBI
+</figcaption>
+</figure>
+<p>“I dunno, man, whatever works for you”</p>
+<p>For the uninitiated, Power BI and Tableau are the dominant platforms for modern day business intelligence. They both offer the ability to communicate information in visually consumable formats, often consumed in the form of the ‘dashboard’.</p>
+<p>Both more or less have the same functionality and grant the ability to model data in a usable form, though there are differences in the way they do this, along with how data can be visualised. But at their core, they’re essentially filling the same market niche.</p>
+<p>My own career has definitely leaned Tableau (after all, I’m a three-time Tableau Ambassador), and that’s why a few years back, if anyone asked me what which I thought was better, I would have responded with near-religious conviction, “Tableau, of course”. After all, that’s all I knew, how could I recommend anything else?</p>
+<p>But later, I worked at an organisation that was purely PowerBi. And it was fine.</p>
+<p>Nowadays, I’m older, grouchier, but possibly a little wiser. And now I would answer that question different:</p>
+<p>“I don’t care”.</p>
+<p>I don’t think I have some super special insight or anything, I’m just beyond the whole the debate. Now, I usually just trying to find the fastest exit from any discussion around PowerBI v Tableau, because I consider it a pointless argument.</p>
+<p>I do want to mention: this isn’t a critique of Tableau or Power BI. Both are excellent tools. It’s a critique of the energy we waste arguing about them.</p>
+<p>With that in mind, I thought it might be interesting to touch on why I think it’s pretty pointless. I’ve got three points to make as to why I think such discussions are now largely unproductive. So, let me indulge.</p>
+</section>
+<section id="its-not-what-the-tool-can-do-for-you-its-what-you-can-do-with-the-tool" class="level2">
+<h2 class="anchored" data-anchor-id="its-not-what-the-tool-can-do-for-you-its-what-you-can-do-with-the-tool">It’s not what the tool can do for you, it’s what you can do with the tool</h2>
+<p>You’ll get far more value from whichever platform you’ve learned to use well, not the one with the flashier interface or more belligerent fans.</p>
+<p>Most users barely scratch the surface of either Tableau or Power BI. But in the hands of a skilled analyst, both tools are more than capable of delivering fast, insightful, and beautifully designed dashboards. In the wrong hands, either one can produce confusing, cluttered, and ineffective outputs.</p>
+<p>So instead of worrying about which tool is “better,” invest your time in mastering the one you have access to. Learn its quirks. Explore its depth. Push it beyond the defaults. That’s where the real value lies.</p>
+<p>And yes, the fundamentals of visual design matter too, but we’ll get to that in point three.</p>
+<p>Of course – you could just hedge all your bets and master both PowerBI and Tableau, which isn’t out of the question and actually not that difficult to achieve if you’ve got any sort of experience in the field.</p>
+<p>So now, when someone asks me, “Which is better?”My honest answer is: “Whichever one you’ve used enough to master.”</p>
+<p>Mastery beats preference every time. And if you’re really looking for enlightenment, learn both, then you’re not stuck in tribal debates. You’re just getting work done.</p>
+</section>
+<section id="you-probably-dont-get-to-choose-anyway" class="level2">
+<h2 class="anchored" data-anchor-id="you-probably-dont-get-to-choose-anyway">You probably don’t get to choose anyway</h2>
+<p>In an organisational setting, BI tool selection is often made far above most data professionals’ pay grade and for reasons that have little to do with dashboard UX or capability.</p>
+<p>In most medium to large organisations, the choice between Tableau and Power BI can often be made by IT, finance, or procurement teams. If you’re lucky, they’ll consult the data and analytics team, but in my experience, I’ve found that’s usually not the case.</p>
+<p>Organisation criteria are less about which tool renders charts better and more about things like:</p>
+<ul>
+<li>Licensing costs</li>
+<li>Integration with existing systems</li>
+<li>Vendor relationships or support contracts</li>
+<li>Minimisation of risk</li>
+</ul>
+<p>That’s why arguing about tools can feel like debating over which is better: Toyota or Honda. Sure, you may have preferences, but they’re still cars, and they’re still going to allow you to drive places. And perhaps that’s what an organisation cares most about.</p>
+<p>Even if you’re a senior data professional within your organisation, your choice may still be constrained by stack alignment (e.g.&nbsp;Microsoft 365 + Power Platform), or existing rollout commitments. You might get a say, but I would wager that it’s rare that you get a completely blank canvas.</p>
+<p>So, while it’s fine to have a favourite, it’s not worth hanging your career or team harmony on it. Exercise pragmatism and be flexible.</p>
+</section>
+<section id="visual-analytics-isnt-about-tools-its-about-fundamentals" class="level2">
+<h2 class="anchored" data-anchor-id="visual-analytics-isnt-about-tools-its-about-fundamentals">Visual analytics isn’t about tools, it’s about fundamentals</h2>
+<p>Given the zeal on display, an outsider observing the debate around products like Tableau and Power BI might be convinced that the success or failure of any visual analytics solution hinges entirely on platform choice.</p>
+<p>But that’s not even remotely true. Neither Tableau nor Power BI fundamentally changes messy data, poor visual communication, or weak analytical thinking. For every great dashboard, there are a thousand terrible ones built using these tools.</p>
+<p>While many act as if the BI tool is the biggest variable in the success of an analytics project, it rarely is. The real drivers of analytical value are things like:</p>
+<ul>
+<li>Establishing a shared understanding of the business problem</li>
+<li>Building trust in your data</li>
+<li>Designing visualisations that aid decision-making, not distract from it</li>
+<li>Understanding your audience and designing for their needs</li>
+</ul>
+<p>You can create stunning, effective dashboards in Excel. You can also produce unreadable monstrosities in the most expensive analytics platforms. The software is just one layer of the cake—often, one of the least important.</p>
+<p>So what are the fundamentals I’m talking about? In visual analytics and dashboard design, they include Gestalt principles, the use of pre-attentive attributes to guide attention, and other concepts like colour theory, accessibility, chart-task fit, and cognitive load theory.</p>
+<p>Instead of fixating on which tool does marginal things better, consider a wider lens:</p>
+<ul>
+<li>How’s your data pipeline quality?</li>
+<li>Will your stakeholders understand your dashboard?</li>
+<li>Does the work you’re doing add value?</li>
+</ul>
+<p>These matter far more than whether you can click-and-drag faster in Tableau or write DAX more elegantly in Power BI.</p>
+</section>
+<section id="less-brand-loyalty-more-analytical-maturity" class="level2">
+<h2 class="anchored" data-anchor-id="less-brand-loyalty-more-analytical-maturity">Less brand loyalty, more analytical maturity</h2>
+<p>Treat BI tools like vehicles. They’re a means to an end and shouldn’t be your identity. A mature data professional who works in the BI space should probably have good working knowledge of the major business intelligence tools anyway and be prepared to shift focus as required.</p>
+<p>But obsessing over whether one tool is “better” just adds noise. Focus instead on building transferable skills, understanding context, and developing the ability to ship insights that actually help people make decisions in whatever tool you have available.</p>
+<p>Because that’s the job of the data professional. The winner of the platform popularity contest is actually irrelevant.</p>
 
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="AI,MCP,Tableau,business intelligence,data visualisation,data profession,Claude" data-listing-date-sort="1750773600000" data-listing-file-modified-sort="1756757670126" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1523">
-<a href="./posts/2025-06-25-early-experiments-tableau-mcp/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./posts/2025-06-25-early-experiments-tableau-mcp/14-header-image.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Early Experiments in Tableau’s New MCP Service: Connecting AI to Business Intelligence Platforms
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('AI'); return false;">
-AI
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('MCP'); return false;">
-MCP
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Tableau'); return false;">
-Tableau
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('business intelligence'); return false;">
-business intelligence
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('data visualisation'); return false;">
-data visualisation
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('data profession'); return false;">
-data profession
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Claude'); return false;">
-Claude
-</div>
-</div>
-<div class="card-text listing-description">
-A hands-on walkthrough of setting up and experimenting with Tableau’s new Model Context Protocol (MCP) server to enable natural language data querying through Claude AI.
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Darragh Murray
-</div>
-<div class="listing-date">
-Jun 25, 2025
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="Tableau,Power BI,business intelligence,data visualisation,data profession" data-listing-date-sort="1749823200000" data-listing-file-modified-sort="1756763213790" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1214">
-<a href="./posts/2025-06-14-tableau-powerbi-debate/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./posts/2025-06-14-tableau-powerbi-debate/homer-lemon.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-The Tableau vs Power BI debate is largely a waste of time
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Tableau'); return false;">
-Tableau
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Power BI'); return false;">
-Power BI
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('business intelligence'); return false;">
-business intelligence
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('data visualisation'); return false;">
-data visualisation
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('data profession'); return false;">
-data profession
-</div>
-</div>
-<div class="card-text listing-description">
-An argument for why data professionals should stop debating Tableau vs Power BI and focus on mastering whatever tool they have access to instead.
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Darragh Murray
-</div>
-<div class="listing-date">
-Jun 14, 2025
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="AFL,analysis,data visualisation" data-listing-date-sort="1725631200000" data-listing-file-modified-sort="1756757670114" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="839">
-<a href="./posts/2024-09-07-who-lifts-for-finals/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="posts/2024-09-07-who-lifts-for-finals/lions.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Who lifts for footy finals?
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('AFL'); return false;">
-AFL
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('analysis'); return false;">
-analysis
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('data visualisation'); return false;">
-data visualisation
-</div>
-</div>
-<div class="card-text listing-description">
-Ahead of the elimination final between the Brisbane Lions and Carlton Blues, I examine which players lift (or drop) in finals games.
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Darragh Murray
-</div>
-<div class="listing-date">
-Sep 7, 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="AFL,analysis,data visualisation" data-listing-date-sort="1725026400000" data-listing-file-modified-sort="1756757670106" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1349">
-<a href="./posts/2024-08-31-harris-andrews/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="posts/2024-08-31-harris-andrews/afl_all_australian_2024.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Should Andrews have had a place in the All-Australian?
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('AFL'); return false;">
-AFL
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('analysis'); return false;">
-analysis
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('data visualisation'); return false;">
-data visualisation
-</div>
-</div>
-<div class="card-text listing-description">
-Did AFL Key Defender Harris Andrews unfairly miss out on an All Australian blazer in 2024?
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Darragh Murray
-</div>
-<div class="listing-date">
-Aug 31, 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
