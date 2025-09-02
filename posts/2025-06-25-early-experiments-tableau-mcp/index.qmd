@@ -8,10 +8,11 @@ categories:
   - AI
   - MCP
   - Tableau
-  - business intelligence
-  - data visualisation
-  - data profession
+  - Business intelligence
+  - Data visualisation
+  - Data profession
   - Claude
+  - Anthropic
 ---
 
 [I've previously written about the emergence of **Model Context Protocol** (MCP)](https://thedatavist.substack.com/p/mcp-and-the-reshaping-of-data-visualisation?r=8vq88), arguing for its potential game changing influence on the future practice of data visualisation and business intelligence.

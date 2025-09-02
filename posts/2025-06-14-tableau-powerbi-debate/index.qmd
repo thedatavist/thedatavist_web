@@ -7,9 +7,9 @@ image: "homer-lemon.jpg"
 categories:
   - Tableau
   - Power BI
-  - business intelligence
-  - data visualisation
-  - data profession
+  - Business intelligence
+  - Data visualisation
+  - Data profession
 ---
 
 ## Why I Don't Care About the Tableau vs Power BI Debate

@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Darragh Murray">
-<meta name="dcterms.date" content="2025-06-25">
-<meta name="description" content="A hands-on walkthrough of setting up and experimenting with Tableau’s new Model Context Protocol (MCP) server to enable natural language data querying through Claude AI.">
+<meta name="dcterms.date" content="2025-07-14">
+<meta name="description" content="A data professional grapples with whether Anthropic’s new Model Context Protocol threatens traditional BI roles by enabling AI to directly access and visualize organizational data, potentially bypassing human analysts.">
 
-<title>Early Experiments in Tableau’s New MCP Service: Connecting AI to Business Intelligence Platforms – thedatavist</title>
+<title>MCP and the Reshaping of Data Visualisation &amp; Business Intelligence – thedatavist</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -114,16 +114,15 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Early Experiments in Tableau’s New MCP Service: Connecting AI to Business Intelligence Platforms</h1>
+      <h1 class="title">MCP and the Reshaping of Data Visualisation &amp; Business Intelligence</h1>
                   <div>
         <div class="description">
-          A hands-on walkthrough of setting up and experimenting with Tableau’s new Model Context Protocol (MCP) server to enable natural language data querying through Claude AI.
+          A data professional grapples with whether Anthropic’s new Model Context Protocol threatens traditional BI roles by enabling AI to directly access and visualize organizational data, potentially bypassing human analysts.
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">AI</div>
                 <div class="quarto-category">MCP</div>
-                <div class="quarto-category">Tableau</div>
                 <div class="quarto-category">Business intelligence</div>
                 <div class="quarto-category">Data visualisation</div>
                 <div class="quarto-category">Data profession</div>
@@ -146,7 +145,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">June 25, 2025</p>
+        <p class="date">July 14, 2025</p>
       </div>
     </div>
     
@@ -162,13 +161,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-is-model-context-protocol" id="toc-what-is-model-context-protocol" class="nav-link active" data-scroll-target="#what-is-model-context-protocol">What is Model Context Protocol?</a></li>
-  <li><a href="#leveraging-tableaus-mcp-server" id="toc-leveraging-tableaus-mcp-server" class="nav-link" data-scroll-target="#leveraging-tableaus-mcp-server">Leveraging Tableau’s MCP Server</a></li>
-  <li><a href="#setting-up-tableau-cloud" id="toc-setting-up-tableau-cloud" class="nav-link" data-scroll-target="#setting-up-tableau-cloud">Setting Up Tableau Cloud</a></li>
-  <li><a href="#configuring-claude" id="toc-configuring-claude" class="nav-link" data-scroll-target="#configuring-claude">Configuring Claude</a></li>
-  <li><a href="#experimenting-with-the-server" id="toc-experimenting-with-the-server" class="nav-link" data-scroll-target="#experimenting-with-the-server">Experimenting with the Server</a></li>
-  <li><a href="#building-visualisations" id="toc-building-visualisations" class="nav-link" data-scroll-target="#building-visualisations">Building Visualisations</a></li>
-  <li><a href="#quick-reflections" id="toc-quick-reflections" class="nav-link" data-scroll-target="#quick-reflections">Quick Reflections</a></li>
+  <li><a href="#hold-up-what-is-model-context-protocol" id="toc-hold-up-what-is-model-context-protocol" class="nav-link active" data-scroll-target="#hold-up-what-is-model-context-protocol">Hold up, what is model context protocol?</a></li>
+  <li><a href="#where-things-get-interesting-and-a-bit-uncomfortable" id="toc-where-things-get-interesting-and-a-bit-uncomfortable" class="nav-link" data-scroll-target="#where-things-get-interesting-and-a-bit-uncomfortable">Where things get interesting and a bit uncomfortable</a></li>
+  <li><a href="#so-should-we-panic" id="toc-so-should-we-panic" class="nav-link" data-scroll-target="#so-should-we-panic">So… should we panic?</a></li>
+  <li><a href="#visualisation-experts-still-matter-but-the-role-may-evolve" id="toc-visualisation-experts-still-matter-but-the-role-may-evolve" class="nav-link" data-scroll-target="#visualisation-experts-still-matter-but-the-role-may-evolve">Visualisation experts still matter but the role may evolve</a></li>
+  <li><a href="#what-now" id="toc-what-now" class="nav-link" data-scroll-target="#what-now">What now?</a></li>
   </ul>
 </nav>
     </div>
@@ -179,88 +176,64 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><a href="https://thedatavist.substack.com/p/mcp-and-the-reshaping-of-data-visualisation?r=8vq88">I’ve previously written about the emergence of <strong>Model Context Protocol</strong> (MCP)</a>, arguing for its potential game changing influence on the future practice of data visualisation and business intelligence.</p>
-<p>So, I guess I wasn’t suprised when leading visual analytics tool <a href="https://github.com/tableau/tableau-mcp">Tableau released their first MCP server</a> earlier this week, providing data professionals like myself <em>“a suite of tools that make it easier for developers to build and configure AI applications that integrate with Tableau Cloud and Server.”</em></p>
-<p>Given my experience with Tableau and newfound interest in MCP, I was keen to give this service a go. And I’m pleased to report early success.</p>
-<p>I’m writing this article in a bit of a rush, covering the process I used to get it running in Anthropics’s Claude Desktop and my initial experiments using the AI application to query data stored on Tableau Cloud. I’m keen to get it out in the world and see what others think - so apologies in advance for any errors (spelling, grammatical or otherwise), it’s highly likely I’ll revise this post in the future.</p>
-<section id="what-is-model-context-protocol" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-model-context-protocol">What is Model Context Protocol?</h2>
-<p>I covered this in my <a href="https://thedatavist.substack.com/p/mcp-and-the-reshaping-of-data-visualisation?r=8vq88">original Substack post</a>, but to paraphrase: MCP is an open standard that simplifies how AI systems connect to external tools, apps, and data.</p>
-<p>Instead of needing custom connectors for every service, MCP acts as a universal layer—one protocol that can pull from anything, whether it’s a CSV, database, or business intelligence tool like Tableau.</p>
-<p>Think of it as a plug-and-play system for giving AI the context it needs to provide more relevant answers.</p>
-</section>
-<section id="leveraging-tableaus-mcp-server" class="level2">
-<h2 class="anchored" data-anchor-id="leveraging-tableaus-mcp-server">Leveraging Tableau’s MCP Server</h2>
-<p>Tableau’s plugin offers a clean, open way for AI tools like Claude to query Tableau dashboards and data using natural language—no complex API calls or coding required.</p>
-<p><a href="https://github.com/tableau/tableau-mcp">Their MCP github repo</a> provides excellent instructions and outlines key implemented features.</p>
-<p>Currently, their toolset offers several data access tools for Tableau Server or Cloud instances:</p>
-<ul>
-<li><strong>list-datasources</strong>: Retrieves a list of published data sources from a specified Tableau site (via REST API)</li>
-<li><strong>list-fields</strong>: Fetches field metadata (name, description) for the specified datasource (Metadata API)</li>
-<li><strong>query-datasources</strong>: Run a Tableau VizQL query (VDS API)</li>
-<li><strong>read-metadata</strong>: Requests metadata for the specified data source (VDS API)</li>
-</ul>
-<p>Yes, only four functions currently, but its pretty early days - and you can still do some interesting things with them. These functions are read-only, allowing you to retrieve data and metadata from Tableau servers, though they’re limited to Tableau Published Data Sources.</p>
-<p>I got started by cloning the Tableau repo into Visual Studio Code, installing Node.js using <code>npm install</code>, then building the plugin with <code>npm run build</code>. The <a href="https://github.com/tableau/tableau-mcp">repo documentation</a> provides clear instructions.</p>
-</section>
-<section id="setting-up-tableau-cloud" class="level2">
-<h2 class="anchored" data-anchor-id="setting-up-tableau-cloud">Setting Up Tableau Cloud</h2>
-<p>Before configuring the MCP server within Claude, I needed to set up authentication and upload a dataset.</p>
-<p>Authentication was straightforward via personal access token (PAT). I configured this in my user settings and noted the PAT token for later use in Claude’s developer settings.</p>
-<p>I sourced a FIFA 2021 complete player dataset from Kaggle for testing (though FIFA 2021 feels quite dated now!). I packaged this as a Tableau Published Data Source on Tableau Cloud, ready for Claude to query via the MCP server.</p>
-<p><img src="1-tableau-published-datasource.png" alt="Tableau Published Datasource" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; display: block; margin: 25px auto;"></p>
-</section>
-<section id="configuring-claude" class="level2">
-<h2 class="anchored" data-anchor-id="configuring-claude">Configuring Claude</h2>
-<p>This proved very straightforward—finding the required file directories on my computer took longer than the actual configuration.</p>
-<p>In Claude’s menu settings under Developer, you can edit the configuration file (mine was called <code>claude_desktop_config.json</code>). The required JSON block configures the local MCP server, specifying which script to run, environment variables, and server details. You essentially need your Tableau server location and PAT token for authentication.</p>
-<p><img src="2-json-configuration.png" alt="JSON configuration" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; display: block; margin: 25px auto;"></p>
-<p>Save the configuration file and restart Claude. If successful, Claude loads without issue and flags ‘tableau’ as running in developer settings.</p>
-<p><img src="3-mcp-running.png" alt="MCP running" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; display: block; margin: 25px auto;"></p>
-<p>Furthermore, if the MCP server is running, you’ll see it in the <em>search and tools</em> menu within the main Claude interface.</p>
-<p><img src="12-tools.png" alt="MCP tools" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; display: block; margin: 25px auto;"></p>
-<p>Claude will also give you the option to turn on and off certain tools within the server itself</p>
-<p><img src="11-see-mcp.png" alt="MCP options" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; display: block; margin: 25px auto;"></p>
-</section>
-<section id="experimenting-with-the-server" class="level2">
-<h2 class="anchored" data-anchor-id="experimenting-with-the-server">Experimenting with the Server</h2>
-<p>Time for the fun stuff! I created a new chat and began testing.</p>
-<p>First, I asked Claude to list all available data sources. Claude used <code>list-datasources</code> and returned 84 data sources. When I asked Claude to check for my FIFA 2021 datasource, it confirmed its presence.</p>
-<p><img src="4-list-datasources.png" alt="List datasources" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; display: block; margin: 25px auto;"></p>
-<p>For more complex queries, I asked Claude to list columns in the FIFA 2021 dataset. It initially tried <code>list-fields</code> but failed, then smartly switched to <code>read-metadata</code>, uncovering nine columns and providing details about datatypes and categories.</p>
-<p><img src="5-list-columns.png" alt="List columns" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; display: block; margin: 25px auto;"></p>
-<p>Getting analytical, I asked for the ten highest-rated players. Claude used <code>query-datasource</code> and quickly identified Lionel Messi and Cristiano Ronaldo at the top. When I asked about the fastest players, Claude correctly reported it couldn’t find a relevant variable in the dataset.</p>
-<p><img src="6-high-rating-players.png" alt="High rating players" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; display: block; margin: 25px auto;"></p>
-<p>To note, Claude will ask you for permission when it tries to use an external integration, such as what you can see in the figure below.</p>
-<p><img src="10-ask-permission.png" alt="Asking permission to run integration" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; display: block; margin: 25px auto;"></p>
-<p>I also tested the server, by asking it questions it couldn’t answer using the datasource I was connected to, such as ‘who are the fastest players’. Claude used <code>list-fields</code>, and quickly concluded that it could not answer this question using the current context.</p>
-<p><img src="6-high-rating-players.png" alt="Fastest players" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; display: block; margin: 25px auto;"></p>
-</section>
-<section id="building-visualisations" class="level2">
-<h2 class="anchored" data-anchor-id="building-visualisations">Building Visualisations</h2>
-<p>I wanted to test some other capabilities, particularly whether I could use this Tableau Cloud data to build basic charts within Claude itself.</p>
-<p>Unfortunately, due to the read-only functions available within the Tableau MCP implementation, I couldn’t build charts within Tableau Cloud directly. However, I could leverage Claude’s own ability to use tools like JavaScript and HTML to do some basic charting within the Claude application itself.</p>
-<p>I first asked Claude to identify which countries had the most players in the top 100 rated players within the FIFA 2021 game. Claude used <code>query-datasource</code> and identified eight countries as ‘top tier’, with Spain having 13 players rated in the top 100.</p>
-<p><img src="8-top-100.png" alt="Top players" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; display: block; margin: 25px auto;"></p>
-<p>Great! I then asked Claude to chart this data. After a few stumbles with my prompting and some pointers from me on visual aesthetics, Claude retrieved the necessary data from Tableau via <code>query-datasource</code>, then generated an accurate—if unspectacular—column chart within Claude itself.</p>
-<p><img src="9-column-chart.png" alt="Column chart showing countries with most top-100 FIFA players" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; display: block; margin: 25px auto;"></p>
-<p>I decided to take it one step further, asking Claude to use Tableau data to build an entire dashboard. I prompted Claude with the following:</p>
+<p>I’ve resisted the urge to panic in the face of the artificial intelligence leviathan for quite some time.</p>
+<p>For the most part, I’ve stuck to the view that large language models (LLMs) are productive tools. Useful enhancements that help good workers become even better. I’ve believed that people who specialise in building compelling visuals and communicating insights still have plenty of runway left in the labour market.</p>
+<p>But my blissfully ignorant facade may have cracked this week after some deep reading on the emergence of model context protocol, or MCP, the apparent ‘USB-C of AI’.</p>
+<section id="hold-up-what-is-model-context-protocol" class="level2">
+<h2 class="anchored" data-anchor-id="hold-up-what-is-model-context-protocol">Hold up, what is model context protocol?</h2>
+<p>For the uninitiated, MCP emerged in November 2024 from Anthropic (the folks behind Claude). It’s an open protocol that standardises how AI applications interact with external resources. That includes other applications, tools, contextual information and crucially, data.</p>
+<p>Here’s the basic idea: an AI application like Claude connects to an MCP server, which then pulls data from various integrated systems. Because MCP is an open, shared standard, you don’t need to build bespoke connectors for every service. One protocol to rule them all.</p>
+<p>Hypothetically, those integrations could include anything — CSV files, Excel workbooks, Oracle databases, random PDFs. Even analytics tools like Power BI or Tableau could, in theory, be part of this ecosystem.</p>
+<p>As Anthropic put it:</p>
 <blockquote class="blockquote">
-<p>“Can you create for me a dashboard showing the FIFA 2021 profile of Arsenal football club. Create four key KPIs across the top, and then two charts underneath, providing insight on where Arsenal is strong and weak versus other teams in the English Premier League within the FIFA 2021 game”</p>
+<p>“MCP provides a universal, open standard for connecting AI systems with data sources, replacing fragmented integrations with a single protocol. The result is a simpler, more reliable way to give AI systems access to the data they need.”</p>
 </blockquote>
-<p>Claude again used <code>query-datasource</code> and responded with a slightly awful looking but functional dashboard! The output was a HTML file that used javascript to build the visuals.</p>
-<p><img src="13-full-dashboard.png" alt="Arsenal FIFA 2021 dashboard" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; display: block; margin: 25px auto;"></p>
-<p>But I was still quite impressed at how quickly it was able to build this using a resource I’d created that sat on a Tableau Cloud server.</p>
-<p>And that’s where I called my experiment to an end.</p>
+<p>Diagramming it out, the architecture might resembles the following:</p>
+<figure style="display: block; margin: 25px auto; text-align: center;" class="figure">
+<img src="mcp_diagram.png" alt="Homer eats a lemon" style="width: 75%; max-width: 600px; height: auto; border-radius: 8px;" class="figure-img">
+<figcaption style="font-style: italic; margin-top: 10px;">
+Sample architecture of how MCP enables integration with AI applications
+</figcaption>
+</figure>
+<p>But the protocol doesn’t just limit itself to those items in the figure above, potentially any information could leverage MCP and provide extra useful context to AI applications.</p>
 </section>
-<section id="quick-reflections" class="level2">
-<h2 class="anchored" data-anchor-id="quick-reflections">Quick Reflections</h2>
-<p>I’ve always been pragmatic about AI capabilities, preferring to observe their evolution. However, after exploring MCP and understanding its opportunities, I’ve become genuinely curious about its impact on analytics engineering, business intelligence, and data visualisation.</p>
-<p>Even in early days, Tableau’s MCP implementation provides interesting food for thought. The ease of querying Tableau Cloud data using natural language suggests the days of learning specific charting techniques in such tools might be numbered.</p>
-<p>A year ago, I’d have dismissed such claims, but MCP’s ability to facilitate seamless communication between AI applications and platforms, whilst providing necessary context for data understanding and insight generation, signals that shifts in the data professional landscape might arrive sooner than expected.</p>
-<p>Tableau itself may pivot its development strategy from adding Desktop features to optimising its platform for AI applications to utilise its superior visual analysis capabilities.</p>
-<p>It’s a curious and exciting time to work in data—even with tools like Tableau. I’ll continue experimenting with Tableau’s MCP service to explore further possibilities.</p>
-<p>Thanks for reading! If you’re interested in my other writing and work, you can <a href="https://thedatavist.substack.com">check out my substack</a> which is more focused on issues in the data profession, or <a href="https://www.linkedin.com/in/darraghmurray/">get in touch / connect via LinkedIn</a>.</p>
+<section id="where-things-get-interesting-and-a-bit-uncomfortable" class="level2">
+<h2 class="anchored" data-anchor-id="where-things-get-interesting-and-a-bit-uncomfortable">Where things get interesting and a bit uncomfortable</h2>
+<p>I’m arguing that MCP opens up both an exciting and potentially unsettling landscape for traditional data visualisation and BI professionals.</p>
+<p>If MCP makes it easy for AI systems to connect directly with your organisation’s data via a standard protocol, then the AI effectively becomes a powerful new interface for that data. And that has potential labour market consequences for typically highly paid data and insights folks.</p>
+<p>Traditionally, the BI professional sits between data and decision-makers. We interpret requests, connect to the appropriate data sources, and build outputs that meet business needs. But with MCP in play, what if those same decision-makers can just… bypass us?</p>
+<p>Picture this: your boss boots up Claude Desktop, connects it to your integrated data warehouse, and starts prompting it to create dashboards that answer business question. No pesky devs, no ticket queue, no intermediary.</p>
+<p>That’s the potential shift. If AI can use MCP to access raw data and generate high-quality visuals and reports, what happens to the role of the BI developer?</p>
+</section>
+<section id="so-should-we-panic" class="level2">
+<h2 class="anchored" data-anchor-id="so-should-we-panic">So… should we panic?</h2>
+<p>Not quite yet.</p>
+<p>I’m fully conscious of the AI-doomer angle of this post, but please indulge me and impart a few hopefully soothing words.</p>
+<p>Right now, most data professionals still hold a clear competitive advantage when it comes to statistical literacy, data quality assessment, and the ability to translate complex findings into business-appropriate insights. These are not trivial skills, and I don’t think large language models have mastered them yet.</p>
+<p>But that advantage may not last forever. As AI systems improve at statistical reasoning and contextual understanding, data professional will continuely need to adapt to stay valuable.</p>
+<p>One obvious move? Start engaging with MCP now. Understand how it works. Experiment with MCP-enabled tools. Position yourself as the person who can design, manage and govern these new data interfaces, not just the chart grunt waiting to be replaced by them.</p>
+<p>Skills in data engineering, data governance, and analytics infrastructure will still likely to grow in value. If you can ensure the data flowing through these new pipelines is clean, trustworthy, and well-managed, you’ll still be at the heart of the insight-delivery process.</p>
+<p>BI professionals and data visualisation folk have the opportunity to shift gears here and widen their skill base to hedge against the risk of leaps forwards like MCP and continue to be relevant.</p>
+</section>
+<section id="visualisation-experts-still-matter-but-the-role-may-evolve" class="level2">
+<h2 class="anchored" data-anchor-id="visualisation-experts-still-matter-but-the-role-may-evolve">Visualisation experts still matter but the role may evolve</h2>
+<p>There’s another area where human BI professionals still hold a clear edge: data storytelling.</p>
+<p>AI can generate charts. MCP might make it easier to do so.</p>
+<p>But designing compelling visual metaphors, framing insights for specific audiences, and weaving data into narratives that inspire action, that’s still very much a human craft.</p>
+<p>Knowing how to present sensitive results to senior executives, how to persuade stakeholders to adopt change, or how to design visuals that speak to a particular cultural or organisational context these skills remain uniquely ours. There likely will be demand for skilled data communicators to shape insights for our colleagues.</p>
+<p>At least, for the time being.</p>
+</section>
+<section id="what-now" class="level2">
+<h2 class="anchored" data-anchor-id="what-now">What now?</h2>
+<p>At the time of writing, the big BI vendors don’t seem to be all-in on MCP — yet. There’s some activity around Metabase integration, but little from Tableau or Microsoft (Power BI). That might change.</p>
+<p>In fact, I suspect it’s only a matter of time. But, in the meantime, I would love to hear your thoughts!</p>
+<hr>
+<p>I basically stumbled across the concept of MCP thanks to some of the great recent LinkedIn posts by Brian Julius, and this post is partially inspired by his recent posts.</p>
+<p>He’s published a few recent short videos explaining the concept that are worth a watch:</p>
+<ul>
+<li><a href="https://www.linkedin.com/posts/brianjuliusdc_ai-mcp-bi-activity-7336834747869929473-4Gyz?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAAMBNeYB5PEd9Q51g_mNH7JfTLL3VUG_pgw">Quick introduction to MCP driven data analysis</a></li>
+<li><a href="https://www.linkedin.com/posts/brianjuliusdc_ai-mcp-activity-7337351335626858498-8-xv?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAAMBNeYB5PEd9Q51g_mNH7JfTLL3VUG_pgw">MCP explained by way of Metallica and the Macarena</a></li>
+</ul>
 
 
 </section>
