@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.56">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Darragh Murray">
+<meta name="dcterms.date" content="2023-11-15">
+<meta name="description" content="A case study in iterative design methodology, exploring three versions of a data visualization on Australian referendums and the strategic decisions behind each iteration.">
+
+<title>Iterative Visual Design and The Choice Visual – thedatavist</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">thedatavist</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../posts.html"> 
+<span class="menu-text">Datavist Blog</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Iterative Visual Design and The Choice Visual</h1>
+                  <div>
+        <div class="description">
+          A case study in iterative design methodology, exploring three versions of a data visualization on Australian referendums and the strategic decisions behind each iteration.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Data visualisation</div>
+                <div class="quarto-category">Tableau</div>
+                <div class="quarto-category">Visual analytics</div>
+                <div class="quarto-category">Design thinking</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Darragh Murray </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">November 15, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#key-insights-from-the-data-story" id="toc-key-insights-from-the-data-story" class="nav-link active" data-scroll-target="#key-insights-from-the-data-story">Key insights from the data story</a></li>
+  <li><a href="#design-evolution-a-three-version-journey" id="toc-design-evolution-a-three-version-journey" class="nav-link" data-scroll-target="#design-evolution-a-three-version-journey">Design evolution: A three-version journey</a></li>
+  <li><a href="#version-1-initial-scrollytelling-approach" id="toc-version-1-initial-scrollytelling-approach" class="nav-link" data-scroll-target="#version-1-initial-scrollytelling-approach">Version 1: Initial scrollytelling approach</a></li>
+  <li><a href="#version-2-social-media-optimization" id="toc-version-2-social-media-optimization" class="nav-link" data-scroll-target="#version-2-social-media-optimization">Version 2: Social media optimization</a></li>
+  <li><a href="#final-version-typography-and-visual-hierarchy-refinement" id="toc-final-version-typography-and-visual-hierarchy-refinement" class="nav-link" data-scroll-target="#final-version-typography-and-visual-hierarchy-refinement">Final version: Typography and visual hierarchy refinement</a></li>
+  <li><a href="#design-methodology-insights" id="toc-design-methodology-insights" class="nav-link" data-scroll-target="#design-methodology-insights">Design methodology insights</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<p>Early last month, I published a series of new <a href="https://public.tableau.com/app/profile/darragh.murray/vizzes">Tableau Public visualisations</a> on the history of referendums in Australia, immediately prior to the latest Australian referendum vote on recognising Indigenous Australians in our constitution - commonly known as the referendum on <strong>The Voice</strong> to parliament (the vote failed but I’m not going to delve into the politics of that outcome here).</p>
+<p>As I developed this series, I iterated through several design approaches before settling on a horizontally scrolling visualisation. This final version incorporates strategic design elements created in Figma (contextual text and custom fonts) with the core visualization developed in Tableau.</p>
+<p>The small multiple maps with integrated bar charts were developed entirely in Tableau using map layers - a powerful yet underutilized feature that demonstrates the platform’s advanced capabilities. Here’s the final version:</p>
+<figure style="display: block; margin: 25px auto; text-align: center;" class="figure">
+<img src="the-choice-1.png" alt="The final visual design I landed on" style="width: 120%; max-width: 800px; height: auto; border-radius: 8px;" class="figure-img">
+<figcaption style="font-style: italic; margin-top: 10px;">
+The final visual design I landed on
+</figcaption>
+</figure>
+<p>During the development of this visualisation, I iterated through several versions before arriving at the final outcome. I thought I’d share the design process behind what became a project I’m genuinely proud of - the finished product incorporates strategic design elements created in Figma (contextual text and custom fonts) with the core visualisation developed in Tableau.</p>
+<p>The small multiple maps with integrated bar charts were developed entirely in Tableau using map layers - a powerful yet underutilised feature that demonstrates the platform’s advanced capabilities.</p>
+<p>You can explore the <a href="https://public.tableau.com/app/profile/darragh.murray/viz/TheChoice_16969413882860/TheChoice">interactive version on Tableau Public</a>.</p>
+<section id="key-insights-from-the-data-story" class="level3">
+<h3 class="anchored" data-anchor-id="key-insights-from-the-data-story">Key insights from the data story</h3>
+<p>While I consider myself well-informed about Australian political history and understand that referendums require both a popular majority and majority support in at least four states, this visualisation revealed some surprising patterns.</p>
+<p>Most striking was the <strong>low success rate of constitutional amendments</strong> - only <strong>8 out of 44</strong> proposed amendments have succeeded, representing just an <strong>18% success rate</strong>. This historical context provided important perspective on the challenges facing The Voice referendum.</p>
+<p>The data also revealed that several referendums failed despite achieving popular majority support across Australia, occurring in <strong>1946, 1977, and 1984</strong>. Conversely, the <a href="https://aiatsis.gov.au/explore/1967-referendum">1967 referendum</a> granting the federal government authority to make laws for Indigenous Australians achieved the highest success rate in Australian referendum history.</p>
+<p>These insights reinforce my conviction that effective data visualisation serves as a powerful tool for rapid historical learning and contextual understanding.</p>
+</section>
+<section id="design-evolution-a-three-version-journey" class="level3">
+<h3 class="anchored" data-anchor-id="design-evolution-a-three-version-journey">Design evolution: A three-version journey</h3>
+<p>Rather than simply presenting the final product, I’ve maintained all three versions as a case study in iterative design methodology. Each version addressed specific user needs and platform constraints while building toward the optimal solution.</p>
+<ul>
+<li><a href="https://public.tableau.com/app/profile/darragh.murray/viz/TheChoice/TheChoice">The Choice - Version 1</a></li>
+<li><a href="https://public.tableau.com/app/profile/darragh.murray/viz/ReferendumsInAustraliaAlternativeVersion/ConstitutionalReferendums">The Choice - Version 2</a></li>
+</ul>
+<p>This approach preserves the design journey for educational purposes and demonstrates the value of systematic iteration.</p>
+</section>
+<section id="version-1-initial-scrollytelling-approach" class="level3">
+<h3 class="anchored" data-anchor-id="version-1-initial-scrollytelling-approach">Version 1: Initial scrollytelling approach</h3>
+<p>The <a href="https://public.tableau.com/app/profile/darragh.murray/viz/TheChoice/TheChoice">first version</a> employed my established ‘scrollytelling’ methodology - a vertically formatted visualisation featuring key performance indicators, a beeswarm timeline, and 44 small multiple maps created using Tableau’s map layers. The dimensions (2000 x 5000 pixels) created a comprehensive but extensive user experience.</p>
+<figure style="display: block; margin: 25px auto; text-align: center;" class="figure">
+<img src="the-choice-2.png" alt="" style="width: 75%; max-width: 600px; height: auto; border-radius: 8px;" class="figure-img">
+<figcaption style="font-style: italic; margin-top: 10px;">
+Version 1: Comprehensive but challenging for social sharing
+</figcaption>
+</figure>
+<p>While initially satisfied with this approach, I identified several optimisation opportunities. The extensive text content created barriers to accessing the core visual insights, and the large format proved challenging for social media distribution.</p>
+<p>Additionally, I encountered technical formatting challenges when transitioning from Tableau Desktop to Tableau Public, particularly with text box positioning and Arial font rendering differences between platforms. This experience highlighted important considerations for cross-platform design consistency.</p>
+</section>
+<section id="version-2-social-media-optimization" class="level3">
+<h3 class="anchored" data-anchor-id="version-2-social-media-optimization">Version 2: Social media optimization</h3>
+<p><a href="https://public.tableau.com/app/profile/darragh.murray/viz/ReferendumsInAustraliaAlternativeVersion/ConstitutionalReferendums">Version 2</a> addressed the social sharing challenges by streamlining the design focus. I condensed the visualisation to emphasise the map elements whilst reducing supplementary text, enabling users to quickly grasp the key insights without extensive reading.</p>
+<figure style="display: block; margin: 25px auto; text-align: center;" class="figure">
+<img src="the-choice-3.png" alt="" style="width: 75%; max-width: 600px; height: auto; border-radius: 8px;" class="figure-img">
+<figcaption style="font-style: italic; margin-top: 10px;">
+Version 2: Optimized for social media consumption
+</figcaption>
+</figure>
+<p>This strategic pivot proved successful, generating significant engagement when shared on <a href="https://www.reddit.com/r/australia/comments/17454t1/constitutional_referendums_in_australia_often_fail/">/r/australia</a> and <a href="https://www.reddit.com/r/dataisbeautiful/comments/1743726/comment/k485wi3/">/r/dataisbeautiful</a>, reaching nearly <strong>half a million views</strong>.</p>
+<p>However, valuable feedback from Tableau mapping expert <a href="https://typefully.com/professorkao">Dennis Kao</a> identified an opportunity to better highlight successful referendum outcomes. This insight prompted the development of version 3, incorporating color-coded background tiles to distinguish successful amendments.</p>
+</section>
+<section id="final-version-typography-and-visual-hierarchy-refinement" class="level3">
+<h3 class="anchored" data-anchor-id="final-version-typography-and-visual-hierarchy-refinement">Final version: Typography and visual hierarchy refinement</h3>
+<p>Building on the lessons from previous iterations, I developed the <a href="https://public.tableau.com/app/profile/darragh.murray/viz/TheChoice_16969413882860/TheChoice">final version</a> to address typography limitations inherent in Tableau’s design constraints.</p>
+<p>While Tableau excels as a visualisation platform, its limited font flexibility can constrain design expression. To overcome this, I created custom background elements in Figma, enabling precise control over typography, including optimal line spacing for the title treatment.</p>
+<figure style="display: block; margin: 25px auto; text-align: center;" class="figure">
+<img src="the-choice-4.png" alt="" style="width: 75%; max-width: 600px; height: auto; border-radius: 8px;" class="figure-img">
+<figcaption style="font-style: italic; margin-top: 10px;">
+Final version: Enhanced typography through Figma integration
+</figcaption>
+</figure>
+<p>This hybrid approach raises important accessibility considerations, as embedding text within images can create barriers for screen readers. It represents a common tension between design aesthetics and accessibility best practices in data visualization.</p>
+<p>The final design also featured a restructured layout: a condensed beeswarm timeline and an 11x4 grid with horizontal scrolling functionality. User feedback indicated this approach improved the balance between contextual information and visual content consumption.</p>
+</section>
+<section id="design-methodology-insights" class="level2">
+<h2 class="anchored" data-anchor-id="design-methodology-insights">Design methodology insights</h2>
+<p>This project exemplifies the iterative design process essential to effective data visualisation. Each version addressed specific user needs while building toward an optimal solution that balanced aesthetic appeal, technical constraints, and accessibility considerations.</p>
+<p>The evolution demonstrates how successful visualisations often require multiple iterations to optimise for different contexts - from comprehensive analysis to social media engagement to refined user experience. Understanding these varied requirements enables designers to create more impactful and versatile data stories.</p>
+<p>For organisations seeking to enhance their data storytelling capabilities, this case study illustrates the value of systematic design iteration, user feedback integration, and cross-platform optimisation strategies.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
