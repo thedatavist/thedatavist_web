@@ -1,6 +1,6 @@
 ---
 title: "My 2023 Iron Viz Journey: Lessons from the Data Visualisation Gauntlet"
-description: "Reflect on my first successful Iron Viz qualifier submission about women's Australian Rules Football, sharing three key lessons learned during the demanding month-long process: be decisive early with topic and data selection, engage the community for feedback, and embrace the challenge as ultimately rewarding for skill development."
+description: "A reflection on preparing for data visualisation competitions: three key lessons from my 2023 IronViz experience"
 author: "Darragh Murray"
 date: "2023-11-04"
 image: "aflw_blazing_trail.png"
@@ -12,31 +12,33 @@ categories:
   - Competition
   - Lessons learned
 ---
-# My Iron Viz Journey: Lessons from the Data Visualisation Gauntlet
+# My 2023 Iron Viz Journey: Lessons from the Data Visualisation Gauntlet
 
 My first participation in Iron Viz Qualifier was a surreal experience.
 
 As I hit the submit button with 10 minutes left until the submission deadline, I felt both wrung out and exhilarated. Like someone had squeezed champagne out of a tea towel. Bizarre metaphors aside, Iron Viz was an odyssey but still an overwhelmingly positive experience.
-
-If you're unfamiliar with Iron Viz, it's an annual data visualisation competition built around the Tableau Public platform. Participants worldwide have a month to create and submit work on a selected theme during qualifier rounds, hoping their submission is good enough to qualify them for the grand final held at the Tableau Conference each year. Three lucky data wizards face off for the title of Iron Viz champion in front of a live audience.
-
-Even though I've used Tableau for years, I'd never been able to get something over the line in the Iron Viz qualifiers. Strangely, now with a newborn in tow, I managed to carve out some time over October to finish the work. This year the feeder theme was 'games', and participants could interpret this topic widely. Fortunately, the scope also included sports.
-
-I immediately knew what I wanted to tell a story about: a deep dive into the history of women in Australian Rules Football and the evolution of the AFLW, the semi-professional, national league dedicated to women's Australian Rules Football. Not only was this topic something I'd been considering exploring for quite some time, I knew I could source high-quality, publicly accessible data quickly.
 
 <figure style="display: block; margin: 25px auto; text-align: center;">
   <img src="aflw_blazing_trail.png" alt="AFLW Blazing of the Trail" style="width: 120%; max-width: 800px; height: auto; border-radius: 8px;">
   <figcaption style="font-style: italic; margin-top: 10px;">AFLW Blazing of the Trail</figcaption>
 </figure>
 
+If you're unfamiliar with Iron Viz, it's an annual data visualisation competition built around the [Tableau Public](https://public.tableau.com/app/discover) platform. Participants worldwide have a month to create and submit work on a selected theme during qualifier rounds, hoping their submission is good enough to qualify them for the grand final held at the Tableau Conference each year. Three lucky data wizards face off for the title of Iron Viz champion in front of a live audience.
+
+Even though I've used Tableau for years, I'd never been able to get something over the line in the Iron Viz qualifiers. Strangely, now with a newborn in tow, I managed to carve out some time over October to finish the work. This year the feeder theme was 'games', and participants could interpret this topic widely. Fortunately, the scope also included sports.
+
+I immediately knew what I wanted to tell a story about: a deep dive into the history of women in Australian Rules Football and the evolution of the AFLW, the semi-professional, national league dedicated to women's Australian Rules Football. Not only was this topic something I'd been considering exploring for quite some time, I knew I could source high-quality, publicly accessible data quickly.
+
+* [Here's is a link to the finished visualisation](https://public.tableau.com/app/profile/darragh.murray/viz/AFLWTheBlazingoftheTrail/AFLWBLAZINGTHETRAIL) - that ended up as one of the finalists!
+
 
 ## One Hectic Month
 
 Despite having the topic and data sorted, my progress throughout October felt slow. I got bogged down in particular design aspects and frequently changed my mind about certain things. Coupled with a busy job, juggling the responsibilities of a 9-month-old and getting COVID-19 for the first time in the days before submissions - I was pretty stressed out by the end.
 
-I almost gave in when I saw Lindsay Betzendahl submit her stunning Wordle viz a week before the deadline. But after some encouraging words from colleagues and kind souls within the global Tableau #datafam and a not insignificant amount of caffeine and paracetamol (for the COVID-19), I pressed on - and managed to submit something that I was proud of with about 15 minutes to spare!
+I almost gave in when I saw [Lindsay Betzendahl submit her stunning Wordle viz a week before the deadline](https://public.tableau.com/app/profile/lindsay.betzendahl/viz/AStoryofFiveLittleLetterzIronViz2023/LongForm). But after some encouraging words from colleagues and kind souls within the global Tableau #datafam and a not insignificant amount of caffeine and paracetamol (for the COVID-19), I pressed on - and managed to submit something that I was proud of with about 15 minutes to spare!
 
-The result? An 8,500-pixel exploration of the history of women in Australian Rules Football, with a particular focus on the emergence of the semi-professional AFLW competition.
+The result? An 8,500-pixel exploration of the [history of women in Australian Rules Football](https://en.wikipedia.org/wiki/Women%27s_Australian_rules_football), with a particular focus on the emergence of the semi-professional [AFLW competition](https://www.womens.afl/).
 
 ## Three Strategic Lessons from the Gauntlet
 
@@ -88,13 +90,13 @@ Given the talent on enormous display in this globe's preeminent data visualisati
 
 This result validates the strategic approach I've outlined above. Even a highly niche topic like women's Australian Rules Football can achieve recognition when you combine strategic preparation, community engagement, and commitment to demanding work.
 
-**Key thanks:** My WDBI colleagues at JLL actively encourage team members to express creativity in competitions like this. CJ Mayes was a sounding board for many ideas I put into my entry. Michelle Frayman and Kimly Scott from the Tableau community provided practical, constructive criticism that improved my visualisation. James Day's fabulous Fitzroy API provided AFLW statistics in a convenient format.
+**Key thanks:** My WDBI colleagues at JLL actively encourage team members to express creativity in competitions like this. [CJ Mayes](https://cj-mayes.com) was a sounding board for many ideas I put into my entry. Michelle Frayman and Kimly Scott from the Tableau community provided practical, constructive criticism that improved my visualisation. James Day's fabulous [Fitzroy API](https://jimmyday12.github.io/fitzRoy/) provided AFLW statistics in a convenient format.
 
 I'd also like to thank Tableau and the competition judges for being brave enough to select a visual essay concerning such a niche topic as one of the top entries. 
 
 Finally, my partner and little boy got less attention from me during October, and I want to thank them for their ongoing support.
 
-**If you want to see the visualisation:** https://lnkd.in/g2etvHxi
+* [Here's that link to the finished visualisation again](https://public.tableau.com/app/profile/darragh.murray/viz/AFLWTheBlazingoftheTrail/AFLWBLAZINGTHETRAIL).
 
 **Well done** to the three finalists for IronViz 2023 - Brittany Rosenau, Paul Roos and Nirosh Perera. Your visualisations are amazing, and you all thoroughly deserve your place in the grand final in Las Vegas next year.
 
