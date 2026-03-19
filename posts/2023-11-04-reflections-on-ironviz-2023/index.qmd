@@ -32,7 +32,7 @@ I immediately knew what I wanted to tell a story about: a deep dive into the his
 * [Here's is a link to the finished visualisation](https://public.tableau.com/app/profile/darragh.murray/viz/AFLWTheBlazingoftheTrail/AFLWBLAZINGTHETRAIL) - that ended up as one of the finalists!
 
 
-## One Hectic Month
+# One Hectic Month
 
 Despite having the topic and data sorted, my progress throughout October felt slow. I got bogged down in particular design aspects and frequently changed my mind about certain things. Coupled with a busy job, juggling the responsibilities of a 9-month-old and getting COVID-19 for the first time in the days before submissions - I was pretty stressed out by the end.
 
@@ -40,11 +40,11 @@ I almost gave in when I saw [Lindsay Betzendahl submit her stunning Wordle viz a
 
 The result? An 8,500-pixel exploration of the [history of women in Australian Rules Football](https://en.wikipedia.org/wiki/Women%27s_Australian_rules_football), with a particular focus on the emergence of the semi-professional [AFLW competition](https://www.womens.afl/).
 
-## Three Strategic Lessons from the Gauntlet
+# Three Strategic Lessons from the Gauntlet
 
 I wanted to share some lessons learned that apply to any demanding data visualisation project - whether it's Iron Viz or high-stakes client work.
 
-### 1. Being decisive in topic selection and data gathering is a massive time-saving strategy
+## 1. Being decisive in topic selection and data gathering is a massive time-saving strategy
 
 Data preparation is likely the most time-consuming task when building any data product. If you can minimise this aspect of the process, you'll maximise your time to work on the visible end product - the charts you construct and the narrative you weave.
 
@@ -54,7 +54,7 @@ I was fortunate that I'd been thinking about my topic for quite some time before
 
 **Key takeaway:** Build a comprehensive list of exciting topics, datasets and relevant themes before you need them. Whether it's for Iron Viz or client projects, strategic preparation allows you to act decisively when opportunities arise.
 
-### 2. Engage the community for critical feedback
+## 2. Engage the community for critical feedback
 
 The online data community is the most valuable asset you can tap into during any challenging project. Not only will it help you focus your ideas and approach, but it will also help you pick up errors, issues or ideas that you might have missed.
 
@@ -64,7 +64,7 @@ I was very fortunate to have community superstars provide critical feedback alon
 
 **Key takeaway:** Build relationships with industry professionals who can provide constructive criticism. Whether it's the Tableau community for competitions or peer networks for client work, external validation strengthens your output and catches blind spots.
 
-### 3. Accept that it will be demanding but ultimately rewarding
+## 3. Accept that it will be demanding but ultimately rewarding
 
 The Iron Viz feeder process is challenging. The skill level on display has increased exponentially in recent years, and you must bring your A-game if you want any chance of making it through.
 
@@ -76,13 +76,13 @@ I also learned deeply about the subject matter. I now have excellent working kno
 
 **Key takeaway:** Embrace challenging projects as growth opportunities. The skills and expertise gained from demanding work - whether competitions or complex client requirements - create competitive advantages and new capabilities.
 
-## Why This Story Matters
+# Why This Story Matters
 
 Women in Australian Rules Football is admittedly a niche topic. The sport is only well-known in Australia, and women's participation has a relatively lower profile. But it's an important story to tell, considering how the women's league development seems to revolutionise women's sports in Australia.
 
 AFLW is a sport I love watching, and this visualisation was my tribute to women's footy. Hopefully, my Iron Viz submission can increase its profile within Australia and globally.
 
-## The Results
+# The Results
 
 And what an end to the year it turned out to be! I found out that I placed in the **top 15** globally and **third** in the Asia-Pacific region in Tableau's annual Iron Viz competition for my interactive visual essay "*The Blazing of the Trail*".
 
