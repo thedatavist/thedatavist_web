@@ -14,7 +14,9 @@ One great thing about the company I work for is that they continually encourage 
 
 Harking back to my postgraduate studies in international relations, I had sourced some data from the [Stockholm International Peace Research Institute](https://www.sipri.org/) around the percentage of GDP various countries use to support their military capability. I was very keen to do some analysis using this data but momentarily stuck with what to compare it with. But like a bolt from the blue, it hit me – why not look at this data in the context of the Human Development Index?
 
-Voila – that was the catalyst for my newest bit of data visualisation work.
+Voila – that was the catalyst for my newest bit of data visualisation work, and below is the result.
+
+![](A-cost-of-global-insecurity.png)
 
 You can view the full interactive on [Tableau Public](https://public.tableau.com/app/profile/darragh.murray).
 

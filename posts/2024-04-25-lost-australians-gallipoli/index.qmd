@@ -12,6 +12,8 @@ image: featured.png
 
 I've carved out some time from my busy schedule to throw together a new viz, this time on cause of death of Australians at Gallipoli during the course of the 10 month campaign.
 
+![](Gallipoli-5.png)
+
 You can view the interactive on Tableau Public by clicking [here](https://public.tableau.com/app/profile/darragh.murray).
 
 Here is some more context about the visual that I wrote on LinkedIn:

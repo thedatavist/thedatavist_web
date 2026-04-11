@@ -24,23 +24,39 @@ As a result, I've thrown together a small dashboard that hopefully allows people
 
 You can access the dashboard via [Tableau Public](https://public.tableau.com/app/profile/darragh.murray).
 
+Here's what the dashboard looks like:
+
+![](FIG-1.png)
+
 ## Some quick instructions
 
 There are two sections. On the right are two simple charts, and on the left are some parameters used to manipulate the data in the charts.
 
-The top-left chart shows snapshot data at a specific moment. Typically this chart defaults to measuring Net Interstate Migration at (or up to) the latest available snapshot date by Australian State/Territory.
+The top-left chart shows snapshot data at a specific moment. Typically this chart defaults to measuring **Net Interstate Migration** at (or up to) the **latest available** snapshot date by Australian State/Territory.
+
+![](FIG-2.png)
 
 The bottom-right chart shows the Australian State/Territory trend for the selected metric by whatever historical trend parameter has been chosen (defaults to two).
 
-On the far left is an area to adjust the parameters of the two charts – these include a population metric dimension (arrivals, departures, net migration) and an analysis date dimension – the latter allowing you to examine data at available quarterly intervals going back to June 1981.
+![](FIG-3.png)
 
-The final available parameter is a historical trend (years/period) selector, allowing you to adjust the historical trend chart to suit your needs. Typically the parameter takes some predefined year intervals – but also has one that shows the COVID pandemic period (March 2020 onward). This trend also relies on the analysis date parameter to determine where the trend ends.
+On the far left is an area to adjust the parameters of the two charts - these include a **population metric** dimension (arrivals, departures, net migration) and an **analysis date** dimension - the latter allowing you to examine data at available quarterly intervals going back to June 1981.
+
+The final available parameter is a **historical trend** (years/period) selector, allowing you to adjust the historical trend chart to suit your needs. Typically the parameter takes some predefined year intervals - but also has one that shows the COVID pandemic period (March 2020 onward). This trend also relies on the analysis date parameter to determine where the trend *ends*.
+
+![](FIG-4.png)
 
 So, for example, if you wanted to see the state-by-state net interstate migration figures for the decade up to December 2000, you would set the following parameters:
 
 - Select Population Metric = Net Interstate Migration
 - Change Analysis Date = December 2000
 - Historical Trend (Years/Periods) = 10
+
+![](FIG-5.png)
+
+You would end up with a figure like the following:
+
+![](FIG-6.png)
 
 And voila!
 

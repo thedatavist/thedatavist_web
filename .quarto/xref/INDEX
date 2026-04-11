@@ -37,5 +37,47 @@
   },
   "posts/2023-11-04-reflections-on-ironviz-2023/index.qmd": {
     "index.html": "b7258dd4"
+  },
+  "services.qmd": {
+    "services.html": "0303d384"
+  },
+  "contact.qmd": {
+    "contact.html": "a287b62d"
+  },
+  "portfolio.qmd": {
+    "portfolio.html": "cffdccbb"
+  },
+  "posts/2017-05-03-analytics-capability-international-education/index.qmd": {
+    "index.html": "ce1e3e94"
+  },
+  "posts/2021-11-01-military-spending-human-development/index.qmd": {
+    "index.html": "0fcddf01"
+  },
+  "posts/2021-04-01-international-education-dashboard/index.qmd": {
+    "index.html": "c679a4d2"
+  },
+  "posts/2024-04-25-lost-australians-gallipoli/index.qmd": {
+    "index.html": "45bed92c"
+  },
+  "posts/2022-09-26-visualising-interstate-migration/index.qmd": {
+    "index.html": "5d311f65"
+  },
+  "posts/2017-01-12-data-driven-decision-making/index.qmd": {
+    "index.html": "19e11941"
+  },
+  "posts/2022-01-10-exploratory-data-analysis/index.qmd": {
+    "index.html": "de585b83"
+  },
+  "posts/2020-06-15-refuge-from-the-storm/index.qmd": {
+    "index.html": "58832535"
+  },
+  "posts/2020-05-13-covid-international-students/index.qmd": {
+    "index.html": "c3a36635"
+  },
+  "posts/2022-09-27-interstate-migration-australia/index.qmd": {
+    "index.html": "dc2c2220"
+  },
+  "posts/2021-07-13-land-is-a-map/index.qmd": {
+    "index.html": "e260dc29"
   }
 }

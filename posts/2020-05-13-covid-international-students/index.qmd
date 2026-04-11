@@ -20,6 +20,8 @@ I was immediately alerted to the existence of a brand new ABS dataset. I quickly
 
 You can view the interactive on my [Tableau Public profile](https://public.tableau.com/app/profile/darragh.murray) (best viewed on a proper PC).
 
+![](Visa-Groups-Year-on-Year.png)
+
 While I haven't had a chance to deep dive into what this all means, it's quite clear that over the last two months we have seen a large drop off in both arrivals and departures for the visa type.
 
 More... soon.

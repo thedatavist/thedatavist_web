@@ -40,6 +40,11 @@ I almost gave in when I saw [Lindsay Betzendahl submit her stunning Wordle viz a
 
 The result? An 8,500-pixel exploration of the [history of women in Australian Rules Football](https://en.wikipedia.org/wiki/Women%27s_Australian_rules_football), with a particular focus on the emergence of the semi-professional [AFLW competition](https://www.womens.afl/).
 
+<figure style="display: block; margin: 25px auto; text-align: center;">
+  <img src="Screenie_1.png" alt="The full 8,500-pixel visualisation" style="width: 100%; max-width: 800px; height: auto; border-radius: 8px;">
+  <figcaption style="font-style: italic; margin-top: 10px;">The full 8,500-pixel visualisation</figcaption>
+</figure>
+
 # Three Strategic Lessons from the Gauntlet
 
 I wanted to share some lessons learned that apply to any demanding data visualisation project - whether it's Iron Viz or high-stakes client work.
