@@ -79,7 +79,8 @@ ul.task-list li input[type="checkbox"] {
 
     const options = {
       valueNames: ['listing-image','listing-date','listing-title','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
+      page: 18,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
       searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
     };
 
@@ -187,7 +188,7 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(16)</span></div><div class="category" data-category="AI">AI <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Analytics">Analytics <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Anthropic">Anthropic <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Australia">Australia <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Business intelligence">Business intelligence <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Case studies">Case studies <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Claude">Claude <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Climate">Climate <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Competition">Competition <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Data Analysis">Data Analysis <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Data Visualisation">Data Visualisation <span class="quarto-category-count">(7)</span></div><div class="category" data-category="Data profession">Data profession <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Data visualisation">Data visualisation <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Design thinking">Design thinking <span class="quarto-category-count">(1)</span></div><div class="category" data-category="History">History <span class="quarto-category-count">(1)</span></div><div class="category" data-category="International Education">International Education <span class="quarto-category-count">(4)</span></div><div class="category" data-category="International Relations">International Relations <span class="quarto-category-count">(2)</span></div><div class="category" data-category="IronViz">IronViz <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Lessons learned">Lessons learned <span class="quarto-category-count">(1)</span></div><div class="category" data-category="MCP">MCP <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Power BI">Power BI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Strategy">Strategy <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Tableau">Tableau <span class="quarto-category-count">(10)</span></div><div class="category" data-category="Visual analytics">Visual analytics <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(20)</span></div><div class="category" data-category="AI">AI <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Analytics">Analytics <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Anthropic">Anthropic <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Australia">Australia <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Business intelligence">Business intelligence <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Case studies">Case studies <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Claude">Claude <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Climate">Climate <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Colour theory">Colour theory <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Competition">Competition <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Competitions">Competitions <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Data Analysis">Data Analysis <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Data Visualisation">Data Visualisation <span class="quarto-category-count">(7)</span></div><div class="category" data-category="Data modeling">Data modeling <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Data profession">Data profession <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Data visualisation">Data visualisation <span class="quarto-category-count">(7)</span></div><div class="category" data-category="Design">Design <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Design thinking">Design thinking <span class="quarto-category-count">(1)</span></div><div class="category" data-category="History">History <span class="quarto-category-count">(1)</span></div><div class="category" data-category="International Education">International Education <span class="quarto-category-count">(4)</span></div><div class="category" data-category="International Relations">International Relations <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Iron Viz">Iron Viz <span class="quarto-category-count">(1)</span></div><div class="category" data-category="IronViz">IronViz <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Lessons learned">Lessons learned <span class="quarto-category-count">(1)</span></div><div class="category" data-category="MCP">MCP <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Power BI">Power BI <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Semantic layer">Semantic layer <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Strategy">Strategy <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Tableau">Tableau <span class="quarto-category-count">(12)</span></div><div class="category" data-category="Visual analytics">Visual analytics <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
@@ -219,7 +220,151 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="AI,MCP,Business intelligence,Data visualisation,Data profession,Claude,Anthropic" data-listing-date-sort="1752415200000" data-listing-file-modified-sort="1775856632884" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="925">
+<div class="g-col-1" data-index="0" data-categories="Business intelligence,AI,Data profession,Tableau,Power BI" data-listing-date-sort="1775138400000" data-listing-file-modified-sort="1775877327072" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1143">
+<a href="./posts/2026-04-03-big-business-intelligence-squeeze/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./posts/2026-04-03-big-business-intelligence-squeeze/featured.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+The Big Business Intelligence Squeeze
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Business intelligence'); return false;">
+Business intelligence
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('AI'); return false;">
+AI
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Data profession'); return false;">
+Data profession
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Tableau'); return false;">
+Tableau
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Power BI'); return false;">
+Power BI
+</div>
+</div>
+<div class="card-text listing-description">
+Examines disruption in traditional BI tools and the skills analytics professionals need going forward as AI-native analytics and data platforms converge on the market.
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Apr 3, 2026
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="AI,Data modeling,Semantic layer,Data profession" data-listing-date-sort="1763301600000" data-listing-file-modified-sort="1775877381147" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1210">
+<a href="./posts/2025-11-17-semantic-layer-matters/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./posts/2025-11-17-semantic-layer-matters/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Onboarding AI: Why the Semantic Layer Matters
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('AI'); return false;">
+AI
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Data modeling'); return false;">
+Data modeling
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Semantic layer'); return false;">
+Semantic layer
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Data profession'); return false;">
+Data profession
+</div>
+</div>
+<div class="card-text listing-description">
+Explores how semantic layers provide essential context for AI systems working with data, preventing hallucinations and enabling accurate enterprise analytics.
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Nov 17, 2025
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="Data visualisation,Design,Colour theory" data-listing-date-sort="1762005600000" data-listing-file-modified-sort="1775877423174" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="956">
+<a href="./posts/2025-11-02-colour-strategy-aesthetics/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./posts/2025-11-02-colour-strategy-aesthetics/featured.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Colour as Strategy and Aesthetics
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Data visualisation'); return false;">
+Data visualisation
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Design'); return false;">
+Design
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Colour theory'); return false;">
+Colour theory
+</div>
+</div>
+<div class="card-text listing-description">
+Analyzes the Australian Bureau of Meteorology’s radar redesign controversy and what it teaches about colour theory in data visualisation.
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Nov 2, 2025
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="3" data-categories="Data visualisation,Tableau,Iron Viz,Competitions" data-listing-date-sort="1761228000000" data-listing-file-modified-sort="1775877494966" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1767">
+<a href="./posts/2025-10-24-data-viz-competitions/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./posts/2025-10-24-data-viz-competitions/featured.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+How to Do Reasonably Well in Data Visualisation Competitions
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Data visualisation'); return false;">
+Data visualisation
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Tableau'); return false;">
+Tableau
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Iron Viz'); return false;">
+Iron Viz
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Competitions'); return false;">
+Competitions
+</div>
+</div>
+<div class="card-text listing-description">
+Practical strategies from placing in the Iron Viz top 10 twice—focusing on preparation, community feedback, and persistence rather than pure talent.
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Oct 24, 2025
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="4" data-categories="AI,MCP,Business intelligence,Data visualisation,Data profession,Claude,Anthropic" data-listing-date-sort="1752415200000" data-listing-file-modified-sort="1775856632884" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="925">
 <a href="./posts/2025-07-14-mcp-reshaping-of-bi/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -264,7 +409,7 @@ Jul 14, 2025
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="AI,MCP,Tableau,Business intelligence,Data visualisation,Data profession,Claude,Anthropic" data-listing-date-sort="1750773600000" data-listing-file-modified-sort="1775856632884" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1523">
+<div class="g-col-1" data-index="5" data-categories="AI,MCP,Tableau,Business intelligence,Data visualisation,Data profession,Claude,Anthropic" data-listing-date-sort="1750773600000" data-listing-file-modified-sort="1775856632884" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1523">
 <a href="./posts/2025-06-25-early-experiments-tableau-mcp/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -312,7 +457,7 @@ Jun 25, 2025
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="Tableau,Power BI,Business intelligence,Data visualisation,Data profession" data-listing-date-sort="1749823200000" data-listing-file-modified-sort="1775856632871" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1214">
+<div class="g-col-1" data-index="6" data-categories="Tableau,Power BI,Business intelligence,Data visualisation,Data profession" data-listing-date-sort="1749823200000" data-listing-file-modified-sort="1775856632871" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1214">
 <a href="./posts/2025-06-14-tableau-powerbi-debate/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -351,7 +496,7 @@ Jun 14, 2025
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="3" data-categories="Data Visualisation,History,Tableau" data-listing-date-sort="1713967200000" data-listing-file-modified-sort="1775869745763" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="345">
+<div class="g-col-1" data-index="7" data-categories="Data Visualisation,History,Tableau" data-listing-date-sort="1713967200000" data-listing-file-modified-sort="1775869745763" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="345">
 <a href="./posts/2024-04-25-lost-australians-gallipoli/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -384,7 +529,7 @@ Apr 25, 2024
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="4" data-categories="Data visualisation,Tableau,Visual analytics,Design thinking" data-listing-date-sort="1699970400000" data-listing-file-modified-sort="1775856632856" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="984">
+<div class="g-col-1" data-index="8" data-categories="Data visualisation,Tableau,Visual analytics,Design thinking" data-listing-date-sort="1699970400000" data-listing-file-modified-sort="1775856632856" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="984">
 <a href="./posts/2023-11-15-iterative-design-the-choice/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -420,7 +565,7 @@ Nov 15, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="5" data-categories="Data visualisation,Tableau,IronViz,Case studies,Competition,Lessons learned" data-listing-date-sort="1699020000000" data-listing-file-modified-sort="1775868482385" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1451">
+<div class="g-col-1" data-index="9" data-categories="Data visualisation,Tableau,IronViz,Case studies,Competition,Lessons learned" data-listing-date-sort="1699020000000" data-listing-file-modified-sort="1775868482385" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1451">
 <a href="./posts/2023-11-04-reflections-on-ironviz-2023/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -462,7 +607,7 @@ Nov 4, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="6" data-categories="Data Visualisation,Australia,Tableau" data-listing-date-sort="1664200800000" data-listing-file-modified-sort="1775867534661" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="788">
+<div class="g-col-1" data-index="10" data-categories="Data Visualisation,Australia,Tableau" data-listing-date-sort="1664200800000" data-listing-file-modified-sort="1775867534661" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="788">
 <a href="./posts/2022-09-27-interstate-migration-australia/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -495,7 +640,7 @@ Sep 27, 2022
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="7" data-categories="Data Visualisation,Australia,Tableau" data-listing-date-sort="1664114400000" data-listing-file-modified-sort="1775867590062" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="446">
+<div class="g-col-1" data-index="11" data-categories="Data Visualisation,Australia,Tableau" data-listing-date-sort="1664114400000" data-listing-file-modified-sort="1775867590062" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="446">
 <a href="./posts/2022-09-26-visualising-interstate-migration/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -528,7 +673,7 @@ Sep 26, 2022
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="8" data-categories="Data Analysis,Analytics" data-listing-date-sort="1641736800000" data-listing-file-modified-sort="1775868743677" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1266">
+<div class="g-col-1" data-index="12" data-categories="Data Analysis,Analytics" data-listing-date-sort="1641736800000" data-listing-file-modified-sort="1775868743677" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1266">
 <a href="./posts/2022-01-10-exploratory-data-analysis/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -558,7 +703,7 @@ Jan 10, 2022
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="9" data-categories="International Relations,Data Visualisation,Tableau" data-listing-date-sort="1635688800000" data-listing-file-modified-sort="1775869773286" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="456">
+<div class="g-col-1" data-index="13" data-categories="International Relations,Data Visualisation,Tableau" data-listing-date-sort="1635688800000" data-listing-file-modified-sort="1775869773286" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="456">
 <a href="./posts/2021-11-01-military-spending-human-development/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -591,7 +736,7 @@ Nov 1, 2021
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="10" data-categories="Data Visualisation,Australia,Tableau" data-listing-date-sort="1626098400000" data-listing-file-modified-sort="1775865177508" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="498">
+<div class="g-col-1" data-index="14" data-categories="Data Visualisation,Australia,Tableau" data-listing-date-sort="1626098400000" data-listing-file-modified-sort="1775865177508" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="498">
 <a href="./posts/2021-07-13-land-is-a-map/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -624,7 +769,7 @@ Jul 13, 2021
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="11" data-categories="International Education,Data Visualisation,Tableau" data-listing-date-sort="1617199200000" data-listing-file-modified-sort="1775865449399" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="218">
+<div class="g-col-1" data-index="15" data-categories="International Education,Data Visualisation,Tableau" data-listing-date-sort="1617199200000" data-listing-file-modified-sort="1775865449399" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="218">
 <a href="./posts/2021-04-01-international-education-dashboard/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -657,7 +802,7 @@ Apr 1, 2021
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="12" data-categories="Data Visualisation,International Relations,Climate" data-listing-date-sort="1592143200000" data-listing-file-modified-sort="1775869913980" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="839">
+<div class="g-col-1" data-index="16" data-categories="Data Visualisation,International Relations,Climate" data-listing-date-sort="1592143200000" data-listing-file-modified-sort="1775869913980" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="839">
 <a href="./posts/2020-06-15-refuge-from-the-storm/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -690,7 +835,7 @@ Jun 15, 2020
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="13" data-categories="International Education,Data Analysis,Australia" data-listing-date-sort="1589292000000" data-listing-file-modified-sort="1775869937439" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="162">
+<div class="g-col-1" data-index="17" data-categories="International Education,Data Analysis,Australia" data-listing-date-sort="1589292000000" data-listing-file-modified-sort="1775869937439" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="162">
 <a href="./posts/2020-05-13-covid-international-students/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -723,11 +868,11 @@ May 13, 2020
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="14" data-categories="International Education,Analytics,Strategy" data-listing-date-sort="1493733600000" data-listing-file-modified-sort="1775865416235" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1697">
+<div class="g-col-1" data-index="18" data-categories="International Education,Analytics,Strategy" data-listing-date-sort="1493733600000" data-listing-file-modified-sort="1775865416235" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1697">
 <a href="./posts/2017-05-03-analytics-capability-international-education/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" src="./posts/2017-05-03-analytics-capability-international-education/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" data-src="./posts/2017-05-03-analytics-capability-international-education/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -756,11 +901,11 @@ May 3, 2017
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="15" data-categories="International Education,Analytics,Strategy" data-listing-date-sort="1484143200000" data-listing-file-modified-sort="1775864875413" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="236">
+<div class="g-col-1" data-index="19" data-categories="International Education,Analytics,Strategy" data-listing-date-sort="1484143200000" data-listing-file-modified-sort="1775864875413" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="236">
 <a href="./posts/2017-01-12-data-driven-decision-making/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" src="./posts/2017-01-12-data-driven-decision-making/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" data-src="./posts/2017-01-12-data-driven-decision-making/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -793,6 +938,9 @@ Jan 12, 2017
 <div class="listing-no-matching d-none">
 No matching items
 </div>
+<nav id="listing-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
 </div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {

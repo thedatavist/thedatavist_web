@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Darragh Murray">
+<meta name="dcterms.date" content="2025-11-02">
+<meta name="description" content="Analyzes the Australian Bureau of Meteorology’s radar redesign controversy and what it teaches about colour theory in data visualisation.">
 
-<title>About | datavist.ai – datavist.ai</title>
+<title>Colour as Strategy and Aesthetics – datavist.ai</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +26,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,20 +71,20 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./images/bubble_ring_exact_64.png" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/bubble_ring_exact_64.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">datavist.ai</span>
     </a>
   </div>
@@ -92,27 +95,27 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./posts.html"> 
+    <a class="nav-link" href="../../posts.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./services.html"> 
+    <a class="nav-link" href="../../services.html"> 
 <span class="menu-text">Services</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./portfolio.html"> 
+    <a class="nav-link" href="../../portfolio.html"> 
 <span class="menu-text">Portfolio</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./contact.html"> 
+    <a class="nav-link" href="../../contact.html"> 
 <span class="menu-text">Contact</span></a>
   </li>  
 </ul>
@@ -123,127 +126,96 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page">
+      <h1 class="title">Colour as Strategy and Aesthetics</h1>
+                  <div>
+        <div class="description">
+          Analyzes the Australian Bureau of Meteorology’s radar redesign controversy and what it teaches about colour theory in data visualisation.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Data visualisation</div>
+                <div class="quarto-category">Design</div>
+                <div class="quarto-category">Colour theory</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta column-page">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Darragh Murray </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">November 2, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">About</h1>
-</div>
+<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
 
 
 
-<div class="quarto-title-meta column-page">
-
-    
-  
-    
-  </div>
-  
 
 
-</header>
-
-
-<section>
-<div class="about-header">
-<section id="darragh-murray" class="level1 about-text">
-<h1>Darragh Murray</h1>
-<p>I’m an analytics professional, AI practitioner, and data communicator based in Brisbane, Australia. With over twenty years in the data field, including international experience at the United Nations and Fortune 500 companies, I help organisations build AI-enabled data platforms and turn complex information into clear decisions.</p>
+<p>When the Australian Bureau of Meteorology back-tracked on its new rain radar colours, it was not bowing to public pressure. It was acknowledging a design truth. The use of colour in data visualisation is both a strategic and aesthetic choice. <strong>Those who master it do not use colour to decorate; they use it to communicate.</strong></p>
+<p>In late 2025 the Australian Bureau of Meteorology found itself facing an unusually fierce wave of public criticism. The Bureau, a national institution responsible for weather forecasting and hazard warnings, had launched a major website overhaul intended to modernise its digital infrastructure. At the centre of the update was a redesigned rain radar, the country’s most heavily used public data product. It attracts close to two million visits each day and many millions more during severe weather. For Australians, checking the radar is a daily ritual as ordinary as glancing at the clock.</p>
+<p>The new site was allegedly faster and technically sound, but one detail changed everything. The default radar view shifted from displaying <em>rain reflectivity</em>, a measure of how strongly radar signals bounce off precipitation, to showing <em>rain rate</em>, or millimetres per hour. That adjustment was subtle in technical terms but transformative in practice. It altered the scale, the colour mapping, and the way intensity appeared on screen.</p>
+<p>For decades Australians had become fluent in reading the old reflectivity scale: light showers appeared in shades of blue, heavier rain moved through greens and yellows, and the most intense cells (those capable of producing hail) showed as deep red or black.</p>
+<p>That visual language was so deeply embedded that many could interpret conditions immediately. The new mode, paired with a softer, smoother palette, seemed to compress those extremes. Downpours that once looked severe now appeared moderate. <strong>To many users the radar seemed to understate intensity, eroding the intuitive trust built through years of habitual use.</strong> The result was immediate confusion. Farmers, pilots and commuters reported that they could no longer read the radar instinctively. Years of perceptual training had been revoked overnight. The dark reds and blacks that once conveyed danger now meant something else entirely, and nobody seemed quite sure what. The Bureau argued that the new colours were more scientifically accurate, yet accuracy was not the problem. Comprehension was. Within days of widespread complaints, the Bureau restored the original palette.</p>
+<section id="colour-as-strategy-and-aesthetic" class="level2">
+<h2 class="anchored" data-anchor-id="colour-as-strategy-and-aesthetic">Colour as strategy and aesthetic</h2>
+<p>This episode demonstrated a principle that extends well beyond meteorology. Colour in data visualisation is not decorative, but neither is it purely functional. It operates in both domains.</p>
+<p>A well-considered palette fulfils two simultaneous goals. It communicates structure and hierarchy, the <strong>strategic function</strong>, while also shaping the viewer’s emotional and perceptual experience, <strong>the aesthetic one</strong>. When those two dimensions are aligned, visualisations feel natural and effortless to read. When they diverge, even accurate data can feel wrong.</p>
+<p>When the Bureau altered its palette, it disrupted both the aesthetic familiarity and the strategic clarity of the radar. The new design may have satisfied internal standards of polish, but it weakened the interpretive bond between colour and meaning. The radar stopped being a visual instrument for rapid comprehension and became a static picture that demanded conscious decoding.</p>
 </section>
-<p><img src="images/darragh.jpg" class="about-image img-fluid" style="max-width: 280px; width: 100%; border-radius: 4px;" alt="Darragh Murray"></p>
-</div>
+<section id="restraint-as-a-mark-of-mastery" class="level2">
+<h2 class="anchored" data-anchor-id="restraint-as-a-mark-of-mastery">Restraint as a mark of mastery</h2>
+<p>Indulge me for a second, as I use this timely event on colour to climb aboard a soapbox.</p>
+<p>I often said that one useful way to distinguish a novice from an experienced visual designer is to observe their treatment of colour. The novice uses it to <em>attract attention;</em> the expert uses it to <strong>direct attention</strong>.</p>
+<p>Beginners often treat colour as a way to create visual interest, reaching instinctively for variety and contrast. Advanced practitioners treat it as a scarce resource. They choose fewer colours, apply them with intent, and understand that aesthetic harmony and communicative clarity depend on restraint.</p>
+<p>The Bureau’s earlier palette succeeded because it was both visually coherent and semantically stable. The attempt to modernise it reflected a common misunderstanding that aesthetic refinement and strategic effectiveness are mutually exclusive. In truth, the most elegant visualisations are those where the aesthetic supports the strategic, where beauty and comprehension are part of the same design decision.</p>
 </section>
-<section>
-<p><span class="section-label">Background</span></p>
-<section id="what-i-do" class="level2">
-<h2 class="anchored" data-anchor-id="what-i-do">What I Do</h2>
-<p>My work sits at the intersection of analytics engineering, AI implementation, and data strategy. I’m particularly focused on how AI agents, the Model Context Protocol (MCP), and context engineering are reshaping how we work with data.</p>
-<p>I believe in practical AI: systems that solve real problems, not hype-driven implementations. Whether it’s building agentic workflows, designing semantic layers that give AI the context it needs, or creating compelling data visualisations, the goal is always the same: enabling better decisions.</p>
-<p>I also write <strong><a href="https://thedatavist.substack.com">The Datavist</a></strong>, a newsletter examining the craft of being a modern data professional, from AI and analytics engineering to the human stories behind data work.</p>
+<section id="beyond-surface-design" class="level2">
+<h2 class="anchored" data-anchor-id="beyond-surface-design">Beyond surface design</h2>
+<p>The Bureau’s reversal revealed how apparently superficial choices can have real institutional consequences. A national weather agency can withstand criticism for a missed forecast, but it risks credibility when users say they can no longer read the map. <strong>Trust in data is inseparable from trust in its presentation.</strong></p>
+<p>The same holds true in analytical work more broadly. A shift from red to amber for a risk indicator, or from green to blue for project status, may seem stylistic. In reality it changes how people interpret identical information. Colour decisions that appear aesthetic are often strategic at their core. Used without purpose, colour distracts. Used deliberately, it guides attention and reinforces understanding.</p>
 </section>
+<section id="closing-reflection" class="level2">
+<h2 class="anchored" data-anchor-id="closing-reflection">Closing reflection</h2>
+<p>Sophistication in data work is often measured by technical capability: complex models, automated pipelines or interactive dashboards. Yet mastery in visualisation is revealed through disciplined control of the fundamentals, and none requires more judgement than colour.</p>
+<p><strong>The best practitioners understand that a palette is both an aesthetic system and a strategic framework.</strong> They choose colours that are visually balanced, cognitively efficient and culturally familiar. They apply them consistently and know when restraint is the more intelligent choice.</p>
+<p>The Bureau of Meteorology’s radar controversy serves as a quiet reminder. Progress in visualisation is not always achieved through novelty or redesign. Sometimes it lies in aligning strategy with aesthetics, and in using colour with intent.</p>
 </section>
-<section>
-<p><span class="section-label">Experience</span></p>
-<section id="industry-experience" class="level2">
-<h2 class="anchored" data-anchor-id="industry-experience">Industry Experience</h2>
-<p>My consulting perspective is shaped by hands-on experience across diverse sectors. I’ve worked in <strong>energy</strong> (high-voltage transmission), <strong>commercial property</strong> at JLL (Fortune 500 global real estate), <strong>international education</strong> at major Australian universities, <strong>government</strong> across state and federal agencies, and at the <strong>United Nations</strong> in New York.</p>
-<p>This breadth means I understand how data challenges manifest differently across industries—and how to adapt AI and analytics solutions to different organisational cultures, regulatory environments, and strategic priorities.</p>
-</section>
-</section>
-<section>
-<p><span class="section-label">Speaking &amp; Writing</span></p>
-<section id="thought-leadership" class="level2">
-<h2 class="anchored" data-anchor-id="thought-leadership">Thought Leadership</h2>
-<p>I regularly present and write on data visualisation, business intelligence, and AI-enabled analytics. Selected engagements include:</p>
-<p><strong>Conferences &amp; Events</strong></p>
+<section id="some-great-links-on-colour-in-data-visualisation" class="level2">
+<h2 class="anchored" data-anchor-id="some-great-links-on-colour-in-data-visualisation">Some great links on colour in data visualisation</h2>
 <ul>
-<li><em>Data demystified: communicating data with impact</em>, Australian International Education Conference (AIEC), Perth, 2019</li>
-<li><em>Blockchain applications for international admission systems</em>, AIEC, Sydney, 2018 (Panel)</li>
-<li><em>Demystifying data: unlocking the value of data-driven decision-making</em>, AIEC, Hobart, 2017</li>
-<li><em>Getting started in the data game</em>, New Zealand International Education Conference, Auckland, 2017</li>
-<li><em>Big data, big insight and international education</em>, AIEC, Melbourne, 2016 (Panel)</li>
-<li><em>The devil is in the data: Empowering international higher education through business analytics</em>, AIEC, Adelaide, 2015</li>
+<li>Lisa Charlotte Muth - <a href="https://www.datawrapper.de/blog/category/color-in-data-vis">Color in Data Viz</a></li>
+<li>Lisa Charlotte Muth - <a href="https://www.datawrapper.de/blog/colors-for-data-vis-style-guides">A Detailed Guide to Colors in Data Vis Style Guides</a></li>
+<li>Mike Cisneros - <a href="https://www.storytellingwithdata.com/blog/2020/5/6/picking-the-right-colors">Picking the Right Colors</a></li>
+<li>Mike Cisneros - <a href="https://www.storytellingwithdata.com/blog/use-color-to-focus-or-to-compete-for-attention">Use Color to Focus or to Compete for Attention</a></li>
+<li>Morgan Depenbusch - <a href="https://www.morgandepenbusch.com/p/how-to-let-color-do-the-storytelling">How to let Color do the Storytelling</a></li>
 </ul>
-<p><strong>Community &amp; User Groups</strong></p>
-<ul>
-<li><em>Prep It: The Underrated Art of Making Data Usable</em>, Tableau Prep User Group, 2022</li>
-<li><em>Reflections on data viz, anxiety and imposter syndrome</em>, Tableau Fringe Festival, 2020</li>
-<li><em>Refuge from the storm: reflections on climate change, refugees and data visualisation</em>, Brisbane Tableau User Group, 2020</li>
-</ul>
-<p><strong>Publications</strong></p>
-<ul>
-<li><em>The Data Game: Building analytics capability in international education</em>, IEAA Vista Magazine, 2017</li>
-</ul>
-</section>
-</section>
-<section>
-<p><span class="section-label">Recognition</span></p>
-<section id="community-recognition" class="level2">
-<h2 class="anchored" data-anchor-id="community-recognition">Community Recognition</h2>
-<p><strong>Tableau Ambassador</strong>: Selected for four consecutive terms by the global Tableau community, recognising contributions to data visualisation education and community building.</p>
-<p><strong>Iron Viz Finalist</strong>: Two-time top 10 global placement in Tableau’s premier data visualisation competition (2023, 2025). Ranked top 3 in Asia-Pacific 2023.</p>
-</section>
-</section>
-<section>
-<p><span class="section-label">Credentials</span></p>
-<section id="education-certifications" class="level2">
-<h2 class="anchored" data-anchor-id="education-certifications">Education &amp; Certifications</h2>
-<p><strong>Education</strong></p>
-<ul>
-<li>Master of International Studies (International Relations), University of Queensland</li>
-<li>Bachelor of Information Technology (Information Systems), University of Queensland</li>
-<li>Bachelor of Arts with Honours (History), University of Queensland</li>
-<li>Graduate Diploma in Business Analytics, Deakin University</li>
-</ul>
-<p><strong>Technical Certifications</strong></p>
-<ul>
-<li>Tableau Certified Data Analyst</li>
-<li>Tableau Certified Associate</li>
-<li>Alteryx Core Certified</li>
-</ul>
-<p><strong>Technical Expertise</strong></p>
-<ul>
-<li><strong>AI &amp; Agents</strong>: LLM integrations, Model Context Protocol (MCP), agentic systems, context engineering, prompt engineering</li>
-<li><strong>Analytics Engineering</strong>: dbt, SQL, semantic layers, data modelling</li>
-<li><strong>Visualisation &amp; BI</strong>: Tableau, Power BI, R, Python</li>
-</ul>
-</section>
-</section>
-<section>
-<p><span class="section-label">Connect</span></p>
-<section id="get-in-touch" class="level2">
-<h2 class="anchored" data-anchor-id="get-in-touch">Get in Touch</h2>
-<p>I’m always interested in discussing AI applications, data challenges, or speaking opportunities.</p>
-<p><a href="https://www.linkedin.com/in/darraghmurray/" class="btn btn-primary">Connect on LinkedIn</a> <a href="./contact.html" class="btn btn-secondary">Get in Touch</a></p>
-</section>
-</section>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
