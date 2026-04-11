@@ -17,28 +17,28 @@ A selection of projects and case studies across data visualisation, analytics, a
 ::: {.portfolio-grid}
 
 ::: {.portfolio-item}
-[![](posts/2025-06-25-early-experiments-tableau-mcp/14-header-image.png){fig-alt="Tableau MCP"}](posts/2025-06-25-early-experiments-tableau-mcp/index.qmd)
+[![](posts/2025-06-25-early-experiments-tableau-mcp/14-header-image.png){fig-alt="Tableau MCP" style="width: 100%; max-width: 400px; height: auto; aspect-ratio: 16/10; object-fit: cover;"}](posts/2025-06-25-early-experiments-tableau-mcp/index.qmd)
 
 ### [Tableau MCP Integration](posts/2025-06-25-early-experiments-tableau-mcp/index.qmd)
 [AI / Tableau]{.meta}
 :::
 
 ::: {.portfolio-item}
-[![](posts/2025-07-14-mcp-reshaping-of-bi/mcp_diagram.png){fig-alt="MCP Architecture"}](posts/2025-07-14-mcp-reshaping-of-bi/index.qmd)
+[![](posts/2025-07-14-mcp-reshaping-of-bi/mcp_diagram.png){fig-alt="MCP Architecture" style="width: 100%; max-width: 400px; height: auto; aspect-ratio: 16/10; object-fit: cover;"}](posts/2025-07-14-mcp-reshaping-of-bi/index.qmd)
 
 ### [AI Reshaping Business Intelligence](posts/2025-07-14-mcp-reshaping-of-bi/index.qmd)
 [AI / Strategy]{.meta}
 :::
 
 ::: {.portfolio-item}
-[![](posts/2023-11-04-reflections-on-ironviz-2023/aflw_blazing_trail.png){fig-alt="IronViz 2023"}](posts/2023-11-04-reflections-on-ironviz-2023/index.qmd)
+[![](posts/2023-11-04-reflections-on-ironviz-2023/aflw_blazing_trail.png){fig-alt="IronViz 2023" style="width: 100%; max-width: 400px; height: auto; aspect-ratio: 16/10; object-fit: cover;"}](posts/2023-11-04-reflections-on-ironviz-2023/index.qmd)
 
 ### [IronViz 2023: AFLW](posts/2023-11-04-reflections-on-ironviz-2023/index.qmd)
 [Data Visualisation]{.meta}
 :::
 
 ::: {.portfolio-item}
-[![](posts/2023-11-15-iterative-design-the-choice/the-choice-4.png){fig-alt="The Choice"}](posts/2023-11-15-iterative-design-the-choice/index.qmd)
+[![](posts/2023-11-15-iterative-design-the-choice/the-choice-4.png){fig-alt="The Choice" style="width: 100%; max-width: 400px; height: auto; aspect-ratio: 16/10; object-fit: cover;"}](posts/2023-11-15-iterative-design-the-choice/index.qmd)
 
 ### [Iterative Design: The Choice](posts/2023-11-15-iterative-design-the-choice/index.qmd)
 [Design Process]{.meta}

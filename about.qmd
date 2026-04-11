@@ -13,7 +13,7 @@ toc: false
 I'm an analytics professional, AI practitioner, and data communicator based in Brisbane, Australia. With over twenty years in the data field, including international experience at the United Nations and Fortune 500 companies, I help organisations build AI-enabled data platforms and turn complex information into clear decisions.
 :::
 
-![](images/darragh.jpg){.about-image fig-alt="Darragh Murray"}
+![](images/darragh.jpg){.about-image fig-alt="Darragh Murray" style="max-width: 280px; width: 100%; border-radius: 4px;"}
 :::
 
 :::
