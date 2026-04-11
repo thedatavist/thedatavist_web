@@ -128,15 +128,25 @@ strong {
   max-height: 36px;
 }
 
+/* Override Quarto column-page layout for hero */
+main.content.column-page section.hero,
+.column-page .hero {
+  grid-column: page !important;
+  justify-self: center !important;
+}
+
 /* Hero */
 section.hero,
 .hero {
   padding: var(--space-xl) 0 !important;
   text-align: center !important;
   max-width: 640px !important;
+  width: 100% !important;
   margin-left: auto !important;
   margin-right: auto !important;
-  display: block !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
 }
 
 section.hero h1,
