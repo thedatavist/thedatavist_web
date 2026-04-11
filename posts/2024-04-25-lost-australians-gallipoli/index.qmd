@@ -1,0 +1,37 @@
+---
+title: "The Lost Australians of Gallipoli"
+description: "An interactive visualisation examining Australian fatalities during the Gallipoli campaign, tracking deaths and their causes throughout the 10-month WWI operation."
+author: "Darragh Murray"
+date: "2024-04-25"
+categories:
+  - Data Visualisation
+  - History
+  - Tableau
+image: featured.png
+---
+
+I've carved out some time from my busy schedule to throw together a new viz, this time on cause of death of Australians at Gallipoli during the course of the 10 month campaign.
+
+You can view the interactive on Tableau Public by clicking [here](https://public.tableau.com/app/profile/darragh.murray).
+
+Here is some more context about the visual that I wrote on LinkedIn:
+
+For a long time, I did not fully appreciate ANZAC Day.
+
+I'm an Irish immigrant to Australia, the son of Irish folks who I suspect found it odd to commemorate a military defeat orchestrated by British forces. Thus, ANZAC Day was never a big deal in our household – it was just another public holiday.
+
+But as I aged and became more aware of the tragedy of The Great War throughout the course of my history degree, my perspective gradually changed and my appreciation of the importance of ANZAC day grew.
+
+I distinctly recall the first time I read Barbara Tuchman's Pulitzer Prize winning history of the origins of The Great War, "The Guns of August" and recall how blown away I was to learn of the sheer scale of the conflict and the tragedy it engendered.
+
+Books like Tuchman's changed my perspectives on the conflict, but also shifted my feelings on Australia's role in World War 1.
+
+I now see ANZAC day through the lens that I think it should be best celebrated, a solemn day of remembrance for the sacrifices of many Australians during times of great conflict and tragedy.
+
+With the above in mind, I've put together a very basic visual interactive that gives the viewer some idea of the scope of fatal casualties at Gallipoli. It tracks the total Australian fatalities over the course of the Gallipoli campaign alongside cause of death.
+
+This is my own meagre way of paying respect to the memory of Gallipoli, but I do hope some find it fleetingly interesting.
+
+Apologies in advance to my New Zealand friends. I did want to acknowledge the role played by New Zealand soldiers in the Gallipoli campaign in this small bit of work but couldn't locate the appropriate data in time.
+
+Lest we forget.

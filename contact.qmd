@@ -1,0 +1,49 @@
+---
+title: "Contact"
+pagetitle: "Contact | datavist.ai"
+toc: false
+---
+
+::: {.section}
+[Get in touch]{.section-label}
+
+## Let's Talk
+
+I'm always interested in discussing data challenges, exploring collaboration opportunities, or connecting with others in the data community.
+
+::: {.contact-grid}
+
+::: {.contact-item}
+### Email
+[prompt@datavist.ai](mailto:prompt@datavist.ai)
+
+Project inquiries and consultations
+:::
+
+::: {.contact-item}
+### LinkedIn
+[darraghmurray](https://www.linkedin.com/in/darraghmurray/)
+
+Professional updates and networking
+:::
+
+::: {.contact-item}
+### Substack
+[thedatavist](https://thedatavist.substack.com)
+
+Articles on data and analytics
+:::
+
+:::
+
+:::
+
+::: {.section}
+[Location]{.section-label}
+
+## Based in Brisbane
+
+datavist.ai is based in Brisbane, Australia, working with clients across Australia and internationally. Remote collaboration works well for most engagements.
+
+Timezone: AEST (UTC+10) / AEDT (UTC+11)
+:::

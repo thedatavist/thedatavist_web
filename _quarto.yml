@@ -2,19 +2,32 @@ project:
   type: website
 
 website:
-  title: "thedatavist"
+  title: "datavist.ai"
   navbar:
+    logo: images/bubble_ring_exact_64.png
+    background: white
+    foreground: "#333333"
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
-      - posts.qmd
+      - href: posts.qmd
+        text: Blog
+      - href: services.qmd
+        text: Services
+      - href: portfolio.qmd
+        text: Portfolio
+      - href: about.qmd
+        text: About
+      - href: contact.qmd
+        text: Contact
+  page-footer:
+    center: |
+      © 2026 datavist.ai | AI & Analytics Engineering
+    background: "#f8f9fa"
 
 format:
   html:
-    theme: lumo
+    theme: cosmo
     css: styles.css
-    toc: true
-
-
-
+    toc: false
+    page-layout: full

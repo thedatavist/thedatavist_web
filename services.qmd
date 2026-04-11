@@ -1,0 +1,107 @@
+---
+title: "Services"
+pagetitle: "Services | datavist.ai"
+toc: false
+---
+
+::: {.section}
+[What we offer]{.section-label}
+
+## How We Can Help
+
+datavist.ai specialises in AI-enabled analytics, agentic systems, and modern data platforms. With deep expertise in the Model Context Protocol (MCP), context engineering, and practical AI implementation, we help organisations harness AI that actually works.
+:::
+
+::: {.section}
+
+::: {.service-detail}
+### AI Agents & Automation
+
+Building agentic AI systems that work alongside your team: autonomous, context-aware, and integrated with your existing tools.
+
+- Custom AI agent development
+- Agentic workflow design
+- Autonomous data processing
+- AI assistants with business context
+- Platform integration
+
+Practical agentic AI that augments your team's capabilities.
+:::
+
+::: {.service-detail}
+### AI-Enabled Data Platforms
+
+Designing data architectures that are ready for AI, giving models the context they need to deliver accurate, useful results.
+
+- Model Context Protocol (MCP) implementations
+- Semantic layer design
+- Context engineering for AI
+- Knowledge graph strategies
+- AI-ready infrastructure
+
+The foundation that makes AI actually useful.
+:::
+
+::: {.service-detail}
+### Strategic Analytics & Insights
+
+Turning data into decisions through clear strategy, actionable insights, and alignment with business objectives.
+
+- Analytics strategy development
+- Insight generation and storytelling
+- Capability assessment
+- Technology recommendations
+- Team development for AI
+
+Strategic guidance grounded in hands-on technical experience.
+:::
+
+::: {.service-detail}
+### Analytics Engineering
+
+Modern data stack practices that create reliable foundations for both human analysts and AI systems.
+
+- dbt (data build tool) workflows
+- SQL transformation layers
+- Semantic layer implementation
+- Data quality frameworks
+- Documentation and lineage
+
+Clean, tested, documented data that humans and AI can trust.
+:::
+
+::: {.service-detail}
+### Data Visualisation & BI
+
+Award-winning visual analytics and business intelligence across leading platforms.
+
+- Tableau development
+- Power BI solutions
+- Executive dashboards
+- Data storytelling
+- Platform migration
+
+Four-time Tableau Ambassador. Two-time Iron Viz top 10 globally.
+:::
+
+:::
+
+::: {.section}
+[Our approach]{.section-label}
+
+## How We Work
+
+**Practical**: We focus on AI and analytics that work in the real world, not theoretical frameworks or over-engineered systems.
+
+**Collaborative**: We work alongside your team, sharing knowledge and building capability. Our goal is to leave you stronger, not dependent.
+
+**Results-focused**: Success is measured by decisions enabled and value delivered, not by technical complexity or hours logged.
+:::
+
+::: {.cta}
+## Ready to start?
+
+Whether you're exploring AI agents, building an AI-enabled data platform, or need help with analytics, let's talk.
+
+[Get in Touch](contact.qmd){.btn .btn-primary}
+:::

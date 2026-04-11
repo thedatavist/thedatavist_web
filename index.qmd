@@ -1,26 +1,69 @@
 ---
-title: "datavist.ai"
-
-subtitle: "Analytics & Data Engineering / Artifical Intelligence / Data Visusalisation & BI / Data Profession"
-
-format:
-  lumo-html: 
-    logo: "logo.png"                             # Optional. Path to a logo displayed above the title
-    github-repo: "https://github.com/thedatavist/thedatavist_web"        # Optional. Adds a github corner at the top right
-    primary-color: "black"
-    self-contained: true
-    is-particlejs-enabled: true                  # Optional: display interactive particles in the document header
-author: Darragh Murray
-date: last-modified
+title: ""
+pagetitle: "datavist.ai"
+toc: false
+title-block-style: none
 ---
-Hi, I'm Darragh Murray  - a data professional with a pragmatic approach to artifical intellgience, data engineering, and analytics who runs **datavist.ai**. 
 
-I'm a three-time Tableau Ambassador, a Power BI wizard, an SQL maven, and an analytics engineering expert, who's learned that mastery beats brand loyalty every time. Here, I share insights on data visualization, BI tools, analytics & data engineering and the fundamentals that actually matter in turning data into decisions.
+::: {.hero}
 
-While I build out my new website with more, hopefully interesting, content, you're welcome to stick around and have a read. 
+# datavist.ai
 
-I do recommend checking out the [blog section](https://thedatavist.netlify.app/posts)!
+![](images/bubble_ring_exact_256.png){.hero-logo fig-alt="datavist.ai"}
 
-I have also updated my [about me](https://thedatavist.netlify.app/about) section with some recent information along with contact details. 
+[AI & Analytics Engineering]{.tagline}
 
-You're more than welcome to [connect with me on LinkedIn](https://www.linkedin.com/in/darraghmurray/). 
+[Building AI-enabled data platforms, agentic systems, and intelligent analytics. Twenty years turning complex data into clear decisions.]{.intro}
+
+[Get in Touch](contact.qmd){.btn .btn-primary}
+[View Work](portfolio.qmd){.btn .btn-secondary}
+:::
+
+::: {.section}
+[What we do]{.section-label}
+
+## Services
+
+::: {.services-list}
+
+- ### AI Agents & Automation
+  Building agentic AI systems that work alongside your team, from autonomous data processing to intelligent assistants that understand your business context.
+
+- ### AI-Enabled Data Platforms
+  Designing data architectures ready for AI. Semantic layers, context engineering, and Model Context Protocol (MCP) integrations that give AI the context it needs.
+
+- ### Strategic Analytics & Insights
+  Aligning analytics and AI capabilities with business objectives. The goal is better decisions, not just better dashboards.
+
+- ### Analytics Engineering
+  Modern data stack practices using dbt workflows, semantic layers, and transformation pipelines that create reliable foundations for both human and AI analysis.
+
+- ### Data Visualisation & BI
+  Award-winning visual analytics across Tableau and Power BI. Four-time Tableau Ambassador with two Iron Viz top 10 global placements.
+
+:::
+
+[Learn more about services](services.qmd)
+:::
+
+::: {.section}
+[From the newsletter]{.section-label}
+
+## Latest Writing
+
+The Datavist examines the craft of being a modern data professional: AI, analytics engineering, and the evolving landscape of data work.
+
+- [The Big Business Intelligence Squeeze](https://thedatavist.substack.com)
+- [Onboarding AI: Why the Semantic Layer Matters](https://thedatavist.substack.com)
+- [MCP and the Reshaping of Data Visualisation & BI](posts/2025-07-14-mcp-reshaping-of-bi/index.qmd)
+
+[Subscribe on Substack](https://thedatavist.substack.com)
+:::
+
+::: {.cta}
+## Let's work together
+
+Ready to build AI-enabled analytics or need help with your data challenges? Let's talk.
+
+[Contact](contact.qmd){.btn .btn-primary}
+:::

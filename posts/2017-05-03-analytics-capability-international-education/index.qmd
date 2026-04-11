@@ -1,0 +1,91 @@
+---
+title: "The Data Game: Building Analytics Capability in International Education"
+description: "How data analytics can strengthen Australia's international education sector. Originally published in IEAA's Vista Magazine."
+author: "Darragh Murray"
+date: "2017-05-03"
+categories:
+  - International Education
+  - Analytics
+  - Strategy
+image: featured.png
+---
+
+*Originally published by IEAA's Vista Magazine (Summer 2016/17)*
+
+Embracing an analytic mindset and capitalising on the technologies in the era of big data are key to reaching Australia's strategic international education goals.
+
+## A tale of prediction and teenage pregnancy
+
+In 2012, journalist Charles Duhigg came across a fascinating story concerning the power of prediction and teenage pregnancy. Writing for the New York Times, Duhigg told how an irate man confronted the manager of a Target department store in the United States, demanding to know why the retailer kept sending his teenage daughter coupons for baby clothes and lotions.
+
+"Are you trying to encourage my daughter to get pregnant?!" the angry father complained, presenting the unfortunate manager with bundles of baby-related paraphernalia. The manager had little idea how this had occurred and promised to follow up. However, investigations were cut short when the father rang back days later to apologise. His teenage daughter was indeed pregnant and somehow Target knew before her family did.
+
+How could Target possibly know this? Well, the answer is through the precise use of data and analytics. Target had been heavily investing in analytics capability — a specialty that places data at the centre of knowledge discovery and communication. Through the use of predictive models, the store could precisely identify potentially pregnant customers based on historical shopping patterns.
+
+While this anecdote is both fascinating and creepy, it reminds us how modern industries are leveraging vast amounts of data to pursue strategic business objectives. Whether it be targeting customers who are expecting, or using data to evaluate the potential of international student markets, skilled use of data is quickly becoming a resource on which businesses and organisations compete.
+
+## The data revolution
+
+Using data to solve problems isn't a recent development. What we now call data science has been widely used in the fields of science and engineering since the 1970s, typically for risk management and workplace health and safety. The field gathered further steam during the 1990s when banking and finance increasingly used data monitoring for combating fraud and credit card theft.
+
+The recent convergence of massive computational power, inexpensive data storage and the development of modern data mining and machine learning technologies has led to the mainstreaming of data as a valuable everyday business resource. It all culminates in the emergence of 'big data' as the latest buzzword across the land.
+
+This data and analytics revolution is now seen as critical to the ongoing development of the modern global economy. In their excellent work *Competing on Analytics*, researchers Davenport and Harris argue that data is now the key resource organisations must use to discover the distinctive capabilities that keep them competitive.
+
+As Davenport and Harris conceptualised, there is a scale of organisational analytics capability, ranging from basic standard reporting to advanced predictive models that permit data-driven forecasting and risk management optimisation. If your organisation is still monitoring key metrics using simple standard reports, you may already be lagging behind.
+
+How then does the analytics revolution intersect with the Australian international education sector? Given the growing number of internationally mobile students — as well as increasing interest from modern economies with advanced education systems in teaching these students — the idea of competing on analytics and data is highly relevant. Knowing more about potential international students before competitors do makes sense if Australia wants to continue to attract the highest quality international students.
+
+Education providers who can compete best in terms of data and analytics will reap the future benefits. Australia's international education sector is fortunate to have one comparative advantage: we have a large amount of good quality student data that other markets seemingly do not.
+
+## Australia's comparative data advantage
+
+Australia has world class data on its international students. Government agencies such as the Department of Immigration and Border Protection (DIBP) regularly publish detailed and timely statistics on student visa application and grant rates that permit analysis of future demand. Similarly, the Department of Education and Training (DET) provides valuable information on international student enrolments and commencements that can be sliced and diced by numerous metrics across all sectors within international education.
+
+Online data portals such as the uCube allow detailed local competitor analysis and benchmarking. Australia's Market Information Package (MIP) is a global leader in international student data visualisation, providing an integrated business intelligence platform that allows institutions and business the ability to analyse the Australian international student market without large scale IT infrastructure investment.
+
+These examples don't even take into account the countless other sources of private organisational information on Australia's international student cohort that can be integrated into these robust public sources.
+
+Such up-to-date and integrated sources of data are not exactly evident in other competing markets for international students. For example, the United States relies on Open Doors published by the Institute of International Education, whereas the Higher Education Statistic Agency (HESA) in the United Kingdom provides some wide-ranging details on the entire student population.
+
+While these services are undoubtedly handy, they don't seem to have the specialist, integrated or flexible platforms for data analysis that the Australian sector enjoys. They can also suffer from lack of timely updates or data that is difficult to extract and analyse.
+
+It's not unreasonable to claim that Australia is a market leader in international student data. The question is, how can we use these datasets to further Australia's international education sector?
+
+## Building analytics capability: the data-driven mindset
+
+Good business decisions are supported by robust data and comprehensive analysis. As Davenport and Harris assert, organisations that are successful in certain markets where competitors flail are nearly certainly winning by driving their strategic business decisions using analytics and data.
+
+Given Australia's enviable international student data resources, a change of mindset and some creativity may be all that's needed to start making large competitive gains. Let's examine a few examples. Assume you're trying to decide whether to enter an international student market. The 'gut-feel' response may be to justify decisions based on what you've read in the media, the recommendation of a trusted colleague or on the basis of what your organisation has done before.
+
+The analytical, data-driven mindset demands much more. A good place to start would be to test for key influential variables in a relevant dataset. Can you identify factors in other mature markets that have historically influenced growth based on data alone? Are variables like gross domestic product or scholarship availability influential and relevant in this case? Finding the answers to such questions in the available data can assist in both firming up confidence in a recommendation as well as result in better strategic planning.
+
+Furthermore, data familiarisation is paramount in building analytics capability. Data mining and visualisation tools such as IBM SPSS, Tableau or TIBCO Spotfire, can be helpful aids in understanding the natural relationships underpinning datasets. Clustering, a technique by which to organise data into distinct groups based on their natural attributes, can be very useful in uncovering insight.
+
+This advanced level of analytics capabilities means moving into the territory of predictive models. This involves examining historical patterns in datasets to help make informed forecasts about the future. Predictive modelling leverages machine learning techniques such as classification, neural networks and logistical regression.
+
+Use of these techniques could afford international education organisations the ability to calculate international application outcome probabilities, or even whether a current student will pass or fail their first year. Predictive modelling has incredible value and countless uses in the context of Australia's international education sector.
+
+The take away message here is that pressing business problems should be tackled by moving from the intuitive to the analytic. Embracing an analytic mindset and capitalising on the technologies in the age of big data could be the key for furthering Australia's strategic international education goals.
+
+## Signal and noise
+
+Australia has set out a bold, three pillar agenda in its 'National Strategy for International Education 2025'. Many of the goals set out in the strategy, particularly in pillar three 'Competing Globally', can be furthered simply by improving our collective analytical capability and embracing data-driven decision making mindset. Competitive modern day organisations invest in advanced analytical capability, using technologies and methods such as data mining, clustering and predictive models to better understand and tackle key strategic problems.
+
+The Australian international education sector is not immune to these developments and there will come a time where we will need to rely on our comparative data advantage to keep ahead of competing international education hubs. We have the raw materials, it's just a case of building on these to advance the industry's collective analytics capability and stay ahead of the competition.
+
+## Give it your best dataset
+
+Enhancing organisational analytics and building data knowledge isn't simply a case of grabbing a dataset and hoping for the best. Here are three titbits of advice about how someone in an analytics position can help their organisation do more with data.
+
+**Focus on process and the end objective**
+
+Doing data correctly requires time, precision and purpose. Colleagues may not be as aware of how complicated organising and manipulating data may be and aren't forthcoming with all of their business requirements when requesting the data they need to make decisions. The more regimented you are with gathering requirements ahead of any analytics-based project, the better it will be for you and your organisation. If you're asked to do data analysis without a solid strategic reason, you're simply wasting your time.
+
+**Some core skills can go a long way**
+
+Basic statistical skills are very helpful for understanding the shape of data. Learn how to compile a five-number statistical summary, know how different measures of averages such as median and mean work and come to grips with the concept of outliers. These are all key skills to being able to understand your data. It takes time to turn data into meaningful insight and requires good skills in data manipulation. Being able to organise information using relational databases or even good spreadsheet skills can take you a long way in the data game.
+
+**Communication is key**
+
+Even if you're the greatest statistician or data scientist known to humankind, it's worth peanuts if you cannot communicate insight correctly. Being able to write about data succinctly and with purpose — alongside the skillful use of meaningful data visualisation — will do a lot more for increasing executive support and increasing organisation analytics capability. Often, when it comes to communicating data, less is more.

@@ -1,53 +1,86 @@
 ---
 title: "About"
+pagetitle: "About | datavist.ai"
+toc: false
 ---
 
----
-title: "About"
----
+::: {.section}
 
-## Why, Hello There!
+::: {.about-header}
+::: {.about-text}
+# Darragh Murray
 
-::: {.grid}
-
-::: {.g-col-8}
-I'm Darragh Murray, a data analytics and insights professional based in Brisbane, Australia, and the voice behind **Datavist.ai**. With over twenty years in the data field, I share ideas, thoughts, and learnings about the profession while helping organisations navigate their own data challenges.
+I'm an analytics professional, AI practitioner, and data communicator based in Brisbane, Australia. With over twenty years in the data field, including international experience at the United Nations and Fortune 500 companies, I help organisations build AI-enabled data platforms and turn complex information into clear decisions.
 :::
 
-::: {.g-col-4}
-![](images/darragh.jpg){fig-alt="Darragh Murray" width="50%"}
+![](images/darragh.jpg){.about-image fig-alt="Darragh Murray"}
 :::
 
 :::
+
+::: {.section}
+[Background]{.section-label}
 
 ## What I Do
-My work spans the full spectrum of data – from engineering robust data & analytics pipelines and creating compelling visualisations to developing analytics strategies and exploring practical AI applications. I'm particularly passionate about data storytelling and turning complex information into clear, actionable insights.
 
-Currently, I work in the Australian energy sector, but my experience crosses industries including international education, commercial property, public service, and even a stint in music journalism and the United Nations! This diverse background gives me a unique perspective on how data challenges vary across different contexts.
+My work sits at the intersection of analytics engineering, AI implementation, and data strategy. I'm particularly focused on how AI agents, the Model Context Protocol (MCP), and context engineering are reshaping how we work with data.
 
-## Datavist.ai
-This site is where I explore topics I find interesting – data visualisation techniques, analytics engineering approaches, business intelligence trends, and AI developments. 
+I believe in practical AI: systems that solve real problems, not hype-driven implementations. Whether it's building agentic workflows, designing semantic layers that give AI the context it needs, or creating compelling data visualisations, the goal is always the same: enabling better decisions.
 
-You'll find a mix of professional insights, case studies, and the occasional deep dive into whatever dataset has caught my attention lately.
+I also write **[The Datavist](https://thedatavist.substack.com)**, a newsletter examining the craft of being a modern data professional, from AI and analytics engineering to the human stories behind data work.
+:::
 
-You'll also occasionally find reposts of articles I've written for my substack: [thedatavist.substack.com](https://thedatavist.substack.com), usually posted a bit after they appear there. 
+::: {.section}
+[Experience]{.section-label}
 
-## Experience & Credentials
-I regularly present at conferences and contribute to the broader data community, sharing insights across the full spectrum of modern analytics platforms. My toolkit includes Power BI and the Power Platform, Tableau, and strong coding capabilities in R, Python, and SQL for complex analytical challenges and data engineering work.
+## Career
 
-My formal qualifications include degrees in information systems, international relations, history, and business analytics, plus certifications across multiple platforms including Tableau Professional certification and Alteryx Designer Advanced. I've also been elected as a Tableau Ambassador by the global Tableau community on three occasions, recognising contributions to that particular community.
+My experience spans industries and continents. I've held analytics and insights roles at **JLL** (Fortune 500 global real estate), worked in **higher education** at major Australian universities, served in **government** across state and federal agencies, and spent time at the **United Nations** in New York.
 
-I've helped organisations across Australia tackle diverse data challenges – whether that's building executive dashboards in Power BI, developing forecasting models in R, engineering data pipelines with Python and SQL, or creating comprehensive analytics frameworks that span multiple tools and platforms.
+This diverse background gives me a unique perspective on how data challenges vary across contexts, and how AI can be applied practically in different organisational settings.
+:::
 
-## Let's Connect
-I'm always interested in discussing data challenges, sharing experiences, or collaborating on interesting projects. If you're working on something compelling or need guidance on your data journey, feel free to get in touch.
+::: {.section}
+[Recognition]{.section-label}
 
-Whether it's a quick coffee chat or a more substantial engagement, I'm happy to explore how we might work together.
+## Achievements
 
-You're more than welcome to [connect with me on LinkedIn](https://www.linkedin.com/in/darraghmurray/). 
+**Tableau Ambassador**: Selected for four consecutive terms by the global Tableau community
 
-Cheers,  
-Darragh
+**Iron Viz**: Two-time top 10 global placement in Tableau's premier data visualisation competition (2023, 2025). Top 3 in Asia-Pacific 2023.
 
----
-*The Datavist is built with Quarto, powered by GitHub, and published via Netlify.*
+**The Lost Australians of Gallipoli**: Published visualisation project exploring WWI history through data
+
+**HIT MACHINES**: Iron Viz 2025 competition entry
+:::
+
+::: {.section}
+[Credentials]{.section-label}
+
+## Education & Skills
+
+**Education**
+
+- Master of International Studies (International Relations), University of Queensland
+- Bachelor of Information Technology (Information Systems), University of Queensland
+- Bachelor of Arts with Honours (History), University of Queensland
+- Graduate Diploma in Business Analytics, Deakin University
+
+**Technical expertise**
+
+- **AI & Agents**: LLM integrations, Model Context Protocol (MCP), agentic systems, context engineering, prompt engineering
+- **Analytics Engineering**: dbt, SQL, semantic layers, data modelling
+- **Visualisation & BI**: Tableau, Power BI, R, Python
+- **Certifications**: Tableau Professional, Alteryx Designer Advanced
+:::
+
+::: {.section}
+[Connect]{.section-label}
+
+## Let's Talk
+
+I'm always interested in discussing AI applications, data challenges, or collaboration opportunities.
+
+[Connect on LinkedIn](https://www.linkedin.com/in/darraghmurray/){.btn .btn-primary}
+[Get in Touch](contact.qmd){.btn .btn-secondary}
+:::

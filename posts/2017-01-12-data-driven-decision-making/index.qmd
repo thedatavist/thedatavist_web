@@ -1,0 +1,44 @@
+---
+title: "Time to Embrace Data-Driven Decision Making in International Higher Education"
+description: "Why Australian universities should move beyond operational reporting to strategic, predictive analytics."
+author: "Darragh Murray"
+date: "2017-01-12"
+categories:
+  - International Education
+  - Analytics
+  - Strategy
+image: featured.png
+---
+
+*Originally published October 2015.*
+
+Australian universities underutilise their data resources when making strategic decisions about international education. While institutions employ business intelligence professionals primarily for operational reporting, answering "what has happened" questions, they should leverage analytics for predictive, strategic problem-solving.
+
+## The Analytics Maturity Gap
+
+Drawing on Davenport and Harris's framework, competitive advantage comes from using data to answer "what will happen?" not just "what happened?"
+
+Most university analytics teams spend their time producing reports: enrollment numbers, retention rates, revenue by source country. This is necessary work, but it's backward-looking. The real value lies in using data to anticipate trends and inform strategy.
+
+## Practical Applications
+
+Predictive analytics could help universities:
+
+- Identify emerging source markets before competitors
+- Evaluate candidate regions for recruitment investment
+- Forecast enrollment changes based on policy, currency, and competitor movements
+- Optimise scholarship and pricing strategies
+
+## The Opportunity
+
+Institutions treating analytics as merely operational tools miss opportunities to drive institutional strategy. The universities that figure this out first will compete more effectively with global educational powerhouses.
+
+The data exists. The tools exist. What's often missing is the organisational commitment to move from reporting to strategy.
+
+## What Needs to Change
+
+1. **Leadership buy-in**: Analytics needs a seat at the strategy table, not just the operations meeting
+2. **Capability investment**: Hire analysts who can build models, not just dashboards
+3. **Culture shift**: Embrace data as a strategic asset, not a compliance requirement
+
+The international education sector is competitive and getting more so. Data-driven institutions will outperform those relying on intuition and tradition.

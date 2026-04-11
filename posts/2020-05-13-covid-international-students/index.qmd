@@ -1,0 +1,25 @@
+---
+title: "COVID-19 and International Students: ABS Overseas Travel Statistics"
+description: "Analysing newly released ABS data on international student arrivals and departures during the early pandemic period."
+author: "Darragh Murray"
+date: "2020-05-13"
+categories:
+  - International Education
+  - Data Analysis
+  - Australia
+image: featured.png
+---
+
+Randomly, I was looking for some arrival and departure data for international students in Australia, seeking to test the theory that there had not been any mass scale departures of overseas students since Australia declared COVID-19 a pandemic.
+
+Somewhat coincidentally, Professor Andrew Norton tweeted this chart literally hours earlier:
+
+> ABS international student arrivals data shows the decline since February and the importance of the mid-year intake.
+
+I was immediately alerted to the existence of a brand new ABS dataset. I quickly did a bit of data wrangling/shaping and uploaded into Tableau Public as a community resource. I've highlighted international students as generally that is the group I'm most interested in.
+
+You can view the interactive on my [Tableau Public profile](https://public.tableau.com/app/profile/darragh.murray) (best viewed on a proper PC).
+
+While I haven't had a chance to deep dive into what this all means, it's quite clear that over the last two months we have seen a large drop off in both arrivals and departures for the visa type.
+
+More... soon.

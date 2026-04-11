@@ -1,0 +1,67 @@
+---
+title: "Portfolio"
+pagetitle: "Portfolio | datavist.ai"
+toc: false
+---
+
+::: {.section}
+[Selected work]{.section-label}
+
+## Featured Projects
+
+A selection of projects and case studies across data visualisation, analytics, and AI implementation.
+:::
+
+::: {.section}
+
+::: {.portfolio-grid}
+
+::: {.portfolio-item}
+[![](posts/2025-06-25-early-experiments-tableau-mcp/14-header-image.png){fig-alt="Tableau MCP"}](posts/2025-06-25-early-experiments-tableau-mcp/index.qmd)
+
+### [Tableau MCP Integration](posts/2025-06-25-early-experiments-tableau-mcp/index.qmd)
+[AI / Tableau]{.meta}
+:::
+
+::: {.portfolio-item}
+[![](posts/2025-07-14-mcp-reshaping-of-bi/mcp_diagram.png){fig-alt="MCP Architecture"}](posts/2025-07-14-mcp-reshaping-of-bi/index.qmd)
+
+### [AI Reshaping Business Intelligence](posts/2025-07-14-mcp-reshaping-of-bi/index.qmd)
+[AI / Strategy]{.meta}
+:::
+
+::: {.portfolio-item}
+[![](posts/2023-11-04-reflections-on-ironviz-2023/aflw_blazing_trail.png){fig-alt="IronViz 2023"}](posts/2023-11-04-reflections-on-ironviz-2023/index.qmd)
+
+### [IronViz 2023: AFLW](posts/2023-11-04-reflections-on-ironviz-2023/index.qmd)
+[Data Visualisation]{.meta}
+:::
+
+::: {.portfolio-item}
+[![](posts/2023-11-15-iterative-design-the-choice/the-choice-4.png){fig-alt="The Choice"}](posts/2023-11-15-iterative-design-the-choice/index.qmd)
+
+### [Iterative Design: The Choice](posts/2023-11-15-iterative-design-the-choice/index.qmd)
+[Design Process]{.meta}
+:::
+
+:::
+
+:::
+
+::: {.section}
+[Expertise]{.section-label}
+
+## Skills & Experience
+
+**Technical** — Tableau, Power BI, R, Python, SQL, dbt, Power Platform, LLM integrations, MCP
+
+**Industries** — Energy & Utilities, International Education, Commercial Property, Government, Media
+:::
+
+::: {.cta}
+## Interested in working together?
+
+Let's discuss how these skills can help solve your data challenges.
+
+[Get in Touch](contact.qmd){.btn .btn-primary}
+:::
