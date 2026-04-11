@@ -33,31 +33,54 @@ I also write **[The Datavist](https://thedatavist.substack.com)**, a newsletter 
 ::: {.section}
 [Experience]{.section-label}
 
-## Career
+## Industry Experience
 
-My experience spans industries and continents. I've held analytics and insights roles at **JLL** (Fortune 500 global real estate), worked in **higher education** at major Australian universities, served in **government** across state and federal agencies, and spent time at the **United Nations** in New York.
+My consulting perspective is shaped by hands-on experience across diverse sectors. I've worked in **energy** (high-voltage transmission), **commercial property** at JLL (Fortune 500 global real estate), **international education** at major Australian universities, **government** across state and federal agencies, and at the **United Nations** in New York.
 
-This diverse background gives me a unique perspective on how data challenges vary across contexts, and how AI can be applied practically in different organisational settings.
+This breadth means I understand how data challenges manifest differently across industries—and how to adapt AI and analytics solutions to different organisational cultures, regulatory environments, and strategic priorities.
+:::
+
+::: {.section}
+[Speaking & Writing]{.section-label}
+
+## Thought Leadership
+
+I regularly present and write on data visualisation, business intelligence, and AI-enabled analytics. Selected engagements include:
+
+**Conferences & Events**
+
+- *Data demystified: communicating data with impact*, Australian International Education Conference (AIEC), Perth, 2019
+- *Blockchain applications for international admission systems*, AIEC, Sydney, 2018 (Panel)
+- *Demystifying data: unlocking the value of data-driven decision-making*, AIEC, Hobart, 2017
+- *Getting started in the data game*, New Zealand International Education Conference, Auckland, 2017
+- *Big data, big insight and international education*, AIEC, Melbourne, 2016 (Panel)
+- *The devil is in the data: Empowering international higher education through business analytics*, AIEC, Adelaide, 2015
+
+**Community & User Groups**
+
+- *Prep It: The Underrated Art of Making Data Usable*, Tableau Prep User Group, 2022
+- *Reflections on data viz, anxiety and imposter syndrome*, Tableau Fringe Festival, 2020
+- *Refuge from the storm: reflections on climate change, refugees and data visualisation*, Brisbane Tableau User Group, 2020
+
+**Publications**
+
+- *The Data Game: Building analytics capability in international education*, IEAA Vista Magazine, 2017
 :::
 
 ::: {.section}
 [Recognition]{.section-label}
 
-## Achievements
+## Community Recognition
 
-**Tableau Ambassador**: Selected for four consecutive terms by the global Tableau community
+**Tableau Ambassador**: Selected for four consecutive terms by the global Tableau community, recognising contributions to data visualisation education and community building.
 
-**Iron Viz**: Two-time top 10 global placement in Tableau's premier data visualisation competition (2023, 2025). Top 3 in Asia-Pacific 2023.
-
-**The Lost Australians of Gallipoli**: Published visualisation project exploring WWI history through data
-
-**HIT MACHINES**: Iron Viz 2025 competition entry
+**Iron Viz Finalist**: Two-time top 10 global placement in Tableau's premier data visualisation competition (2023, 2025). Ranked top 3 in Asia-Pacific 2023.
 :::
 
 ::: {.section}
 [Credentials]{.section-label}
 
-## Education & Skills
+## Education & Certifications
 
 **Education**
 
@@ -66,20 +89,25 @@ This diverse background gives me a unique perspective on how data challenges var
 - Bachelor of Arts with Honours (History), University of Queensland
 - Graduate Diploma in Business Analytics, Deakin University
 
-**Technical expertise**
+**Technical Certifications**
+
+- Tableau Certified Data Analyst
+- Tableau Certified Associate
+- Alteryx Core Certified
+
+**Technical Expertise**
 
 - **AI & Agents**: LLM integrations, Model Context Protocol (MCP), agentic systems, context engineering, prompt engineering
 - **Analytics Engineering**: dbt, SQL, semantic layers, data modelling
 - **Visualisation & BI**: Tableau, Power BI, R, Python
-- **Certifications**: Tableau Professional, Alteryx Designer Advanced
 :::
 
 ::: {.section}
 [Connect]{.section-label}
 
-## Let's Talk
+## Get in Touch
 
-I'm always interested in discussing AI applications, data challenges, or collaboration opportunities.
+I'm always interested in discussing AI applications, data challenges, or speaking opportunities.
 
 [Connect on LinkedIn](https://www.linkedin.com/in/darraghmurray/){.btn .btn-primary}
 [Get in Touch](contact.qmd){.btn .btn-secondary}
